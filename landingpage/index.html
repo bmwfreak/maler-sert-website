@@ -28,7 +28,7 @@
     font-size: 17px;
   }
   a { color: var(--accent-strong); }
-  .container { max-width: 1000px; margin: 0 auto; padding: 0 22px; }
+  .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 22px; min-width: 0; }
 
   /* Topbar */
   .topbar {
@@ -69,15 +69,21 @@
   /* Hero */
   header.hero {
     padding: 80px 0 72px;
-    background:
-      linear-gradient(rgba(0, 23, 51, 0.68), rgba(0, 23, 51, 0.68)),
-      url('img/malerarbeiten-weisse-farbrolle.jpg') center / cover no-repeat;
+    background-color: #071a30;
+    background-image:
+      linear-gradient(90deg, rgba(0, 23, 51, 0.9) 0%, rgba(0, 23, 51, 0.76) 47%, rgba(0, 23, 51, 0.34) 100%),
+      url('img/hero-fahrzeug-maler-sert.jpg');
+    background-position: center, left center;
+    background-repeat: no-repeat;
+    background-size: cover, 120% auto;
     color: #fff;
     min-height: 500px;
     display: flex;
     align-items: center;
   }
   header.hero .container { width: 100%; }
+  header.hero h1 { max-width: 610px; font-size: 42px; }
+  header.hero .lead { max-width: 550px; }
   .eyebrow {
     font-size: 13px;
     letter-spacing: 0.14em;
@@ -166,28 +172,16 @@
     align-items: center;
   }
   @media (min-width: 720px) {
-    .team-grid { grid-template-columns: 240px 1fr; }
+    .team-grid { grid-template-columns: 290px 1fr; }
   }
-  .team-photo-placeholder {
-    background: var(--accent-soft);
-    border: 2px dashed var(--accent);
-    border-radius: 14px;
-    aspect-ratio: 3/4;
-    max-width: 240px;
+  .team-photo {
+    border-radius: 8px;
+    aspect-ratio: 9/16;
+    max-width: 290px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: var(--accent);
-  }
-  .team-photo-placeholder svg { width: 56px; height: 56px; opacity: 0.55; }
-  .team-photo-placeholder .photo-caption {
-    font-size: 12px;
-    color: var(--ink-soft);
-    text-align: center;
-    padding: 0 12px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
   }
   .team-text h2 { margin-top: 0; }
   .team-text .person-title {
@@ -444,11 +438,20 @@
     h2 { font-size: 26px; }
     .lead { font-size: 17px; }
     section { padding: 48px 0; }
-    header.hero { padding: 56px 0 48px; min-height: 0; }
+    header.hero {
+      padding: 56px 0 48px;
+      min-height: 0;
+      background-position: center, 22% center;
+      background-size: cover, auto 100%;
+    }
+    header.hero h1 { font-size: 32px; }
+    header.hero h1,
+    header.hero .lead { max-width: 100%; }
+    .cta-row .btn { padding: 13px 18px; font-size: 15px; }
     .nav { min-height: 56px; }
     .brand { font-size: 16px; }
     .brand span { display: none; }
-    .team-photo-placeholder { aspect-ratio: 4/3; max-width: 100%; }
+    .team-photo { max-width: 260px; margin: 0 auto; }
   }
 </style>
 </head>
@@ -513,12 +516,7 @@
   <div class="container">
     <div class="team-grid">
       <div>
-        <div class="team-photo-placeholder">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-          </svg>
-          <span class="photo-caption">Foto von Mehmet<br>wird ergänzt</span>
-        </div>
+        <img class="team-photo" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer von Maler Sert" />
       </div>
       <div class="team-text">
         <h2>Ihr Ansprechpartner</h2>
