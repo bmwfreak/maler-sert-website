@@ -2,27 +2,30 @@
 
 **Kontext:** Erstes echtes Kundenprojekt — Maler-Meisterbetrieb in Hamburg, seit 2002. Inhaber Mehmet Sert ist befreundet, wir bauen die digitale Präsenz unentgeltlich auf und sammeln dadurch Praxis-Erfahrung für die nächsten Bürohilfe-Kunden.
 
-**Lieferumfang (geplant):**
-- Eigene Domain
-- Geschäfts-E-Mail
-- Statische Webseite (One-Pager mit vier Leistungsbereichen)
-- Google Business Profile (mit öffentlicher Adresse, da Werkstatt vorhanden)
-- Impressum + Datenschutzerklärung
-- Übergabe-Dokumentation, damit Mehmet Sert oder ein anderer Dienstleister es später weiterführen kann
+**Lieferumfang:**
+- ✅ Eigene Domain — `maler-sert.de` registriert
+- ✅ Geschäfts-E-Mail — `info@maler-sert.de` eingerichtet
+- ✅ Statische Webseite (One-Pager mit 6 Leistungsbereichen, Bild-Cards, helles Design)
+- ✅ Google Business Profile — angelegt + Verifizierung angestoßen
+- ✅ Impressum + Datenschutzerklärung
+- ⏳ Hosting live-schalten (Git-Repo fertig, Netlify-Deploy steht an)
+- ⏳ Übergabe-Dokumentation für Mehmet
 
 ## Dateien
 
 | Datei | Inhalt | Status |
 |---|---|---|
-| `DATA.md` | Firmenfakten aus North Data, Creditreform, Branchenbüchern | Befüllt |
-| `01_ANGEBOT.md` | Leistungsbereiche und Inhalte für die Webseite | Entwurf |
-| `02_GBP_SETUP.md` | Google Business Profile Schritt für Schritt (Standort-Profil + Google-Konto-Neuanlage) | Entwurf |
-| `03_GO_LIVE_CHECKLIST.md` | Domain, Mail, Hosting, GBP-Abnahme | Folgt |
-| `04_DOMAIN_MAIL.md` | Domain-Auswahl, Mailpostfach, Telefonkonzept | Entwurf |
-| `05_VEREINBARUNG.md` | Kurze schriftliche Absprache zwischen Emre und Mehmet | Entwurf |
-| `landingpage/index.html` | One-Pager mit 6 Leistungsbereichen, Quadratmeter-Preisen, SMS-Fallback | ✓ Entwurf |
-| `landingpage/impressum.html` | Impressum nach § 5 DDG, USt-IdNr + Haftpflicht als Platzhalter | ✓ Entwurf |
-| `landingpage/datenschutz.html` | Datenschutz ohne Tracking/Formular/Cookies | ✓ Entwurf |
+| `DATA.md` | Firmenfakten aus North Data, Creditreform, Branchenbüchern | ✅ Befüllt |
+| `01_ANGEBOT.md` | Leistungsbereiche und Inhalte für die Webseite | ✅ Fertig |
+| `02_GBP_SETUP.md` | Google Business Profile Schritt für Schritt | ✅ Umgesetzt |
+| `04_DOMAIN_MAIL.md` | Domain-Auswahl, Mailpostfach, Telefonkonzept | ✅ Umgesetzt |
+| `05_VEREINBARUNG.md` | Schriftliche Absprache zwischen Emre und Mehmet | ✅ Fertig |
+| `netlify.toml` | Netlify Deployment-Konfiguration | ✅ Fertig |
+| `DEPLOYMENT.md` | Schritt-für-Schritt Deploy-Anleitung (3 Optionen) | ✅ Fertig |
+| `landingpage/index.html` | One-Pager mit 6 Leistungsbereichen, Bild-Cards, helles Design | ✅ Fertig |
+| `landingpage/impressum.html` | Impressum nach § 5 DDG (USt-IdNr + Haftpflicht noch offen) | ⏳ Fast fertig |
+| `landingpage/datenschutz.html` | Datenschutz ohne Tracking/Formular/Cookies | ✅ Fertig |
+| `landingpage/img/leistung1–6.jpg` | 6 lizenzfreie Beispielfotos (Unsplash) für Leistungs-Cards | ✅ Befüllt |
 
 ## Zielgruppen (laut Mehmet betrifft alle vier)
 
@@ -45,28 +48,24 @@
 
 **Bewusst NICHT prominent:** Auf Mehmets Wunsch wird „Maler-Meisterbetrieb" nicht groß ausgelobt. Der Meisterbrief existiert (HWK Hamburg), wird aber nur dezent im Impressum und einmal im Footer erwähnt — nicht in Hero oder Headlines.
 
-## Was als nächstes zu entscheiden ist
+## Was noch aussteht
 
-1. **Erstes Gespräch mit Mehmet** — bestätigen lassen:
-   - Welche Leistungen wirklich angeboten werden (jedes Detail in `01_ANGEBOT.md` muss stimmen)
-   - Ob Festpreis tatsächlich für alles gilt oder nur für klar abgegrenzte Projekte
-   - Ob Mitarbeitende beschäftigt werden (für „Über uns" / GBP)
-   - Ob er bereit ist, 5–10 Fotos von eigenen Arbeiten zu liefern (entscheidet die optische Qualität der Webseite)
+1. ⏳ **Netlify Deployment** — Website live schalten (Git-Repo fertig, siehe `DEPLOYMENT.md`)
+2. ⏳ **GBP-Verifizierung abwarten** — Postkarte (5–14 Tage), dann Profil fertig ausfüllen
+3. ⏳ **Fotos von Mehmet** — 5–10 echte Vorher/Nachher-Fotos für GBP-Galerie und Website
+4. ⏳ **Erste Google-Bewertungen** — 3–5 Stammkunden direkt nach Auftrag ansprechen
+5. ⏳ **USt-IdNr** — sobald erteilt in `impressum.html` nachtragen
+6. ⏳ **Berufshaftpflicht-Daten** — Versicherer + Anschrift im Impressum ergänzen
 
-2. **Domain** — Vorschläge in `04_DOMAIN_MAIL.md`. Mehmet muss zustimmen, vor allem weil er sich später auch unter dieser Domain bewerben muss.
+## Fortschritt (Stand: Mai 2026)
 
-3. **Vereinbarung** — `05_VEREINBARUNG.md` ausdrucken, gemeinsam unterschreiben, **bevor** Domain & Mail bezahlt werden.
-
-4. **Google Business Profile** — Postkarten-Verifizierung dauert 5–14 Tage. So früh wie möglich starten.
-
-## Lieferzeit-Schätzung (realistisch, Sonntag-Abend-Stand)
-
-- Tag 1 (Gespräch mit Mehmet): Leistungen klar, Fotos angefragt, Domain abgestimmt, Vereinbarung unterschrieben
-- Tag 2: Domain + Mail registrieren, Impressum/Datenschutz mit echten Daten finalisieren
-- Tag 3: Landingpage bauen (Entwurf), Mehmet zur Freigabe schicken
-- Tag 4: Korrekturen einbauen, Live-Deployment auf Netlify
-- Tag 5: GBP anlegen, Verifizierung anstoßen
-- Tag 6–14: Postkarte abwarten, GBP fertig konfigurieren, erste Beiträge posten
+- ✅ Tag 1: Leistungen klar, Domain abgestimmt, Vereinbarung fertig
+- ✅ Tag 2: Domain `maler-sert.de` + Mail `info@maler-sert.de` registriert
+- ✅ Tag 3: Landingpage gebaut (helles Design, 6 Bild-Cards)
+- ✅ Tag 4: Git-Repo erstellt, Netlify-Konfiguration fertig
+- ✅ Tag 5: GBP angelegt, Verifizierung angestoßen
+- ⏳ Tag 6–14: Postkarte abwarten → GBP fertig konfigurieren
+- ⏳ Offen: Netlify live-schalten, echte Fotos von Mehmet einpflegen
 
 ## Unterschied zu Bürohilfe Hamburg
 
