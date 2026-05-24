@@ -1,0 +1,202 @@
+==============================================================
+  FRAGEN AN MEHMET SERT - vor Aufbau der Webseite klaeren
+==============================================================
+  Stand: 23.05.2026 | Reihenfolge wie im Gespraech sinnvoll
+
+
+1. LEISTUNGEN - was bietest du wirklich an?
+----------------------------------------------
+[ ] Innenanstrich (Waende, Decken, Tueren, Heizkoerper)
+[ ] Tapezieren (Vlies, Raufaser, Designtapeten)
+[ ] Lasuren, Lackieren, Spachteltechniken
+[ ] Schimmel-Sanierung -> brauchst du Spezialzertifikat?
+[ ] Fassadenanstrich, Balkon, Garage
+[ ] Holz-Aussenanstrich (Zaun, Carport)
+[ ] Treppenhaus, Tiefgarage, WEG-Auftraege
+[ ] Mieterwechsel-Renovierung
+[ ] Bueros, Praxen, Gastronomie
+[ ] Hygiene-Anstriche fuer Praxen (Erfahrung vorhanden?)
+[ ] Neubau als Subunternehmer
+
+WICHTIG: was sind die 2-3 Bereiche, die 80% deines Umsatzes
+ausmachen? Auf die fokussiert die Webseite besonders.
+
+Was machst du NICHT, soll auch nicht auf die Webseite?
+.....................................................
+
+
+2. FESTPREIS - wirklich immer?
+----------------------------------------------
+Wir wollen "Festpreis statt Stundenabrechnung" als Haupt-
+Verkaufsargument auf die Webseite schreiben.
+
+[ ] Gilt das wirklich fuer ALLES?
+[ ] Oder gibt es Bereiche, wo du Stundensatz nehmen musst?
+    (z.B. Schaeden, wo Umfang unklar ist)
+[ ] Vor-Ort-Termin / Angebot kostenlos - bestaetigen?
+
+
+3. RECHTLICHE ECKDATEN (fuer Impressum + GBP)
+----------------------------------------------
+[ ] Meisterbrief vorhanden? JA / NEIN
+    -> Wenn JA: ausgestellt von welcher Handwerkskammer?
+       (vermutlich HWK Hamburg)
+    -> Wenn NEIN: dann duerfen wir NICHT "Meisterbetrieb"
+       schreiben - waere abmahnfaehig
+
+[ ] USt-IdNr. (faengt mit DE an, 9 Ziffern):
+    DE...............
+
+[ ] Steuernummer:
+    ......................
+
+[ ] Berufshaftpflichtversicherung
+    -> Versicherer:.........................
+    -> Versicherungsnummer:.................
+    -> Deckungssumme: ..................... Euro
+
+[ ] Mitgliedschaft Maler- und Lackiererinnung Hamburg?
+    JA / NEIN
+
+
+4. MITARBEITER / "UEBER UNS"-TEXT
+----------------------------------------------
+[ ] Wie viele Mitarbeitende beschaeftigst du aktuell?
+    .....
+
+[ ] Familienbetrieb? Wer arbeitet alles mit?
+    .....................................................
+
+[ ] Wann genau hast du gegruendet?
+    -> Handelsregister sagt 05.02.2002 - stimmt das, oder hast
+       du vorher schon als Einzelunternehmer angefangen?
+
+[ ] Was war dein Werdegang? (kurzer Satz fuers "Ueber uns")
+    .....................................................
+
+
+5. KUNDEN-SPRACHEN
+----------------------------------------------
+[ ] Bedienst du auch tuerkischsprachige Kunden?
+    JA / NEIN
+    -> Wenn JA: soll Webseite + GBP zweisprachig sein?
+       Oder reicht ein Hinweis "Wir sprechen Deutsch
+       und Tuerkisch"?
+
+
+6. EINZUGSGEBIET
+----------------------------------------------
+[ ] Welche Hamburger Stadtteile bedienst du?
+    -> Komplettes Hamburg-Stadtgebiet? JA / NEIN
+    -> Auch Umland (Norderstedt, Pinneberg, Reinbek)?
+       JA / NEIN
+    -> Wenn ja, welche Orte konkret?
+       .....................................................
+
+
+7. TELEFON + BUEROZEITEN
+----------------------------------------------
+[ ] Telefonnummer 040 687045 bleibt bestehen? JA / NEIN
+[ ] Mobilnummer auch oeffentlich? JA / NEIN
+    -> Mobilnr: .................
+[ ] Wann bist du telefonisch erreichbar?
+    Mo-Fr von ....... bis ....... Uhr
+    Sa von ....... bis ....... Uhr
+    So: erreichbar / nicht erreichbar
+[ ] Anrufbeantworter vorhanden? JA / NEIN
+
+
+8. E-MAIL + GOOGLE-KONTO
+----------------------------------------------
+Stand:
+- maler.sert@yahoo.de existiert seit Jahren, wird weiter
+  genutzt
+- Google-Konto hat Mehmet noch nicht
+
+Plan:
+- Neue Domain: maler-sert.de (oder Alternative)
+- Neue Mail: info@maler-sert.de
+- Yahoo wird automatisch auf neue Mail weitergeleitet
+- Google-Konto wird mit info@maler-sert.de neu angelegt,
+  Yahoo dient als Wiederherstellung
+
+[ ] Bist du mit dieser Loesung einverstanden?
+[ ] Bist du beim Termin dabei, um das Google-Konto
+    gemeinsam zu erstellen? (15 Min)
+
+
+9. DOMAIN - dein Wunschname
+----------------------------------------------
+Vorschlaege in Reihenfolge der Empfehlung:
+
+[ ] maler-sert.de            <- meine Empfehlung
+[ ] malerei-sert.de
+[ ] maler-sert-hamburg.de
+[ ] sert-malerei.de
+[ ] etwas anderes:............................
+
+Kosten: ca. 12 Euro pro Jahr, Abbuchung von deinem
+Geschaeftskonto. Domain laeuft auf deine Firma.
+
+
+10. FOTOS / REFERENZEN
+----------------------------------------------
+Die Webseite wirkt nur dann professionell, wenn Bilder
+deiner eigenen Arbeiten zu sehen sind. Stock-Fotos wirken
+billig.
+
+[ ] Kannst du 5 bis 10 Fotos von eigenen Arbeiten liefern?
+    Ideal: Vorher / Nachher
+[ ] Foto vom Firmenwagen mit Aufschrift?
+[ ] Foto vor der Werkstatt (Niederung 15)?
+[ ] Foto von dir selbst (vor der Werkstatt oder bei der
+    Arbeit) - Menschen vertrauen Menschen
+[ ] WICHTIG: bei Vorher/Nachher von Kunden-Wohnungen
+    brauchst du das schriftliche OK des Kunden!
+
+
+11. REFERENZ-NAMEN
+----------------------------------------------
+[ ] Darf eine Hausverwaltung namentlich genannt werden?
+    Wenn ja, welche?
+    .....................................................
+[ ] Darf ein Gewerbekunde namentlich genannt werden?
+    Wenn ja, welcher?
+    .....................................................
+    -> NUR mit deren ausdruecklicher Erlaubnis!
+
+
+12. UNSERE VEREINBARUNG
+----------------------------------------------
+Schriftliche Vereinbarung (Datei 05_VEREINBARUNG.md):
+- ich baue alles unentgeltlich auf
+- du zahlst nur Domain (12 Euro/Jahr) und Mail (12 Euro/Jahr)
+- ich darf das Projekt spaeter als Referenz nennen
+- du behaeltst alle Zugaenge und kannst jederzeit wechseln
+
+[ ] Bist du damit einverstanden?
+[ ] Wann koennen wir das gemeinsam unterschreiben?
+
+
+13. ZEITPLAN - bis wann soll alles fertig sein?
+----------------------------------------------
+Mein Vorschlag:
+- Tag 1: Gespraech mit dir (heute/diese Woche)
+- Tag 2: Domain + Mail anlegen
+- Tag 3: Webseite-Entwurf
+- Tag 4: dein Feedback + Live-Schaltung
+- Tag 5: GBP anlegen, Postkarte abwarten
+- Tag 14: alles fertig, Postkarte da, Profil live
+
+[ ] Passt dieser Rahmen fuer dich?
+[ ] Hast du einen Wunschtermin / Anlass (z.B. Visitenkarten
+    erneuern, Schild an der Werkstatt)?
+
+
+==============================================================
+  NACH DEM GESPRAECH:
+  Mehmet bekommt:
+  - Entwurf der Vereinbarung zum Lesen
+  - Liste, welche Fotos gewuenscht sind
+  - Termin fuer gemeinsame Domain-/Konto-Anlage
+==============================================================

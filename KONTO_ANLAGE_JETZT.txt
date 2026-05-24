@@ -1,0 +1,174 @@
+==============================================================
+  GOOGLE-KONTO FUER MEHMET SERT - Schritt fuer Schritt
+==============================================================
+  Dauer: ca. 10-15 Minuten
+  Wer macht was: Emre tippt, Mehmet sitzt daneben, Telefon dabei
+
+
+VORBEREITUNG - das brauchst du jetzt bereit:
+----------------------------------------------
+[ ] Mehmets Handy +49 173 8615002 fuer die SMS-Verifizierung
+[ ] Mehmets Geburtsdatum (wird beim Signup abgefragt)
+[ ] Yahoo-Zugang malersert@yahoo.de zur Hand
+    (falls Google eine Bestaetigungsmail dahin schickt)
+[ ] Ein neues, starkes Passwort denken (12+ Zeichen, gemischt)
+    -> idealerweise direkt in Bitwarden o.ae. speichern
+[ ] Browser: am besten Chrome oder Edge im Inkognito-/InPrivate-Modus
+    -> verhindert, dass es mit Emres eigenem Konto kollidiert
+
+
+SCHRITT 1 - Signup-Seite oeffnen
+----------------------------------------------
+URL: https://accounts.google.com/signup
+
+-> "Fuer mich selbst" auswaehlen
+
+
+SCHRITT 2 - Name und Login eingeben
+----------------------------------------------
+Vorname: Mehmet
+Nachname: Sert
+
+Bei der Frage nach der E-Mail-Adresse / Nutzernamen:
+-> "Vorhandene E-Mail-Adresse verwenden" klicken
+   (kleiner Link unter dem Eingabefeld)
+-> E-Mail eintragen: malersert@yahoo.de
+
+Passwort: das vorbereitete starke Passwort eintragen
+Passwort bestaetigen: nochmal eintragen
+"Weiter" klicken
+
+
+SCHRITT 3 - Bestaetigungscode aus Yahoo holen
+----------------------------------------------
+Google schickt jetzt einen Code an malersert@yahoo.de
+
+-> In einem zweiten Tab Yahoo Mail oeffnen
+   (https://login.yahoo.com)
+-> Mit Mehmets Yahoo-Passwort einloggen
+-> Mail von "Google" suchen (Posteingang oder Spam!)
+-> 6-stelligen Code kopieren
+-> Zurueck zum Signup-Tab, Code eintragen
+-> "Bestaetigen"
+
+
+SCHRITT 4 - Telefon-Verifizierung
+----------------------------------------------
+Google fragt nach einer Mobilnummer fuer den Sicherheits-Check.
+
+Telefonnummer eintragen: +49 173 8615002
+"Weiter" klicken
+
+-> SMS mit 6-stelligem Code kommt auf Mehmets Handy (Sekunden)
+-> Code eintragen
+-> "Bestaetigen"
+
+
+SCHRITT 5 - Persoenliche Daten
+----------------------------------------------
+Geburtsdatum:  Tag .. / Monat .. / Jahr .....
+   -> Mehmet muss das selbst angeben
+Geschlecht: -> "Lieber nicht angeben" geht auch (empfohlen,
+              keine geschaeftliche Relevanz)
+
+"Weiter" klicken
+
+
+SCHRITT 6 - Datenschutz/Nutzungsbedingungen
+----------------------------------------------
+Google zeigt ein langes Zustimmungs-Fenster.
+
+Wichtige Einstellungen vorher prueffen (unten am Fenster):
+[ ] "Personalisierung" -> auf MINIMUM stellen
+    (Mehmet braucht keine personalisierten Werbe-Profile)
+
+"Ich stimme zu" / "Akzeptieren" klicken
+
+
+SCHRITT 7 - Konto ist da, sofort in Bitwarden speichern!
+----------------------------------------------
+Bitte JETZT, bevor wir weitermachen, eintragen:
+
+In Bitwarden neuer Eintrag:
+- Name:      Google-Konto Maler Sert
+- Login:     malersert@yahoo.de
+- Passwort:  (das in Schritt 2 vergebene)
+- URL:       https://accounts.google.com
+- Notiz:     Konto fuer Mehmet Sert / Maler Sert GmbH
+             Wiederherstellung: SMS an +49 173 8615002
+             Yahoo-Passwort bekommt Mehmet weiterhin selbst
+
+
+SCHRITT 8 - Schnell-Check
+----------------------------------------------
+Folgenden Link aufrufen, eingeloggt sein, sollte gehen:
+https://myaccount.google.com
+
+Wenn Mehmets Name oben rechts steht: KONTO LAEUFT. ✓
+
+------------------------------------------
+NACH DER KONTO-ANLAGE - sofort weiter mit:
+------------------------------------------
+
+A) Eigene Google-Maps-Suche durchfuehren:
+   https://www.google.com/maps
+   Suchwort: "Maler Sert Hamburg"
+   -> Erscheint ein Eintrag mit "Inhaber? Profil beanspruchen"?
+   -> Wenn JA: diesen Button drueckene (BEANSPRUCHEN, NICHT NEU ANLEGEN)
+   -> Wenn NEIN: weiter zu B
+
+B) Google Business Profile neu anlegen:
+   https://business.google.com
+   Vorgehen Schritt fuer Schritt: siehe 02_GBP_SETUP.md
+   Stichworte fuer den Schnellstart:
+   - Geschaeftstyp: "Lokales Geschaeft / Geschaeft mit Standort"
+   - Adresse: In der Niederung 15, 22047 Hamburg
+   - Primaerkategorie: "Maler"
+   - Sekundaer: "Bauunternehmer", "Innenausstattungsdienst",
+     "Tapezierer", "Bauwerksabdichter"
+   - Verifizierung: Postkarte starten (5-14 Tage)
+
+
+==============================================================
+  TYPISCHE STOLPERSTELLEN
+==============================================================
+
+PROBLEM: "Diese E-Mail ist schon ein Google-Konto"
+LOESUNG: Mehmet hat sich frueher unbewusst registriert (z.B.
+         beim Smartphone-Kauf). Statt Signup auf "Anmelden"
+         gehen, "Passwort vergessen" anklicken, ueber die
+         Yahoo-Adresse zuruecksetzen.
+
+PROBLEM: SMS-Code kommt nicht an
+LOESUNG: 2-3 Min warten, dann "Erneut senden". Falls weiter
+         nichts: andere Mobilnummer probieren oder Anruf statt
+         SMS waehlen.
+
+PROBLEM: "Diese Telefonnummer wurde zu oft verwendet"
+LOESUNG: Eine andere Mobilnummer (z.B. die vom Vater oder Emre)
+         nehmen, spaeter kann man sie wieder gegen Mehmets
+         tauschen.
+
+PROBLEM: Google zeigt eine Sicherheitsabfrage (CAPTCHA, Foto-
+         auswahl)
+LOESUNG: Ganz normal beantworten, kein Grund zur Panik. Google
+         macht das bei neuen Konten haeufig.
+
+PROBLEM: Mehmet kennt sein Yahoo-Passwort nicht mehr
+LOESUNG: STOPP. Erst Yahoo-Passwort zuruecksetzen ueber Handy.
+         Sonst koennen wir Schritt 3 nicht abschliessen.
+         URL: https://login.yahoo.com -> "Probleme beim
+         Einloggen?"
+
+
+==============================================================
+  WICHTIG fuer Emre nach der Anlage:
+==============================================================
+
+[ ] Zugangsdaten in Bitwarden gespeichert
+[ ] Bitwarden-Eintrag mit Mehmet ueber sein Smartphone geteilt
+    (Bitwarden Free reicht: Share / Export-Funktion)
+[ ] Notiz an Mehmet: "Diese Mail und dieses Passwort merkst du
+    dir - das ist DEIN Konto, ich habe es nur eingerichtet"
+[ ] Telefonisch oder per Mail bestaetigen, dass Mehmet sich
+    selbst einloggen kann (Mehmet probiert es einmal alleine)

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Maler Sert GmbH in Hamburg seit 2002 — Familienbetrieb für die komplette Renovierung: Malerarbeiten, Boden, Trockenbau, Schimmel-Sanierung und Montage aus einer Hand." />
+<title>Maler Sert GmbH — Hamburger Familienbetrieb für die komplette Renovierung</title>
+<style>
+  :root {
+    --ink: #1a202c;
+    --ink-soft: #4a5568;
+    --line: #e2e8f0;
+    --bg: #ffffff;
+    --bg-band: #f8f9fa;
+    --bg-card: #ffffff;
+    --accent: #004085;
+    --accent-strong: #002752;
+    --accent-soft: #e6eef7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--accent-strong); }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 22px; }
+
+  /* Topbar */
+  .topbar {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: saturate(140%) blur(8px);
+  }
+  .nav {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .brand {
+    color: var(--accent-strong);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .brand span { color: var(--ink-soft); font-weight: 500; }
+  .call-link {
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .call-link:hover { background: var(--accent-strong); color: #fff; }
+
+  /* Hero */
+  header.hero {
+    padding: 64px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 1.12;
+    margin: 0 0 22px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    max-width: 760px;
+  }
+  h1 strong { color: var(--accent); }
+  .lead {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 660px;
+    margin: 0 0 30px;
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid transparent;
+    transition: transform 0.08s ease, background 0.15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-primary:hover { background: var(--accent-strong); color: white; }
+  .btn-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-secondary:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
+
+  /* Trust band */
+  .trust {
+    background: var(--bg-band);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .trust-item h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    color: var(--accent-strong);
+    font-weight: 700;
+  }
+  .trust-item p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  /* Sektionen */
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  section.alt { background: var(--bg-band); }
+  h2 {
+    font-size: 32px;
+    margin: 0 0 14px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .section-intro {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 720px;
+    margin: 0 0 38px;
+  }
+
+  /* Leistungs-Cards */
+  .leistungen {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) {
+    .leistungen { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 980px) {
+    .leistungen { grid-template-columns: repeat(3, 1fr); }
+  }
+  .leistung-card {
+    background: var(--bg-card);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .leistung-card .card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .leistung-card .card-body {
+    padding: 24px;
+  }
+  .leistung-card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--accent-strong);
+  }
+  .leistung-card p {
+    margin: 0 0 12px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .leistung-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--ink);
+    font-size: 14px;
+  }
+  .leistung-card li { margin-bottom: 4px; }
+
+  /* Preis-Beispiele */
+  .preis-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+  @media (min-width: 600px) {
+    .preis-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .preis-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .preis-card .label {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .preis-card .preis {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  .preis-card .preis small {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .preis-hint {
+    margin: 24px 0 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  /* Ablauf — 3 Schritte */
+  .ablauf {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    counter-reset: step;
+  }
+  @media (min-width: 700px) {
+    .ablauf { grid-template-columns: repeat(3, 1fr); }
+  }
+  .ablauf-step {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+  }
+  .ablauf-step::before {
+    counter-increment: step;
+    content: counter(step);
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 36px;
+    margin-bottom: 14px;
+  }
+  .ablauf-step h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .ablauf-step p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  /* Einzugsgebiet */
+  .einzugsgebiet-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .pill {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  /* Kontakt */
+  .kontakt-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 800px) {
+    .kontakt-grid { grid-template-columns: 1.1fr 0.9fr; }
+  }
+  .kontakt-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px;
+  }
+  .kontakt-card h3 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    color: var(--accent-strong);
+  }
+  .kontakt-row { margin-bottom: 14px; }
+  .kontakt-row strong { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 2px; font-weight: 600; }
+  .kontakt-row a { font-size: 19px; font-weight: 700; text-decoration: none; }
+  .kontakt-row a:hover { text-decoration: underline; }
+  .kontakt-hint {
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--ink);
+    margin-top: 18px;
+  }
+  .erreichbar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px;
+  }
+  .erreichbar-card h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+  }
+  .erreichbar-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  .erreichbar-card td {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .erreichbar-card td:last-child {
+    text-align: right;
+    color: var(--ink-soft);
+  }
+  .erreichbar-card tr:last-child td {
+    border-bottom: 0;
+  }
+
+  /* Footer */
+  footer {
+    padding: 36px 0 50px;
+    text-align: center;
+    background: var(--bg-band);
+  }
+  footer p {
+    margin: 6px 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* Small screen tweaks */
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    .lead { font-size: 17px; }
+    section { padding: 48px 0; }
+    header.hero { padding: 48px 0 40px; }
+    .nav { min-height: 56px; }
+    .brand { font-size: 16px; }
+    .brand span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#top">Maler Sert <span>· Hamburg</span></a>
+    <a class="call-link" href="tel:+491738615002">0173 8615002</a>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="eyebrow">Hamburger Familienbetrieb seit 2002</div>
+    <h1>Renovierung aus <strong>einer Hand</strong> — Maler­arbeiten, Boden, Trockenbau, Montage und alles drum herum.</h1>
+    <p class="lead">Wir kümmern uns ums Streichen, Tapezieren, Fliesen, Parkett, Trockenbau, Schimmel-Sanierung und kleine Reparaturen — damit Sie nicht zwischen mehreren Handwerkern koordinieren müssen. In Hamburg und Umland.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+491738615002">Jetzt anrufen</a>
+      <a class="btn btn-secondary" href="#kontakt">Per Mail oder SMS</a>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <h3>Seit 2002 in Hamburg</h3>
+      <p>Über zwei Jahrzehnte am Markt. Familienbetrieb, kein Call-Center.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Komplette Renovierung</h3>
+      <p>Vom Streichen bis zur Küchenmontage — alles aus einer Hand, ein Ansprechpartner.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Vor-Ort-Termin kostenlos</h3>
+      <p>Klare Quadratmeter-Preise oder schriftliches Festpreis-Angebot — kein versteckter Stundensatz.</p>
+    </div>
+  </div>
+</section>
+
+<section id="leistungen">
+  <div class="container">
+    <h2>Was wir machen</h2>
+    <p class="section-intro">Maler­arbeiten sind der Kern — daneben übernehmen wir alles, was in einer Wohnung oder einem Haus zwischen Rohbau und fertiger Übergabe anfällt.</p>
+
+    <div class="leistungen">
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung1.jpg" alt="Malerarbeiten" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Maler­arbeiten</h3>
+          <p>Streichen, Tapezieren, Lasieren — innen und außen.</p>
+          <ul>
+            <li>Innen­anstriche, Wände, Decken, Türen</li>
+            <li>Tapezieren (Vlies, Raufaser, Designtapeten)</li>
+            <li>Fassaden, Balkone, Garagen</li>
+            <li>Holz­anstriche, Lasuren, Lackieren</li>
+            <li>Treppenhaus, Tiefgarage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung2.jpg" alt="Boden" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Boden</h3>
+          <p>Vom neuen Belag bis zum aufgefrischten Parkett.</p>
+          <ul>
+            <li>Bodenbelag (Vinyl, Laminat, Designboden)</li>
+            <li>Parkett schleifen und versiegeln</li>
+            <li>Fliesen­legen (Bad, Küche, Flur)</li>
+            <li>Alten Boden raus, Untergrund vorbereiten</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung3.jpg" alt="Trockenbau, Putz und Spachtel" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Trockenbau, Putz &amp; Spachtel</h3>
+          <p>Alles zwischen Rohbau und Anstrich.</p>
+          <ul>
+            <li>Trennwände, abgehängte Decken</li>
+            <li>Vorwand­installationen</li>
+            <li>Innenputz, Putz­reparaturen, Sanier­putz</li>
+            <li>Spachtel­arbeiten als Vorbereitung</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung4.jpg" alt="Schimmel-Sanierung und Trocknung" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Schimmel-Sanierung &amp; Trocknung</h3>
+          <p>Mit Zertifikat — und vor allem mit Blick auf die Ursache.</p>
+          <ul>
+            <li>Schimmel professionell entfernen</li>
+            <li>Trocknung nach Wasser­schaden</li>
+            <li>Sanier­putz und vorbeugende Anstriche</li>
+            <li>Saubere Doku für Versicherung oder Hausverwaltung</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung5.jpg" alt="Montage und Reparatur" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Montage &amp; Reparatur</h3>
+          <p>Das, was sonst zwischen den Gewerken liegen bleibt.</p>
+          <ul>
+            <li>Küchen­montage</li>
+            <li>Schrank­montage</li>
+            <li>Kleine Elektro­arbeiten (Lampen, Steckdosen)</li>
+            <li>Reparaturen rund ums Haus</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="card-image"><img src="img/leistung6.jpg" alt="Hausverwaltungen und Gewerbe" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-body">
+          <h3>Hausverwaltungen &amp; Gewerbe</h3>
+          <p>Wiederkehrende Aufträge, mit Doku, auf Wunsch auch außerhalb der Geschäftszeiten.</p>
+          <ul>
+            <li>Treppenhaus- und Gemeinschafts­flächen</li>
+            <li>Mieterwechsel-Renovierungen</li>
+            <li>WEG-Aufträge mit Hausverwaltungs-Doku</li>
+            <li>Büros, Praxen, Gastronomie</li>
+            <li>Schaden­behebung nach Wasser, Brand, Vandalismus</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="preise">
+  <div class="container">
+    <h2>Preise transparent</h2>
+    <p class="section-intro">Für klassische Streich­arbeiten gibt es feste Quadratmeter-Preise, damit Sie vorab planen können. Alles andere bekommen Sie nach dem kostenlosen Vor-Ort-Termin als schriftliches Festpreis-Angebot.</p>
+
+    <div class="preis-grid">
+      <div class="preis-card">
+        <div class="label">Wand zweimal streichen, weiß</div>
+        <div class="preis">ab 8,10 € <small>/ m²</small></div>
+      </div>
+      <div class="preis-card">
+        <div class="label">Decke zweimal streichen</div>
+        <div class="preis">ab 9,10 € <small>/ m²</small></div>
+      </div>
+    </div>
+
+    <p class="preis-hint">
+      Für alle anderen Arbeiten — Boden, Trockenbau, Sanierung, Montage — vereinbaren wir einen kostenlosen Besichtigungstermin und Sie bekommen ein schriftliches Festpreis-Angebot. Keine Stundensätze, keine versteckten Posten.
+    </p>
+  </div>
+</section>
+
+<section id="ablauf">
+  <div class="container">
+    <h2>Wie es bei uns abläuft</h2>
+    <p class="section-intro">Vom ersten Anruf bis zum sauber abgenommenen Auftrag — drei einfache Schritte.</p>
+
+    <div class="ablauf">
+      <div class="ablauf-step">
+        <h3>Anrufen oder schreiben</h3>
+        <p>Kurz beschreiben, was ansteht. Wir melden uns innerhalb eines Werktags zurück und vereinbaren einen Termin vor Ort.</p>
+      </div>
+      <div class="ablauf-step">
+        <h3>Vor-Ort-Termin — kostenlos</h3>
+        <p>Wir schauen uns alles in Ruhe an, beraten zu Material und Aufwand und nehmen die wichtigsten Maße auf.</p>
+      </div>
+      <div class="ablauf-step">
+        <h3>Schriftliches Festpreis-Angebot</h3>
+        <p>Sie bekommen ein klares Angebot — Quadratmeter-Preis oder Festpreis. Wenn Sie zustimmen, fixieren wir den Termin und legen los.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="gebiet">
+  <div class="container">
+    <h2>Wo wir arbeiten</h2>
+    <p class="section-intro">Tätig im gesamten Hamburger Stadtgebiet und im näheren Umland. Längere Anfahrten gern auf Anfrage.</p>
+    <div class="einzugsgebiet-list">
+      <span class="pill">Hamburg (alle Stadtteile)</span>
+      <span class="pill">Norderstedt</span>
+      <span class="pill">Pinneberg</span>
+      <span class="pill">Reinbek</span>
+      <span class="pill">weitere Orte auf Anfrage</span>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <p class="section-intro">Anruf, Mail oder SMS — je nachdem, was Ihnen lieber ist. Wir antworten verlässlich.</p>
+
+    <div class="kontakt-grid">
+
+      <div class="kontakt-card">
+        <h3>Direkt erreichen</h3>
+        <div class="kontakt-row">
+          <strong>Telefon</strong>
+          <a href="tel:+491738615002">0173 8615002</a>
+        </div>
+        <div class="kontakt-row">
+          <strong>E-Mail</strong>
+          <a href="mailto:info@maler-sert.de">info@maler-sert.de</a>
+        </div>
+        <div class="kontakt-row">
+          <strong>Adresse</strong>
+          Maler Sert GmbH<br>
+          In der Niederung 15<br>
+          22047 Hamburg
+        </div>
+        <div class="kontakt-hint">
+          Außerhalb der Sprechzeiten gerne per <strong>SMS oder WhatsApp</strong> an dieselbe Nummer — wir melden uns am nächsten Werktag zurück.
+        </div>
+      </div>
+
+      <div class="erreichbar-card">
+        <h3>Erreichbarkeit</h3>
+        <table>
+          <tr><td>Montag</td><td>9–17 Uhr</td></tr>
+          <tr><td>Dienstag</td><td>9–17 Uhr</td></tr>
+          <tr><td>Mittwoch</td><td>9–17 Uhr</td></tr>
+          <tr><td>Donnerstag</td><td>9–17 Uhr</td></tr>
+          <tr><td>Freitag</td><td>9–17 Uhr</td></tr>
+          <tr><td>Samstag</td><td>9–13 Uhr</td></tr>
+          <tr><td>Sonntag</td><td>geschlossen</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Maler Sert GmbH</strong> · In der Niederung 15 · 22047 Hamburg</p>
+    <p>Telefon: <a href="tel:+491738615002">0173 8615002</a> · E-Mail: <a href="mailto:info@maler-sert.de">info@maler-sert.de</a></p>
+    <p>
+      <a href="impressum.html">Impressum</a>·
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
