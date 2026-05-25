@@ -5,6 +5,87 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Maler Sert GmbH in Hamburg seit 2002 — Familienbetrieb für die komplette Renovierung: Malerarbeiten, Boden, Trockenbau, Schimmel-Sanierung und Montage aus einer Hand." />
 <title>Maler Sert GmbH — Hamburger Familienbetrieb für die komplette Renovierung</title>
+<link rel="canonical" href="https://maler-sert.de/" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="alternate icon" href="favicon.ico" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Maler Sert GmbH — Hamburger Familienbetrieb für die komplette Renovierung" />
+<meta property="og:description" content="Renovierung aus einer Hand seit 2002 in Hamburg. Malerarbeiten, Boden, Trockenbau, Schimmel-Sanierung und Montage — alles aus einer Hand." />
+<meta property="og:image" content="https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg" />
+<meta property="og:image:alt" content="Mehmet Sert vor dem Firmenwagen der Maler Sert GmbH" />
+<meta property="og:url" content="https://maler-sert.de/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="Maler Sert GmbH" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Maler Sert GmbH — Hamburger Familienbetrieb" />
+<meta name="twitter:description" content="Renovierung aus einer Hand seit 2002 in Hamburg." />
+<meta name="twitter:image" content="https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg" />
+
+<!-- LocalBusiness Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Painter",
+  "name": "Maler Sert GmbH",
+  "image": "https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg",
+  "logo": "https://maler-sert.de/img/mehmet-sert-portrait.png",
+  "telephone": "+49-173-8615002",
+  "email": "info@maler-sert.de",
+  "url": "https://maler-sert.de/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "In der Niederung 15",
+    "postalCode": "22047",
+    "addressLocality": "Hamburg",
+    "addressCountry": "DE"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Hamburg"},
+    {"@type": "City", "name": "Norderstedt"},
+    {"@type": "City", "name": "Pinneberg"},
+    {"@type": "City", "name": "Reinbek"}
+  ],
+  "foundingDate": "2002",
+  "priceRange": "€€",
+  "vatID": "DE462262729",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "sameAs": [],
+  "founder": {
+    "@type": "Person",
+    "name": "Mehmet Sert",
+    "jobTitle": "Inhaber & Geschäftsführer"
+  },
+  "knowsAbout": [
+    "Malerarbeiten",
+    "Tapezieren",
+    "Fassadenanstriche",
+    "Bodenverlegung",
+    "Parkett",
+    "Fliesenlegen",
+    "Trockenbau",
+    "Schimmel-Sanierung",
+    "Küchenmontage"
+  ]
+}
+</script>
+
 <style>
   :root {
     --ink: #1a202c;
@@ -19,6 +100,22 @@
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+
+  /* Skip-Link für Tastatur-Nutzer */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 12px;
+    background: var(--accent-strong);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 100;
+    transition: top 0.15s;
+  }
+  .skip-link:focus { top: 12px; color: #fff; }
   body {
     margin: 0;
     font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
@@ -73,9 +170,9 @@
     background-image:
       linear-gradient(90deg, rgba(0, 23, 51, 0.9) 0%, rgba(0, 23, 51, 0.76) 47%, rgba(0, 23, 51, 0.34) 100%),
       url('img/hero-fahrzeug-maler-sert.jpg');
-    background-position: center, left center;
+    background-position: center, center right;
     background-repeat: no-repeat;
-    background-size: cover, 120% auto;
+    background-size: cover, cover;
     color: #fff;
     min-height: 500px;
     display: flex;
@@ -302,6 +399,9 @@
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     counter-reset: step;
   }
   @media (min-width: 700px) {
@@ -314,9 +414,7 @@
     padding: 24px;
     position: relative;
   }
-  .ablauf-step::before {
-    counter-increment: step;
-    content: counter(step);
+  .ablauf-step .step-num {
     display: inline-block;
     width: 36px;
     height: 36px;
@@ -327,6 +425,7 @@
     text-align: center;
     line-height: 36px;
     margin-bottom: 14px;
+    font-size: 16px;
   }
   .ablauf-step h3 {
     margin: 0 0 8px;
@@ -402,16 +501,30 @@
     border-collapse: collapse;
     font-size: 15px;
   }
-  .erreichbar-card td {
+  .erreichbar-card td,
+  .erreichbar-card th {
     padding: 8px 0;
     border-bottom: 1px solid var(--line);
+    text-align: left;
+    font-weight: 400;
   }
-  .erreichbar-card td:last-child {
+  .erreichbar-card td {
     text-align: right;
     color: var(--ink-soft);
   }
-  .erreichbar-card tr:last-child td {
+  .erreichbar-card tr:last-child td,
+  .erreichbar-card tr:last-child th {
     border-bottom: 0;
+  }
+  /* Visually hidden but accessible to screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
   }
 
   /* Footer */
@@ -442,7 +555,7 @@
       padding: 56px 0 48px;
       min-height: 0;
       background-position: center, 22% center;
-      background-size: cover, auto 100%;
+      background-size: cover, cover;
     }
     header.hero h1 { font-size: 32px; }
     header.hero h1,
@@ -457,12 +570,16 @@
 </head>
 <body>
 
+<a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
+
 <div class="topbar">
   <div class="container nav">
     <a class="brand" href="#top">Maler Sert <span>· Hamburg</span></a>
     <a class="call-link" href="tel:+491738615002">0173 8615002</a>
   </div>
 </div>
+
+<main id="hauptinhalt">
 
 <header class="hero" id="top">
   <div class="container">
@@ -480,7 +597,7 @@
   <div class="container trust-grid">
     <div class="trust-item">
       <div class="trust-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
           <line x1="16" y1="2" x2="16" y2="6"></line>
           <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -492,7 +609,7 @@
     </div>
     <div class="trust-item">
       <div class="trust-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
@@ -502,7 +619,7 @@
     </div>
     <div class="trust-item">
       <div class="trust-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
@@ -516,7 +633,7 @@
   <div class="container">
     <div class="team-grid">
       <div>
-        <img class="team-photo" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer von Maler Sert" />
+        <img class="team-photo" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer von Maler Sert" width="290" height="516" loading="lazy" decoding="async" />
       </div>
       <div class="team-text">
         <h2>Ihr Ansprechpartner</h2>
@@ -536,7 +653,7 @@
     <div class="leistungen">
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Malerarbeiten" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Malerarbeiten" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Maler­arbeiten</h3>
           <p>Streichen, Tapezieren, Lasieren — innen und außen.</p>
@@ -551,7 +668,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/boden.jpg" alt="Boden" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/boden.jpg" alt="Boden" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Boden</h3>
           <p>Vom neuen Belag bis zum aufgefrischten Parkett.</p>
@@ -565,7 +682,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/trockenbau-spachtel.jpg" alt="Trockenbau, Putz und Spachtel" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/trockenbau-spachtel.jpg" alt="Trockenbau, Putz und Spachtel" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Trockenbau, Putz &amp; Spachtel</h3>
           <p>Alles zwischen Rohbau und Anstrich.</p>
@@ -579,7 +696,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung und Trocknung" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung und Trocknung" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Schimmel-Sanierung &amp; Trocknung</h3>
           <p>Mit Zertifikat — und vor allem mit Blick auf die Ursache.</p>
@@ -593,7 +710,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/montage-reparatur.jpg" alt="Montage und Reparatur" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/montage-reparatur.jpg" alt="Montage und Reparatur" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Montage &amp; Reparatur</h3>
           <p>Das, was sonst zwischen den Gewerken liegen bleibt.</p>
@@ -607,7 +724,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/hausverwaltung-gewerbe.jpg" alt="Hausverwaltungen und Gewerbe" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><img src="img/hausverwaltung-gewerbe.jpg" alt="Hausverwaltungen und Gewerbe" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
         <div class="card-body">
           <h3>Hausverwaltungen &amp; Gewerbe</h3>
           <p>Wiederkehrende Aufträge, mit Doku, auf Wunsch auch außerhalb der Geschäftszeiten.</p>
@@ -652,20 +769,23 @@
     <h2>Wie es bei uns abläuft</h2>
     <p class="section-intro">Vom ersten Anruf bis zum sauber abgenommenen Auftrag — drei einfache Schritte.</p>
 
-    <div class="ablauf">
-      <div class="ablauf-step">
+    <ol class="ablauf">
+      <li class="ablauf-step">
+        <span class="step-num" aria-hidden="true">1</span>
         <h3>Anrufen oder schreiben</h3>
         <p>Kurz beschreiben, was ansteht. Wir melden uns innerhalb eines Werktags zurück und vereinbaren einen Termin vor Ort.</p>
-      </div>
-      <div class="ablauf-step">
+      </li>
+      <li class="ablauf-step">
+        <span class="step-num" aria-hidden="true">2</span>
         <h3>Vor-Ort-Termin — kostenlos</h3>
         <p>Wir schauen uns alles in Ruhe an, beraten zu Material und Aufwand und nehmen die wichtigsten Maße auf.</p>
-      </div>
-      <div class="ablauf-step">
+      </li>
+      <li class="ablauf-step">
+        <span class="step-num" aria-hidden="true">3</span>
         <h3>Schriftliches Festpreis-Angebot</h3>
         <p>Sie bekommen ein klares Angebot — Quadratmeter-Preis oder Festpreis. Wenn Sie zustimmen, fixieren wir den Termin und legen los.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -680,6 +800,9 @@
       <span class="pill">Reinbek</span>
       <span class="pill">weitere Orte auf Anfrage</span>
     </div>
+    <p style="margin-top:18px;font-size:15px;color:var(--ink-soft);">
+      <a href="https://www.openstreetmap.org/?mlat=53.5511&amp;mlon=10.0193#map=11/53.55/10.02" target="_blank" rel="noopener">Standort auf OpenStreetMap ansehen →</a>
+    </p>
   </div>
 </section>
 
@@ -706,6 +829,10 @@
           In der Niederung 15<br>
           22047 Hamburg
         </div>
+        <div class="kontakt-row">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/491738615002?text=Hallo%20Herr%20Sert%2C%20ich%20bräuchte%20...." rel="noopener">Direkt schreiben</a>
+        </div>
         <div class="kontakt-hint">
           Außerhalb der Sprechzeiten gerne per <strong>SMS oder WhatsApp</strong> an dieselbe Nummer — wir melden uns am nächsten Werktag zurück.
         </div>
@@ -714,19 +841,24 @@
       <div class="erreichbar-card">
         <h3>Erreichbarkeit</h3>
         <table>
-          <tr><td>Montag</td><td>9–17 Uhr</td></tr>
-          <tr><td>Dienstag</td><td>9–17 Uhr</td></tr>
-          <tr><td>Mittwoch</td><td>9–17 Uhr</td></tr>
-          <tr><td>Donnerstag</td><td>9–17 Uhr</td></tr>
-          <tr><td>Freitag</td><td>9–17 Uhr</td></tr>
-          <tr><td>Samstag</td><td>9–13 Uhr</td></tr>
-          <tr><td>Sonntag</td><td>geschlossen</td></tr>
+          <caption class="sr-only">Öffnungs- und Erreichbarkeitszeiten</caption>
+          <tbody>
+            <tr><th scope="row">Montag</th><td>9–17 Uhr</td></tr>
+            <tr><th scope="row">Dienstag</th><td>9–17 Uhr</td></tr>
+            <tr><th scope="row">Mittwoch</th><td>9–17 Uhr</td></tr>
+            <tr><th scope="row">Donnerstag</th><td>9–17 Uhr</td></tr>
+            <tr><th scope="row">Freitag</th><td>9–17 Uhr</td></tr>
+            <tr><th scope="row">Samstag</th><td>9–13 Uhr</td></tr>
+            <tr><th scope="row">Sonntag</th><td>geschlossen</td></tr>
+          </tbody>
         </table>
       </div>
 
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container">
