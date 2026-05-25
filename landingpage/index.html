@@ -171,7 +171,10 @@
     background-color: #071a30;
     background-image:
       linear-gradient(90deg, rgba(0, 23, 51, 0.9) 0%, rgba(0, 23, 51, 0.76) 47%, rgba(0, 23, 51, 0.34) 100%),
-      url('img/hero-fahrzeug-maler-sert.jpg');
+      image-set(
+        url('img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
+        url('img/hero-fahrzeug-maler-sert.jpg')  type('image/jpeg')
+      );
     background-position: center, center right;
     background-repeat: no-repeat;
     background-size: cover, cover;
@@ -635,7 +638,10 @@
   <div class="container">
     <div class="team-grid">
       <div>
-        <img class="team-photo" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer von Maler Sert" width="290" height="516" loading="lazy" decoding="async" />
+        <picture>
+          <source srcset="img/mehmet-sert-portrait.webp" type="image/webp">
+          <img class="team-photo" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer von Maler Sert" width="290" height="516" loading="lazy" decoding="async" />
+        </picture>
       </div>
       <div class="team-text">
         <h2>Ihr Ansprechpartner</h2>
@@ -655,7 +661,7 @@
     <div class="leistungen">
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Malerarbeiten" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/malerarbeiten-weisse-farbrolle.webp" type="image/webp"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Malerarbeiten" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Maler­arbeiten</h3>
           <p>Streichen, Tapezieren, Lasieren — innen und außen.</p>
@@ -670,7 +676,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/boden.jpg" alt="Boden" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/boden.webp" type="image/webp"><img src="img/boden.jpg" alt="Boden" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Boden</h3>
           <p>Vom neuen Belag bis zum aufgefrischten Parkett.</p>
@@ -684,7 +690,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/trockenbau-spachtel.jpg" alt="Trockenbau, Putz und Spachtel" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/trockenbau-spachtel.webp" type="image/webp"><img src="img/trockenbau-spachtel.jpg" alt="Trockenbau, Putz und Spachtel" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Trockenbau, Putz &amp; Spachtel</h3>
           <p>Alles zwischen Rohbau und Anstrich.</p>
@@ -698,7 +704,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung und Trocknung" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/schimmel-sanierung.webp" type="image/webp"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung und Trocknung" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Schimmel-Sanierung &amp; Trocknung</h3>
           <p>Mit Zertifikat — und vor allem mit Blick auf die Ursache.</p>
@@ -712,7 +718,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/montage-reparatur.jpg" alt="Montage und Reparatur" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/montage-reparatur.webp" type="image/webp"><img src="img/montage-reparatur.jpg" alt="Montage und Reparatur" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Montage &amp; Reparatur</h3>
           <p>Das, was sonst zwischen den Gewerken liegen bleibt.</p>
@@ -726,7 +732,7 @@
       </div>
 
       <div class="leistung-card">
-        <div class="card-image"><img src="img/hausverwaltung-gewerbe.jpg" alt="Hausverwaltungen und Gewerbe" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></div>
+        <div class="card-image"><picture><source srcset="img/hausverwaltung-gewerbe.webp" type="image/webp"><img src="img/hausverwaltung-gewerbe.jpg" alt="Hausverwaltungen und Gewerbe" width="400" height="200" loading="lazy" decoding="async" style="width:100%; height:200px; object-fit:cover; display:block;"></picture></div>
         <div class="card-body">
           <h3>Hausverwaltungen &amp; Gewerbe</h3>
           <p>Wiederkehrende Aufträge, mit Doku, auf Wunsch auch außerhalb der Geschäftszeiten.</p>
