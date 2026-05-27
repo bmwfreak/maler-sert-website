@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#252a2e" />
 <meta name="description" content="Impressum der Maler Sert GmbH, Hamburg." />
 <meta name="robots" content="noindex" />
 <title>Impressum — Maler Sert GmbH</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preload" href="fonts/source-sans-3-latin-400-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/newsreader-latin-500-600.woff2" as="font" type="font/woff2" crossorigin />
 <style>
   :root {
     --ink: #2a221b;
@@ -23,7 +26,7 @@
     background: var(--bg);
     color: var(--ink);
     line-height: 1.65;
-    font-size: 17px;
+    font-size: var(--text-base);
   }
   a { color: var(--accent-strong); }
   .container { max-width: 760px; margin: 0 auto; padding: 0 22px; }
@@ -41,11 +44,11 @@
     color: var(--accent-strong);
     font-weight: 800;
     text-decoration: none;
-    font-size: 18px;
+    font-size: var(--text-base);
   }
   main { padding: 50px 0 70px; }
   h1 {
-    font-size: 32px;
+    font-size: var(--text-section);
     font-weight: 800;
     margin: 0 0 8px;
     letter-spacing: -0.01em;
@@ -56,7 +59,7 @@
   }
   h2 {
     margin: 32px 0 10px;
-    font-size: 19px;
+    font-size: var(--text-lead);
     color: var(--accent-strong);
     font-weight: 700;
   }
@@ -68,15 +71,18 @@
   footer {
     border-top: 1px solid var(--line);
     padding: 24px 0;
-    font-size: 14px;
+    font-size: var(--text-xs);
     color: var(--ink-soft);
     text-align: center;
   }
   footer a { color: var(--ink); margin: 0 8px; text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 </style>
+<link rel="stylesheet" href="premium-system.css" />
 </head>
-<body>
+<body class="legal-page">
+
+<a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
 
 <div class="topbar">
   <div class="container nav">
@@ -84,7 +90,7 @@
   </div>
 </div>
 
-<main>
+<main id="hauptinhalt">
   <div class="container">
     <h1>Impressum</h1>
     <p class="lead">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
@@ -119,11 +125,9 @@
       Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: DE462262729
     </p>
 
-    <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+    <h2>Berufsbezeichnung</h2>
     <p>
-      Berufsbezeichnung: Maler und Lackierer (verliehen in der Bundesrepublik Deutschland)<br>
-      Zuständige Kammer: Handwerkskammer Hamburg, Holstenwall 12, 20355 Hamburg<br>
-      Es gelten die Regelungen der Handwerksordnung (HwO) sowie die berufsrechtlichen Bestimmungen der Handwerkskammer Hamburg, einsehbar unter <a href="https://www.hwk-hamburg.de" target="_blank" rel="noopener">www.hwk-hamburg.de</a>.
+      Maler und Lackierer
     </p>
 
     <h2>Berufshaftpflichtversicherung</h2>
@@ -156,7 +160,7 @@
       Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
     </p>
 
-    <p style="margin-top:36px;color:var(--ink-soft);font-size:14px;">Stand: Mai 2026</p>
+    <p style="margin-top:36px;color:var(--ink-soft);font-size: var(--text-xs);">Stand: Mai 2026</p>
   </div>
 </main>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#004085"/>
-  <text x="32" y="44" font-family="-apple-system,Segoe UI,Roboto,sans-serif"
-        font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle"
-        letter-spacing="-1">MS</text>
+  <rect width="64" height="64" rx="10" fill="#2a3034"/>
+  <path d="M12 13h40v2H12z" fill="#ad6840"/>
+  <text x="32" y="45" font-family="Georgia,serif"
+        font-size="31" font-weight="600" fill="#f6f2eb" text-anchor="middle">MS</text>
 </svg>

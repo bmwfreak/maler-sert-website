@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Maler Sert GmbH: Malermeisterbetrieb in Hamburg seit 2002. Malerarbeiten, Böden und Sanierung mit kostenloser Besichtigung und schriftlichem Angebot." />
+<meta name="description" content="Maler Sert GmbH in Hamburg seit 2002: Malerarbeiten, Böden und Sanierung mit persönlicher Besichtigung und schriftlichem Angebot." />
+<meta name="theme-color" content="#252a2e" />
 <title>Maler Sert GmbH — Präzise Malerarbeiten und Renovierung in Hamburg</title>
 <link rel="canonical" href="https://maler-sert.de/" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="alternate icon" href="favicon.ico" />
 <link rel="preload" href="fonts/source-sans-3-latin-400-700.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="fonts/newsreader-latin-500-600.woff2" as="font" type="font/woff2" crossorigin />
+<script>document.documentElement.classList.add("js");</script>
 
 <!-- Open Graph -->
 <meta property="og:title" content="Maler Sert GmbH — Präzise Malerarbeiten in Hamburg" />
-<meta property="og:description" content="Saubere Oberflächen und klare Renovierung: Malermeisterbetrieb in Hamburg seit 2002." />
+<meta property="og:description" content="Saubere Oberflächen und klare Renovierung: Maler Sert GmbH in Hamburg seit 2002." />
 <meta property="og:image" content="https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg" />
 <meta property="og:image:alt" content="Mehmet Sert vor dem Firmenwagen der Maler Sert GmbH" />
 <meta property="og:url" content="https://maler-sert.de/" />
@@ -34,7 +36,7 @@
   "@type": "Painter",
   "name": "Maler Sert GmbH",
   "image": "https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg",
-  "logo": "https://maler-sert.de/img/mehmet-sert-portrait.png",
+  "logo": "https://maler-sert.de/favicon.svg",
   "telephone": "+49-173-8615002",
   "email": "info@maler-sert.de",
   "url": "https://maler-sert.de/",
@@ -106,15 +108,15 @@
     src: url("fonts/newsreader-latin-500-600.woff2") format("woff2");
   }
   :root {
-    --ink: #19201e;
-    --ink-soft: #56625e;
-    --line: #d9ddd8;
+    --ink: #25282b;
+    --ink-soft: #686c70;
+    --line: #d9d7d3;
     --bg: #ffffff;
     --bg-band: #f5f6f3;
     --bg-card: #ffffff;
-    --accent: #214c4b;
-    --accent-strong: #163736;
-    --accent-soft: #e7eeee;
+    --accent: #555c61;
+    --accent-strong: #2a3034;
+    --accent-soft: #ecebea;
     --warm: #a45d37;
     --warm-strong: #85472a;
     --warm-soft: #f2e9e3;
@@ -124,8 +126,8 @@
 
   /* Skip-Link für Tastatur-Nutzer */
   .skip-link {
-    position: absolute;
-    top: -40px;
+    position: fixed;
+    top: 12px;
     left: 12px;
     background: var(--accent-strong);
     color: #fff;
@@ -134,16 +136,18 @@
     text-decoration: none;
     font-weight: 700;
     z-index: 100;
-    transition: top 0.15s;
+    transform: translateY(calc(-100% - 24px));
+    transition: transform 0.15s ease;
   }
-  .skip-link:focus { top: 12px; color: #fff; }
+  .skip-link:focus,
+  .skip-link:focus-visible { transform: translateY(0); color: #fff; }
   body {
     margin: 0;
     font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
     background: var(--bg);
     color: var(--ink);
     line-height: 1.62;
-    font-size: 18px;
+    font-size: var(--text-base);
   }
   a { color: var(--accent-strong); }
   a,
@@ -183,19 +187,19 @@
   }
   .brand-name {
     font-family: "Newsreader", Georgia, serif;
-    font-size: 30px;
+    font-size: var(--text-brand);
     font-weight: 600;
     line-height: 1;
   }
   .brand-location {
     color: var(--ink-soft);
-    font-size: 14px;
+    font-size: var(--text-xs);
     font-weight: 600;
   }
   .nav-actions { display: flex; align-items: center; gap: 34px; }
   .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
-    font-size: 16px;
+    font-size: var(--text-sm);
     font-weight: 600;
     text-decoration: none;
     color: var(--ink-soft);
@@ -208,7 +212,7 @@
     padding: 11px 18px;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: var(--text-sm);
     white-space: nowrap;
     transition: background 0.18s ease;
   }
@@ -217,14 +221,14 @@
   /* Hero */
   header.hero {
     padding: 108px 0 102px;
-    background-color: #152523;
+    background-color: #252a2e;
     background-image:
-      linear-gradient(90deg, rgba(17, 31, 29, 0.93) 0%, rgba(17, 31, 29, 0.84) 39%, rgba(17, 31, 29, 0.46) 63%, rgba(17, 31, 29, 0.18) 100%),
+      linear-gradient(90deg, rgba(29, 32, 35, 0.94) 0%, rgba(29, 32, 35, 0.88) 40%, rgba(29, 32, 35, 0.57) 64%, rgba(29, 32, 35, 0.22) 100%),
       image-set(
-        url('img/boden.webp') type('image/webp'),
-        url('img/boden.jpg') type('image/jpeg')
+        url('img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
+        url('img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
       );
-    background-position: center, center;
+    background-position: center, center right;
     background-repeat: no-repeat;
     background-size: cover, cover;
     color: #fff;
@@ -233,13 +237,13 @@
     align-items: center;
   }
   header.hero .container { width: 100%; }
-  header.hero h1 { max-width: 650px; font-size: 62px; }
+  header.hero h1 { max-width: 650px; font-size: var(--text-display); }
   header.hero .lead { max-width: 520px; }
   .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    font-size: 14px;
+    font-size: var(--text-xs);
     letter-spacing: 0;
     text-transform: uppercase;
     color: rgba(255,255,255,0.81);
@@ -254,7 +258,7 @@
   }
   h1 {
     font-family: "Newsreader", Georgia, serif;
-    font-size: 62px;
+    font-size: var(--text-display);
     line-height: 1.04;
     margin: 0 0 24px;
     font-weight: 500;
@@ -266,7 +270,7 @@
   }
   h1 strong { color: #deb190; font-weight: 500; }
   .lead {
-    font-size: 20px;
+    font-size: var(--text-lead);
     color: rgba(255,255,255,0.9);
     max-width: 660px;
     margin: 0 0 38px;
@@ -278,7 +282,7 @@
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 17px;
+    font-size: var(--text-base);
     border: 1px solid transparent;
     transition: transform 0.08s ease, background 0.15s;
   }
@@ -300,21 +304,26 @@
     display: grid;
     gap: 0;
     grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
   }
-  .trust-item { padding: 0 28px; border-left: 1px solid var(--line); }
-  .trust-item:first-child { padding-left: 0; border-left: 0; }
-  .trust-item:last-child { padding-right: 0; }
+  .trust-item {
+    padding: 14px 18px 16px;
+    border-left: 1px solid var(--line);
+    border-radius: 3px;
+    transition: background 0.2s ease;
+  }
+  .trust-item:first-child { border-left: 0; }
   .trust-label {
     margin: 0 0 7px;
     color: var(--warm);
-    font-size: 13px;
+    font-size: var(--text-xs);
     font-weight: 700;
     text-transform: uppercase;
   }
   .trust-item h3 {
     font-family: "Newsreader", Georgia, serif;
     margin: 0 0 4px;
-    font-size: 26px;
+    font-size: var(--text-section);
     color: var(--accent-strong);
     font-weight: 600;
     line-height: 1.16;
@@ -322,7 +331,7 @@
   .trust-item p {
     margin: 0;
     color: var(--ink-soft);
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
 
   /* Betrieb / Inhaber */
@@ -333,50 +342,27 @@
     align-items: center;
   }
   @media (min-width: 860px) {
-    .about-grid { grid-template-columns: 1.05fr 0.95fr; }
+    .about-grid { grid-template-columns: 0.72fr 1fr; }
   }
-  .about-vehicle {
-    aspect-ratio: 16/11;
+  .about-portrait {
+    aspect-ratio: 4/5;
     border-radius: 4px;
     width: 100%;
+    max-width: 384px;
     display: block;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
   }
   .about-text h2 { margin-top: 0; }
   .about-text > p {
     color: var(--ink-soft);
     margin: 0 0 15px;
   }
-  .owner-row {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    border-top: 1px solid var(--line);
-    margin-top: 30px;
-    padding-top: 22px;
-  }
-  .owner-photo {
-    width: 72px;
-    height: 88px;
-    border-radius: 3px;
-    display: block;
-    object-fit: cover;
-    object-position: center top;
-  }
-  .owner-name {
-    margin: 0 0 2px;
-    font-family: "Newsreader", Georgia, serif;
-    color: var(--accent-strong);
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 1.15;
-  }
   .person-title {
-    font-size: 15px;
+    font-size: var(--text-base);
     font-weight: 600;
     color: var(--accent);
-    margin: 0;
+    margin: -3px 0 25px;
   }
 
   /* Sektionen */
@@ -384,14 +370,14 @@
   section.alt { background: var(--bg-band); }
   .section-kicker {
     color: var(--warm);
-    font-size: 14px;
+    font-size: var(--text-xs);
     font-weight: 700;
     text-transform: uppercase;
     margin: 0 0 12px;
   }
   h2 {
     font-family: "Newsreader", Georgia, serif;
-    font-size: 44px;
+    font-size: var(--text-section);
     line-height: 1.14;
     margin: 0 0 16px;
     font-weight: 500;
@@ -401,7 +387,7 @@
     font-optical-sizing: auto;
   }
   .section-intro {
-    font-size: 20px;
+    font-size: var(--text-lead);
     color: var(--ink-soft);
     max-width: 720px;
     margin: 0 0 48px;
@@ -426,6 +412,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease;
   }
   .leistung-card .card-image {
     background: var(--bg-band);
@@ -437,6 +424,7 @@
     height: 238px;
     object-fit: cover;
     display: block;
+    transition: transform 0.42s ease;
   }
   .leistung-card .card-body {
     flex: 1;
@@ -446,7 +434,7 @@
   .leistung-card h3 {
     font-family: "Newsreader", Georgia, serif;
     margin: 0 0 10px;
-    font-size: 28px;
+    font-size: var(--text-card-title);
     line-height: 1.18;
     font-weight: 600;
     color: var(--accent-strong);
@@ -454,27 +442,102 @@
   .leistung-card p {
     margin: 0 0 15px;
     color: var(--ink-soft);
-    font-size: 17px;
+    font-size: var(--text-base);
   }
   .leistung-card ul {
     margin: 0;
     padding-left: 19px;
     color: var(--ink);
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
   .leistung-card li { margin-bottom: 6px; }
   .card-link {
     display: inline-flex;
     margin-top: 17px;
     color: var(--accent);
-    font-size: 16px;
+    font-size: var(--text-sm);
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid rgba(33, 76, 75, 0.35);
+    border-bottom: 1px solid rgba(85, 92, 97, 0.35);
   }
   .card-link:hover {
     color: var(--accent-strong);
     border-color: var(--accent-strong);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .trust-item:hover { background: var(--accent-soft); }
+    .leistung-card:hover { transform: translateY(-3px); }
+    .leistung-card:hover .card-image img { transform: scale(1.025); }
+  }
+
+  /* Progressive reveal: content stays visible when JavaScript is unavailable. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .js .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .js .leistungen .leistung-card:nth-child(2).reveal.visible { transition-delay: 0.06s; }
+  .js .leistungen .leistung-card:nth-child(3).reveal.visible { transition-delay: 0.12s; }
+  .js .leistungen .leistung-card:nth-child(4).reveal.visible { transition-delay: 0.06s; }
+  .js .leistungen .leistung-card:nth-child(5).reveal.visible { transition-delay: 0.12s; }
+  .js .leistungen .leistung-card:nth-child(6).reveal.visible { transition-delay: 0.18s; }
+  @media (hover: hover) and (pointer: fine) {
+    .js .leistung-card.reveal.visible:hover { transform: translateY(-3px); }
+  }
+
+  @media (min-width: 1100px) {
+    header.hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background-image: none;
+      background-color: #252a2e;
+    }
+    header.hero::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 0 0 0 52%;
+      background-image:
+        linear-gradient(90deg, rgba(29, 32, 35, 0.2), rgba(29, 32, 35, 0.1)),
+        image-set(
+          url('img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
+          url('img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
+        );
+      background-position: center, center top;
+      background-repeat: no-repeat;
+      background-size: cover, cover;
+    }
+    header.hero::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: calc(52% - 70px);
+      width: 140px;
+      background: linear-gradient(90deg, #252a2e 0%, rgba(37, 42, 46, 0.62) 46%, transparent 100%);
+      pointer-events: none;
+    }
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: 1100px) and (max-width: 1399px) {
+    header.hero h1 {
+      max-width: 515px;
+      font-size: var(--text-display);
+    }
+    header.hero .lead {
+      max-width: 455px;
+      font-size: var(--text-lead);
+    }
   }
 
   /* Preis-Beispiele */
@@ -495,13 +558,13 @@
     padding: 25px 26px 27px;
   }
   .preis-card .label {
-    font-size: 17px;
+    font-size: var(--text-base);
     color: var(--ink-soft);
     margin-bottom: 9px;
   }
   .preis-card .preis {
     font-family: "Newsreader", Georgia, serif;
-    font-size: 38px;
+    font-size: var(--text-section);
     line-height: 1.1;
     font-weight: 600;
     color: var(--accent);
@@ -510,14 +573,14 @@
   }
   .preis-card .preis small {
     font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
-    font-size: 16px;
+    font-size: var(--text-sm);
     font-weight: 500;
     color: var(--ink-soft);
   }
   .preis-hint {
     margin: 29px 0 0;
     color: var(--ink-soft);
-    font-size: 17px;
+    font-size: var(--text-base);
     max-width: 730px;
   }
 
@@ -555,19 +618,19 @@
     text-align: center;
     line-height: 1;
     margin-bottom: 18px;
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
   .ablauf-step h3 {
     font-family: "Newsreader", Georgia, serif;
     margin: 0 0 10px;
-    font-size: 27px;
+    font-size: var(--text-card-title);
     line-height: 1.18;
     font-weight: 600;
   }
   .ablauf-step p {
     margin: 0;
     color: var(--ink-soft);
-    font-size: 17px;
+    font-size: var(--text-base);
   }
 
   /* Einzugsgebiet */
@@ -582,12 +645,12 @@
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 9px 15px;
-    font-size: 16px;
+    font-size: var(--text-sm);
     color: var(--ink);
   }
   .map-link {
     margin: 24px 0 0;
-    font-size: 16px;
+    font-size: var(--text-sm);
     color: var(--ink-soft);
   }
 
@@ -609,19 +672,19 @@
   .kontakt-card h3 {
     font-family: "Newsreader", Georgia, serif;
     margin: 0 0 20px;
-    font-size: 29px;
+    font-size: var(--text-card-title);
     font-weight: 600;
     color: var(--accent-strong);
   }
   .kontakt-row { margin-bottom: 18px; }
-  .kontakt-row strong { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 3px; font-weight: 600; text-transform: uppercase; }
-  .kontakt-row a { font-size: 21px; font-weight: 600; text-decoration: none; }
+  .kontakt-row strong { display: block; font-size: var(--text-xs); color: var(--ink-soft); margin-bottom: 3px; font-weight: 600; text-transform: uppercase; }
+  .kontakt-row a { font-size: var(--text-lead); font-weight: 600; text-decoration: none; }
   .kontakt-row a:hover { text-decoration: underline; }
   .kontakt-hint {
     background: var(--accent-soft);
     border-radius: 3px;
     padding: 17px 19px;
-    font-size: 16px;
+    font-size: var(--text-sm);
     color: var(--ink);
     margin-top: 18px;
   }
@@ -634,13 +697,13 @@
   .erreichbar-card h3 {
     font-family: "Newsreader", Georgia, serif;
     margin: 0 0 18px;
-    font-size: 27px;
+    font-size: var(--text-card-title);
     font-weight: 600;
   }
   .erreichbar-card table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 17px;
+    font-size: var(--text-base);
   }
   .erreichbar-card td,
   .erreichbar-card th {
@@ -677,7 +740,7 @@
   footer p {
     margin: 8px 0;
     color: var(--ink-soft);
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
   footer a {
     color: var(--ink);
@@ -692,65 +755,78 @@
 
   /* Small screen tweaks */
   @media (max-width: 700px) {
-    body { font-size: 17px; }
+    body { font-size: var(--text-base); }
     .container { padding: 0 22px; }
-    h1 { font-size: 42px; }
-    h2 { font-size: 34px; }
-    .lead { font-size: 18px; }
+    h1 { font-size: var(--text-display); }
+    h2 { font-size: var(--text-section); }
+    .lead { font-size: var(--text-base); }
     section { padding: 62px 0; }
     .nav { min-height: 66px; gap: 12px; }
     .brand { gap: 0; }
-    .brand-name { font-size: 26px; }
+    .brand-name { font-size: var(--text-card-title); }
     .brand-location { display: none; }
-    .call-link { padding: 10px 14px; font-size: 15px; }
+    .call-link { padding: 10px 14px; font-size: var(--text-sm); }
     header.hero {
       padding: 72px 0 68px;
       min-height: 560px;
       background-image:
-        linear-gradient(90deg, rgba(17, 31, 29, 0.91) 0%, rgba(17, 31, 29, 0.78) 100%),
+        linear-gradient(90deg, rgba(29, 32, 35, 0.93) 0%, rgba(29, 32, 35, 0.79) 100%),
         image-set(
-          url('img/boden.webp') type('image/webp'),
-          url('img/boden.jpg') type('image/jpeg')
+          url('img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
+          url('img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
         );
-      background-position: center, 42% center;
+      background-position: center, 52% center;
       background-size: cover, cover;
     }
-    .eyebrow { margin-bottom: 18px; font-size: 13px; }
-    header.hero h1 { font-size: 43px; }
+    .eyebrow { margin-bottom: 18px; font-size: var(--text-xs); }
+    header.hero h1 { font-size: var(--text-display); }
     header.hero h1,
     header.hero .lead { max-width: 100%; }
-    .cta-row .btn { padding: 14px 18px; font-size: 16px; }
+    .cta-row .btn { padding: 14px 18px; font-size: var(--text-sm); }
     .trust { padding: 31px 0; }
-    .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 29px 0; }
-    .trust-item { padding: 0 18px; }
-    .trust-item:nth-child(odd) { border-left: 0; padding-left: 0; }
-    .trust-item:nth-child(even) { padding-right: 0; }
-    .trust-item h3 { font-size: 24px; }
-    .section-intro { font-size: 18px; margin-bottom: 37px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 0; margin: 0 auto; }
+    .trust-item { padding: 10px; }
+    .trust-item:nth-child(odd) { border-left: 0; }
+    .trust-item h3 { font-size: var(--text-card-title); }
+    .section-intro { font-size: var(--text-base); margin-bottom: 37px; }
     .leistung-card .card-image img { height: 250px; }
     .about-grid { gap: 34px; }
+    .about-portrait { max-width: 310px; margin: 0 auto; }
+    .js .leistungen .leistung-card.reveal.visible { transition-delay: 0s; }
     .kontakt-card,
     .erreichbar-card { padding: 26px 23px; }
   }
   @media (max-width: 420px) {
-    header.hero h1 { font-size: 38px; }
+    header.hero h1 { font-size: var(--text-section); }
     .cta-row .btn { width: 100%; text-align: center; }
   }
   @media (max-width: 340px) {
-    .trust-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; margin: 0 auto; }
     .trust-item,
     .trust-item:nth-child(even) {
       border-left: 0;
-      padding: 0;
+      padding: 10px 0;
     }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    .js .reveal,
+    .js .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
     .btn,
-    .call-link { transition: none; }
+    .call-link,
+    .leistung-card,
+    .leistung-card .card-image img,
+    .trust-item { transition: none; }
     .btn:hover { transform: none; }
+    .leistung-card:hover,
+    .leistung-card:hover .card-image img { transform: none; }
   }
 </style>
+<link rel="stylesheet" href="premium-system.css" />
 </head>
 <body>
 
@@ -776,7 +852,12 @@
 <main id="hauptinhalt">
 
 <header class="hero" id="top">
-  <div class="container">
+  <picture class="hero-media">
+    <source srcset="img/hero-fahrzeug-maler-sert.webp" type="image/webp">
+    <img src="img/hero-fahrzeug-maler-sert.jpg" alt="Mehmet Sert vor dem Firmenfahrzeug der Maler Sert GmbH" width="1672" height="941" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-content reveal">
     <div class="eyebrow">Malerbetrieb in Hamburg · seit 2002</div>
     <h1>Saubere Oberflächen. <strong>Präzise Renovierung.</strong></h1>
     <p class="lead">Malerarbeiten, Böden und Sanierungen für private Räume, Hausverwaltungen und Gewerbe. Persönlich besichtigt, klar angeboten und sauber übergeben.</p>
@@ -784,33 +865,15 @@
       <a class="btn btn-primary" href="#kontakt">Kostenlosen Termin anfragen</a>
       <a class="btn btn-secondary" href="tel:+491738615002">Direkt anrufen</a>
     </div>
+    <aside class="hero-proof" aria-label="Qualifikationen und Zusagen">
+      <div><strong>Persönlich vor Ort</strong><span>Besichtigung durch Mehmet Sert</span></div>
+      <div><strong>Seit 2002</strong><span>Familienbetrieb in Hamburg</span></div>
+      <div><strong>Sanierung mit Zertifikat</strong><span>Fachgerecht dokumentiert</span></div>
+      <div><strong>Schriftlicher Festpreis</strong><span>Nach Besichtigung</span></div>
+      <a class="hero-profile-link" href="https://www.google.com/search?kgmid=/g/11zbs0xcxh" target="_blank" rel="noopener">Google-Unternehmensprofil ansehen</a>
+    </aside>
   </div>
 </header>
-
-<section class="trust" aria-label="Qualifikationen und Zusagen">
-  <div class="container trust-grid">
-    <div class="trust-item">
-      <p class="trust-label">Qualifikation</p>
-      <h3>Malermeister</h3>
-      <p>HWK Hamburg</p>
-    </div>
-    <div class="trust-item">
-      <p class="trust-label">Erfahrung</p>
-      <h3>Seit 2002</h3>
-      <p>Familienbetrieb in Hamburg</p>
-    </div>
-    <div class="trust-item">
-      <p class="trust-label">Fachbereich</p>
-      <h3>Sanierung</h3>
-      <p>Schimmel-Sanierung mit Zertifikat</p>
-    </div>
-    <div class="trust-item">
-      <p class="trust-label">Angebot</p>
-      <h3>Schriftlich</h3>
-      <p>Festpreis nach Besichtigung</p>
-    </div>
-  </div>
-</section>
 
 <section id="leistungen">
   <div class="container">
@@ -820,8 +883,8 @@
 
     <div class="leistungen">
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/malerarbeiten-weisse-farbrolle.webp" type="image/webp"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Malerarbeiten" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/malerarbeiten-weisse-farbrolle.webp" type="image/webp"><img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Maler streicht Wand mit weißer Farbrolle in Hamburg" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Maler­arbeiten</h3>
           <p>Streichen, Tapezieren, Lasieren — innen und außen.</p>
@@ -834,10 +897,10 @@
           </ul>
           <a class="card-link" href="malerarbeiten-hamburg.html">Mehr zu Malerarbeiten →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/boden.webp" type="image/webp"><img src="img/boden.jpg" alt="Boden" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/boden.webp" type="image/webp"><img src="img/boden.jpg" alt="Neuer Designboden in Hamburger Wohnung verlegt" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Boden</h3>
           <p>Vom neuen Belag bis zum aufgefrischten Parkett.</p>
@@ -849,10 +912,10 @@
           </ul>
           <a class="card-link" href="bodenbelag-hamburg.html">Mehr zu Bodenbelag →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/trockenbau-spachtel.webp" type="image/webp"><img src="img/trockenbau-spachtel.jpg" alt="Trockenbau, Putz und Spachtel" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/trockenbau-spachtel.webp" type="image/webp"><img src="img/trockenbau-spachtel.jpg" alt="Spachtelarbeiten und Trockenbau in Hamburg" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Trockenbau, Putz &amp; Spachtel</h3>
           <p>Alles zwischen Rohbau und Anstrich.</p>
@@ -864,10 +927,10 @@
           </ul>
           <a class="card-link" href="trockenbau-hamburg.html">Mehr zu Trockenbau →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/schimmel-sanierung.webp" type="image/webp"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung und Trocknung" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/schimmel-sanierung.webp" type="image/webp"><img src="img/schimmel-sanierung.jpg" alt="Schimmel-Sanierung an Hamburger Wand durch Fachbetrieb" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Schimmel-Sanierung &amp; Trocknung</h3>
           <p>Mit Zertifikat — und vor allem mit Blick auf die Ursache.</p>
@@ -879,10 +942,10 @@
           </ul>
           <a class="card-link" href="schimmel-sanierung-hamburg.html">Mehr zur Schimmel-Sanierung →</a>
         </div>
-      </div>
+      </article>
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/montage-reparatur.webp" type="image/webp"><img src="img/montage-reparatur.jpg" alt="Montage und Reparatur" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/montage-reparatur.webp" type="image/webp"><img src="img/montage-reparatur.jpg" alt="Küchenmontage und Handwerksreparatur in Hamburg" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Montage &amp; Reparatur</h3>
           <p>Das, was sonst zwischen den Gewerken liegen bleibt.</p>
@@ -893,10 +956,10 @@
             <li>Reparaturen rund ums Haus</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <div class="leistung-card">
-        <div class="card-image"><picture><source srcset="img/hausverwaltung-gewerbe.webp" type="image/webp"><img src="img/hausverwaltung-gewerbe.jpg" alt="Hausverwaltungen und Gewerbe" width="400" height="200" loading="lazy" decoding="async"></picture></div>
+      <article class="leistung-card reveal">
+        <div class="card-image"><picture><source srcset="img/hausverwaltung-gewerbe.webp" type="image/webp"><img src="img/hausverwaltung-gewerbe.jpg" alt="Treppenhaus-Renovierung für Hausverwaltung in Hamburg" width="400" height="200" loading="lazy" decoding="async"></picture></div>
         <div class="card-body">
           <h3>Hausverwaltungen &amp; Gewerbe</h3>
           <p>Wiederkehrende Aufträge, mit Doku, auf Wunsch auch außerhalb der Geschäftszeiten.</p>
@@ -908,7 +971,7 @@
             <li>Schaden­behebung nach Wasser, Brand, Vandalismus</li>
           </ul>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
@@ -917,22 +980,22 @@
 <section class="alt" id="preise">
   <div class="container">
     <p class="section-kicker">Kalkulation</p>
-    <h2>Preise transparent</h2>
-    <p class="section-intro">Für klassische Streich­arbeiten gibt es feste Quadratmeter-Preise, damit Sie vorab planen können. Alles andere bekommen Sie nach dem kostenlosen Vor-Ort-Termin als schriftliches Festpreis-Angebot.</p>
+    <h2>Richtpreise mit klarem Leistungsumfang.</h2>
+    <p class="section-intro">Für klassische Streich­arbeiten erhalten Sie eine erste Orientierung pro Quadratmeter. Verbindlich wird der Preis nach dem kostenlosen Vor-Ort-Termin im schriftlichen Angebot.</p>
 
     <div class="preis-grid">
-      <div class="preis-card">
+      <div class="preis-card reveal">
         <div class="label">Wand zweimal streichen, weiß</div>
         <div class="preis">ab 8,10 € <small>/ m²</small></div>
       </div>
-      <div class="preis-card">
+      <div class="preis-card reveal">
         <div class="label">Decke zweimal streichen</div>
         <div class="preis">ab 9,10 € <small>/ m²</small></div>
       </div>
     </div>
 
     <p class="preis-hint">
-      Für alle anderen Arbeiten — Boden, Trockenbau, Sanierung, Montage — vereinbaren wir einen kostenlosen Besichtigungstermin und Sie bekommen ein schriftliches Festpreis-Angebot. Keine Stundensätze, keine versteckten Posten.
+      Richtpreise netto, zzgl. gesetzlicher MwSt. Die Richtpreise setzen einen tragfähigen, vorbereiteten Untergrund voraus. Material, Abdeckarbeiten und Ausbesserungen werden im schriftlichen Angebot konkret benannt.
     </p>
   </div>
 </section>
@@ -944,17 +1007,17 @@
     <p class="section-intro">Vom ersten Anruf bis zum sauber abgenommenen Auftrag — drei einfache Schritte.</p>
 
     <ol class="ablauf">
-      <li class="ablauf-step">
+      <li class="ablauf-step reveal">
         <span class="step-num" aria-hidden="true">1</span>
         <h3>Anrufen oder schreiben</h3>
         <p>Kurz beschreiben, was ansteht. Wir melden uns innerhalb eines Werktags zurück und vereinbaren einen Termin vor Ort.</p>
       </li>
-      <li class="ablauf-step">
+      <li class="ablauf-step reveal">
         <span class="step-num" aria-hidden="true">2</span>
         <h3>Vor-Ort-Termin — kostenlos</h3>
         <p>Wir schauen uns alles in Ruhe an, beraten zu Material und Aufwand und nehmen die wichtigsten Maße auf.</p>
       </li>
-      <li class="ablauf-step">
+      <li class="ablauf-step reveal">
         <span class="step-num" aria-hidden="true">3</span>
         <h3>Schriftliches Festpreis-Angebot</h3>
         <p>Sie bekommen ein klares Angebot — Quadratmeter-Preis oder Festpreis. Wenn Sie zustimmen, fixieren wir den Termin und legen los.</p>
@@ -965,26 +1028,17 @@
 
 <section id="team" class="alt">
   <div class="container">
-    <div class="about-grid">
+    <div class="about-grid reveal">
       <picture>
-        <source srcset="img/hero-fahrzeug-maler-sert.webp" type="image/webp">
-        <img class="about-vehicle" src="img/hero-fahrzeug-maler-sert.jpg" alt="Mehmet Sert vor dem Fahrzeug der Maler Sert GmbH" width="1672" height="941" loading="lazy" decoding="async" />
+        <source srcset="img/mehmet-sert-portrait.webp" type="image/webp">
+        <img class="about-portrait" src="img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer der Maler Sert GmbH" width="290" height="516" loading="lazy" decoding="async" />
       </picture>
       <div class="about-text">
         <p class="section-kicker">Persönlicher Betrieb</p>
         <h2>Direkt mit Mehmet Sert.</h2>
+        <p class="person-title">Inhaber &amp; Geschäftsführer</p>
         <p>Jeder Auftrag wird persönlich besichtigt und klar kalkuliert. Sie sprechen nicht mit einer Vermittlung oder Hotline, sondern direkt mit dem Betrieb, der die Arbeit ausführt.</p>
         <p>Seit 2002 arbeitet Maler Sert in Hamburg für private Eigentümer, Hausverwaltungen und Gewerbekunden.</p>
-        <div class="owner-row">
-          <picture>
-            <source srcset="img/mehmet-sert-portrait.webp" type="image/webp">
-            <img class="owner-photo" src="img/mehmet-sert-portrait.png" alt="" width="72" height="88" loading="lazy" decoding="async" />
-          </picture>
-          <div>
-            <p class="owner-name">Mehmet Sert</p>
-            <p class="person-title">Inhaber &amp; Geschäftsführer</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1005,6 +1059,21 @@
     <p class="map-link">
       <a href="https://www.openstreetmap.org/?mlat=53.5511&amp;mlon=10.0193#map=11/53.55/10.02" target="_blank" rel="noopener">Standort auf OpenStreetMap ansehen →</a>
     </p>
+  </div>
+</section>
+
+<section class="closing-trust" aria-label="Verlässliche Beauftragung">
+  <div class="container closing-trust-inner">
+    <div>
+      <p class="section-kicker">Verlässlich beauftragen</p>
+      <h2>Persönlich besichtigt.<br>Schriftlich kalkuliert.</h2>
+    </div>
+    <div class="closing-proof">
+      <p><strong>Persönlich</strong><span>Besichtigung durch Mehmet Sert</span></p>
+      <p><strong>Seit 2002</strong><span>In Hamburg tätig</span></p>
+      <p><strong>Mit Zertifikat</strong><span>Schimmel-Sanierung</span></p>
+      <p><strong>Festpreis</strong><span>Nach Besichtigung</span></p>
+    </div>
   </div>
 </section>
 
@@ -1034,7 +1103,7 @@
         </div>
         <div class="kontakt-row">
           <strong>WhatsApp</strong>
-          <a href="https://wa.me/491738615002?text=Hallo%20Herr%20Sert%2C%20ich%20bräuchte%20...." rel="noopener">Direkt schreiben</a>
+          <a href="https://wa.me/491738615002?text=Hallo%20Herr%20Sert%2C%20ich%20br%C3%A4uchte%20Unterst%C3%BCtzung%20bei%20Malerarbeiten." target="_blank" rel="noopener">Direkt schreiben</a>
         </div>
         <div class="kontakt-hint">
           Außerhalb der Sprechzeiten gerne per <strong>SMS oder WhatsApp</strong> an dieselbe Nummer — wir melden uns am nächsten Werktag zurück.
@@ -1074,5 +1143,30 @@
   </div>
 </footer>
 
+<nav class="mobile-contact-bar" aria-label="Schnellkontakt">
+  <a class="mobile-call" href="tel:+491738615002">Anrufen</a>
+  <a class="mobile-message" href="https://wa.me/491738615002?text=Hallo%20Herr%20Sert%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Malerarbeiten." target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script>
+  (() => {
+    const elements = document.querySelectorAll(".reveal");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
+
+    elements.forEach((element) => observer.observe(element));
+  })();
+</script>
 </body>
 </html>
