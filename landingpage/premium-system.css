@@ -257,8 +257,8 @@ header.hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: clamp(40rem, 51vw, 45rem);
-  padding-block: clamp(4.25rem, 3.1rem + 3.2vw, 6.6rem);
+  min-height: clamp(34rem, calc(100svh - 5.25rem), 41rem);
+  padding-block: clamp(3.35rem, 2.45rem + 2.6vw, 5.2rem);
   background: var(--surface-deep) !important;
 }
 
@@ -348,6 +348,18 @@ header.hero .lead {
 .hero-profile-link:hover {
   color: #f5d1b5;
   text-decoration-color: currentColor;
+}
+
+@media (min-width: 68rem) {
+  .hero-proof {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 44rem;
+    gap: var(--space-3);
+  }
+
+  .hero-profile-link {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 52rem) {
@@ -493,6 +505,94 @@ header.hero .lead {
   #leistungen .leistung-card:nth-child(6) .card-image img {
     height: 100%;
     min-height: 19rem;
+  }
+}
+
+.work-proof {
+  background: var(--surface-base);
+}
+
+.proof-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.proof-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-lift);
+}
+
+.proof-card picture {
+  display: block;
+  height: clamp(14rem, 28vw, 24rem);
+  background: var(--surface-soft);
+}
+
+.proof-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proof-copy {
+  padding: var(--space-4);
+}
+
+.proof-copy span {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  color: var(--accent-copper);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.proof-copy h3 {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-card-title);
+  font-weight: 600;
+  line-height: 1.13;
+  text-wrap: balance;
+}
+
+.proof-copy p {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 52rem) {
+  .proof-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .proof-card--wide {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .proof-card:not(.proof-card--wide) {
+    grid-column: span 5;
+  }
+
+  .proof-card--wide picture {
+    height: clamp(28rem, 42vw, 36rem);
+  }
+
+  .proof-card:not(.proof-card--wide) {
+    grid-template-columns: minmax(12rem, 0.85fr) 1fr;
+  }
+
+  .proof-card:not(.proof-card--wide) picture {
+    height: 100%;
+    min-height: 14rem;
   }
 }
 
@@ -657,7 +757,8 @@ footer a:hover {
     position: relative;
     inset: auto;
     width: 100%;
-    aspect-ratio: 1672 / 941;
+    height: clamp(8rem, 34vw, 9.5rem);
+    aspect-ratio: auto;
   }
 
   .hero-media img {
@@ -669,11 +770,31 @@ footer a:hover {
   }
 
   header.hero .hero-content {
-    padding-block: var(--space-6);
+    padding-block: var(--space-4);
+  }
+
+  header.hero h1 {
+    margin-bottom: var(--space-3);
+    font-size: clamp(2rem, 1.72rem + 1.45vw, 2.35rem);
+  }
+
+  header.hero .lead {
+    margin-bottom: var(--space-3);
   }
 
   .hero-proof {
-    margin-top: var(--space-4);
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+  }
+
+  .hero-proof span {
+    display: none;
+  }
+
+  .hero-profile-link {
+    margin-top: 0;
+    font-size: var(--text-xs);
   }
 
   .page-hero {

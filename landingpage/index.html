@@ -13,15 +13,6 @@
 <link rel="preload" href="fonts/newsreader-latin-500-600.woff2" as="font" type="font/woff2" crossorigin />
 <script>document.documentElement.classList.add("js");</script>
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YFTMCYXTDX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YFTMCYXTDX');
-</script>
-
 <!-- Open Graph -->
 <meta property="og:title" content="Maler Sert GmbH — Präzise Malerarbeiten in Hamburg" />
 <meta property="og:description" content="Saubere Oberflächen, präzises Handwerk: Maler Sert GmbH in Hamburg seit 2002." />
@@ -42,35 +33,45 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Painter",
+  "@type": ["Painter", "HomeAndConstructionBusiness"],
   "name": "Maler Sert GmbH",
+  "legalName": "Maler Sert GmbH",
+  "description": "Malerbetrieb in Hamburg seit 2002: Innen- und Außenanstriche, Fassaden, Bodenbelag, Trockenbau und Schimmel-Sanierung. Festpreis nach kostenloser Besichtigung.",
   "image": "https://maler-sert.de/img/hero-fahrzeug-maler-sert.jpg",
-  "logo": "https://maler-sert.de/favicon.svg",
-  "telephone": "+49-173-8615002",
-  "email": "info@maler-sert.de",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://maler-sert.de/favicon.svg",
+    "width": 64,
+    "height": 64
+  },
   "url": "https://maler-sert.de/",
+  "telephone": "+49-173-8615002",
+  "email": "malersert@yahoo.de",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "In der Niederung 15",
     "postalCode": "22047",
     "addressLocality": "Hamburg",
+    "addressRegion": "Hamburg",
     "addressCountry": "DE"
   },
-  "areaServed": [
-    {"@type": "City", "name": "Hamburg"},
-    {"@type": "City", "name": "Norderstedt"},
-    {"@type": "City", "name": "Pinneberg"},
-    {"@type": "City", "name": "Reinbek"}
-  ],
-  "foundingDate": "2002",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.5967448,
+    "longitude": 10.0873051
+  },
+  "hasMap": "https://www.google.com/maps?kgmid=/g/11zbs0xcxh",
   "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Rechnung, Überweisung, Bar",
   "vatID": "DE462262729",
+  "foundingDate": "2002",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
+      "opens": "08:00",
+      "closes": "18:00"
     },
     {
       "@type": "OpeningHoursSpecification",
@@ -79,25 +80,42 @@
       "closes": "13:00"
     }
   ],
-  "sameAs": [
-    "https://www.google.com/search?kgmid=/g/11zbs0xcxh"
+  "areaServed": [
+    {"@type": "City", "name": "Hamburg"},
+    {"@type": "City", "name": "Norderstedt"},
+    {"@type": "City", "name": "Pinneberg"},
+    {"@type": "City", "name": "Reinbek"}
   ],
   "founder": {
     "@type": "Person",
     "name": "Mehmet Sert",
     "jobTitle": "Inhaber & Geschäftsführer"
   },
+  "sameAs": [
+    "https://www.google.com/search?kgmid=/g/11zbs0xcxh",
+    "https://www.google.com/maps?kgmid=/g/11zbs0xcxh",
+    "https://maler-sert.de/"
+  ],
   "knowsAbout": [
     "Malerarbeiten",
     "Tapezieren",
     "Fassadenanstriche",
     "Bodenverlegung",
     "Parkett",
-    "Fliesenlegen",
     "Trockenbau",
-    "Schimmel-Sanierung",
-    "Küchenmontage"
-  ]
+    "Schimmel-Sanierung"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Leistungen Maler Sert GmbH",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Malerarbeiten Hamburg", "description": "Innenanstriche, Tapezieren, Decken und Wände streichen in Hamburg", "url": "https://maler-sert.de/malerarbeiten-hamburg.html"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fassadenanstrich Hamburg", "description": "Außenanstrich, Putzfassade, Klinker und Holzfassade in Hamburg", "url": "https://maler-sert.de/fassadenanstrich-hamburg.html"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bodenbelag Hamburg", "description": "Laminat, Parkett, Vinyl und Linoleum verlegen in Hamburg", "url": "https://maler-sert.de/bodenbelag-hamburg.html"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trockenbau Hamburg", "description": "Trockenbau, Rigips-Wände, abgehängte Decken in Hamburg", "url": "https://maler-sert.de/trockenbau-hamburg.html"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Schimmel-Sanierung Hamburg", "description": "Schimmel entfernen, Sanierung und Vorbeugung in Hamburg", "url": "https://maler-sert.de/schimmel-sanierung-hamburg.html"}}
+    ]
+  }
 }
 </script>
 
@@ -740,6 +758,64 @@
     border: 0;
   }
 
+  /* ── Kontaktformular ── */
+  .anfrage-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 34px;
+    margin-bottom: 28px;
+  }
+  .anfrage-form-card h3 {
+    font-family: "Newsreader", Georgia, serif;
+    margin: 0 0 8px;
+    font-size: var(--text-card-title);
+    font-weight: 600;
+    color: var(--accent-strong);
+  }
+  .form-lead { color: var(--ink-soft); margin: 0 0 26px; font-size: var(--text-base); }
+  .form-row { margin-bottom: 18px; }
+  .form-row-2 { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 560px) { .form-row-2 { grid-template-columns: 1fr; } }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: var(--text-sm); font-weight: 600; color: var(--ink); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-size: var(--text-base);
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 11px 14px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s ease;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(85,92,97,0.12); }
+  .form-group input:user-invalid,
+  .form-group textarea:user-invalid { border-color: #b03a2e; }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit { cursor: pointer; border: none; font-size: var(--text-base); }
+  .form-hinweis { margin: 12px 0 0; font-size: var(--text-xs); color: var(--ink-soft); }
+  .form-success {
+    background: #f0f7f2;
+    border: 1px solid #c3dcc9;
+    border-left: 3px solid #2e7d50;
+    border-radius: 4px;
+    padding: 22px 24px;
+    color: var(--ink);
+    font-size: var(--text-base);
+  }
+  .form-success p { margin: 0; }
+  @media (max-width: 700px) {
+    .anfrage-form-card { padding: 24px 20px; }
+  }
+
   /* Footer */
   footer {
     padding: 42px 0 52px;
@@ -835,7 +911,7 @@
     .leistung-card:hover .card-image img { transform: none; }
   }
 </style>
-<link rel="stylesheet" href="premium-system.css" />
+<link rel="stylesheet" href="premium-system.css?v=20260529" />
 </head>
 <body>
 
@@ -986,6 +1062,52 @@
   </div>
 </section>
 
+<section class="work-proof" aria-labelledby="arbeitsbeispiele-title">
+  <div class="container">
+    <p class="section-kicker">Arbeitsbeispiele</p>
+    <h2 id="arbeitsbeispiele-title">Ergebnisqualität, die man sehen kann.</h2>
+    <p class="section-intro">Saubere Kanten, ruhige Flächen und belastbare Übergaben sind der sichtbare Maßstab. Diese Bildsprache macht klar, welche Art Ausführung Maler Sert anstrebt.</p>
+
+    <div class="proof-grid">
+      <article class="proof-card proof-card--wide reveal">
+        <picture>
+          <source srcset="img/malerarbeiten-weisse-farbrolle.webp" type="image/webp">
+          <img src="img/malerarbeiten-weisse-farbrolle.jpg" alt="Weiße Farbrolle für gleichmäßige Malerarbeiten an einer Wand" width="1200" height="1800" loading="lazy" decoding="async">
+        </picture>
+        <div class="proof-copy">
+          <span>Innenflächen</span>
+          <h3>Ruhiger Auftrag, klare Kanten.</h3>
+          <p>Abdecken, Untergrund prüfen, sauberer Farbauftrag und eine Übergabe ohne Farbreste an Beschlägen, Böden oder Sockeln.</p>
+        </div>
+      </article>
+
+      <article class="proof-card reveal">
+        <picture>
+          <source srcset="img/boden.webp" type="image/webp">
+          <img src="img/boden.jpg" alt="Sauber verlegter Bodenbelag mit ruhigem Oberflächenbild" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
+        <div class="proof-copy">
+          <span>Boden & Abschluss</span>
+          <h3>Gerade Übergänge.</h3>
+          <p>Untergrund vorbereitet, Belag sauber geführt und Anschlüsse stimmig gelöst.</p>
+        </div>
+      </article>
+
+      <article class="proof-card reveal">
+        <picture>
+          <source srcset="img/hausverwaltung-gewerbe.webp" type="image/webp">
+          <img src="img/hausverwaltung-gewerbe.jpg" alt="Gepflegtes Mehrfamilienhaus für Hausverwaltungen und Gewerbe" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
+        <div class="proof-copy">
+          <span>Objekte</span>
+          <h3>Sauber dokumentiert.</h3>
+          <p>Für Eigentümer, Hausverwaltungen und Gewerbe mit klarer Abstimmung und belastbarer Übergabe.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="alt" id="preise">
   <div class="container">
     <p class="section-kicker">Kalkulation</p>
@@ -1090,7 +1212,52 @@
   <div class="container">
     <p class="section-kicker">Anfrage</p>
     <h2>Kontakt</h2>
-    <p class="section-intro">Anruf, Mail oder SMS — je nachdem, was Ihnen lieber ist. Wir antworten verlässlich.</p>
+    <p class="section-intro">Formular ausfüllen, anrufen oder schreiben — je nachdem, was Ihnen lieber ist. Wir antworten verlässlich.</p>
+
+    <div class="anfrage-form-card">
+      <h3>Kostenlose Anfrage stellen</h3>
+      <p class="form-lead">Kurz beschreiben, was ansteht — Mehmet Sert meldet sich innerhalb eines Werktags.</p>
+      <form id="anfrage-form" novalidate>
+        <div class="form-row form-row-2">
+          <div class="form-group">
+            <label for="anf-name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="anf-name" name="name" placeholder="Ihr Name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="anf-telefon">Telefon</label>
+            <input type="tel" id="anf-telefon" name="telefon" placeholder="Für Rückruf" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="anf-leistung">Leistung</label>
+            <select id="anf-leistung" name="leistung">
+              <option value="">Bitte wählen</option>
+              <option value="Malerarbeiten">Malerarbeiten</option>
+              <option value="Bodenbelag">Bodenbelag</option>
+              <option value="Trockenbau / Putz">Trockenbau / Putz</option>
+              <option value="Schimmel-Sanierung">Schimmel-Sanierung</option>
+              <option value="Montage &amp; Reparatur">Montage &amp; Reparatur</option>
+              <option value="Hausverwaltung / Gewerbe">Hausverwaltung / Gewerbe</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="anf-nachricht">Kurze Beschreibung <span aria-hidden="true">*</span></label>
+            <textarea id="anf-nachricht" name="nachricht" rows="4" placeholder="Was soll gemacht werden? In welchem Stadtteil? Wohnungsgröße ca.?" required></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn btn-primary form-submit">Anfrage senden →</button>
+        </div>
+        <p class="form-hinweis">* Pflichtfeld. Ihre Nachricht wird direkt an Mehmet Sert gesendet.</p>
+      </form>
+      <div class="form-success" id="anfrage-success" hidden>
+        <p>✓ <strong>Vielen Dank!</strong> Ihre Anfrage wurde gesendet. Mehmet Sert meldet sich innerhalb eines Werktags bei Ihnen.</p>
+      </div>
+    </div>
 
     <div class="kontakt-grid">
 
@@ -1102,7 +1269,7 @@
         </div>
         <div class="kontakt-row">
           <strong>E-Mail</strong>
-          <a href="mailto:info@maler-sert.de">info@maler-sert.de</a>
+          <a href="mailto:malersert@yahoo.de">malersert@yahoo.de</a>
         </div>
         <div class="kontakt-row">
           <strong>Adresse</strong>
@@ -1143,10 +1310,17 @@
 
 <footer>
   <div class="container">
-    <p><strong>Maler Sert GmbH</strong> · In der Niederung 15 · 22047 Hamburg</p>
-    <p>Telefon: <a href="tel:+491738615002">0173 8615002</a> · E-Mail: <a href="mailto:info@maler-sert.de">info@maler-sert.de</a></p>
+    <p><strong>Maler Sert GmbH</strong> · Hamburg · 22047</p>
+    <p>Telefon: <a href="tel:+491738615002">0173 8615002</a> · E-Mail: <a href="mailto:malersert@yahoo.de">malersert@yahoo.de</a></p>
     <p>
-      <a href="impressum.html">Impressum</a>·
+      <a href="malerarbeiten-hamburg.html">Malerarbeiten</a> ·
+      <a href="fassadenanstrich-hamburg.html">Fassadenanstrich</a> ·
+      <a href="trockenbau-hamburg.html">Trockenbau</a> ·
+      <a href="bodenbelag-hamburg.html">Bodenbelag</a> ·
+      <a href="schimmel-sanierung-hamburg.html">Schimmel-Sanierung</a>
+    </p>
+    <p>
+      <a href="impressum.html">Impressum</a> ·
       <a href="datenschutz.html">Datenschutz</a>
     </p>
   </div>
@@ -1156,6 +1330,54 @@
   <a class="mobile-call" href="tel:+491738615002">Anrufen</a>
   <a class="mobile-message" href="https://wa.me/491738615002?text=Hallo%20Herr%20Sert%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Malerarbeiten." target="_blank" rel="noopener">WhatsApp</a>
 </nav>
+
+<script>
+  /* ── Kontaktformular: WhatsApp ── */
+  (() => {
+    const form = document.getElementById('anfrage-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name     = document.getElementById('anf-name').value.trim();
+      const telefon  = document.getElementById('anf-telefon').value.trim();
+      const leistung = document.getElementById('anf-leistung').value;
+      const msg      = document.getElementById('anf-nachricht').value.trim();
+
+      /* Einfache Pflichtfeldprüfung */
+      const nameEl = document.getElementById('anf-name');
+      const msgEl  = document.getElementById('anf-nachricht');
+      let ok = true;
+      if (!name)  { nameEl.setCustomValidity('Bitte geben Sie Ihren Namen ein.'); nameEl.reportValidity(); ok = false; }
+      else         { nameEl.setCustomValidity(''); }
+      if (!msg && ok) { msgEl.setCustomValidity('Bitte beschreiben Sie Ihr Vorhaben.'); msgEl.reportValidity(); ok = false; }
+      else             { msgEl.setCustomValidity(''); }
+      if (!ok) return;
+
+      /* WhatsApp-Nachricht aufbauen */
+      const lines = ['📋 *Neue Anfrage von maler-sert.de*', ''];
+      lines.push('*Name:* '      + name);
+      if (telefon)  lines.push('*Telefon:* '  + telefon);
+      if (leistung) lines.push('*Leistung:* ' + leistung);
+      lines.push('*Nachricht:* ' + msg);
+      const waText = encodeURIComponent(lines.join('\n'));
+
+      window.open('https://wa.me/491738615002?text=' + waText, '_blank', 'noopener,noreferrer');
+
+      /* Erfolgs-State anzeigen */
+      form.hidden = true;
+      document.getElementById('anfrage-success').hidden = false;
+    });
+
+    /* Eigene Validierungsmeldung zurücksetzen, sobald Nutzer tippt */
+    ['anf-name', 'anf-nachricht'].forEach(id => {
+      document.getElementById(id).addEventListener('input', function () {
+        this.setCustomValidity('');
+      });
+    });
+  })();
+</script>
 
 <script>
   (() => {
