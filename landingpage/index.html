@@ -149,6 +149,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie funktioniert die Beauftragung bei Maler Sert?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Einfach anrufen (0173 8615002) oder per WhatsApp schreiben. Wir melden uns innerhalb eines Werktags zurück, vereinbaren einen kostenlosen Vor-Ort-Termin und machen anschließend ein schriftliches Festpreisangebot — ohne Stundensatz und ohne versteckte Kosten."}
+    },
+    {
+      "@type": "Question",
+      "name": "In welchen Stadtteilen Hamburg arbeitet Maler Sert?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Wir arbeiten im gesamten Hamburger Stadtgebiet sowie in Norderstedt, Pinneberg und Reinbek. Weitere Orte im näheren Umland auf Anfrage."}
+    },
+    {
+      "@type": "Question",
+      "name": "Machen Sie auch Aufträge für Hausverwaltungen und Gewerbe?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Ja. Wir betreuen Hausverwaltungen, WEGs und Gewerbekunden mit klarer Doku und verlässlichen Terminen. Typische Aufgaben: Treppenhäuser, Mieterwechsel-Renovierungen, Büros und Praxen — auf Wunsch auch außerhalb der regulären Geschäftszeiten."}
+    },
+    {
+      "@type": "Question",
+      "name": "Wie schnell bekomme ich ein Angebot?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nach Ihrer Anfrage melden wir uns innerhalb eines Werktags. Der Vor-Ort-Termin findet in der Regel innerhalb weniger Tage statt. Das schriftliche Angebot erhalten Sie nach der Besichtigung — üblicherweise noch am gleichen oder nächsten Werktag."}
+    }
+  ]
+}
+</script>
+
 <style>
   @font-face {
     font-family: "Source Sans 3";
@@ -885,6 +914,16 @@
     .leistung-card:hover,
     .leistung-card:hover .card-image img { transform: none; }
   }
+
+  /* FAQ */
+  .faq-list { max-width: 780px; }
+  details { border-bottom: 1px solid var(--line); }
+  details:first-child { border-top: 1px solid var(--line); }
+  summary { padding: 18px 0; font-weight: 700; font-size: var(--text-base); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--ink); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: var(--text-card-title); font-weight: 400; color: var(--warm); flex-shrink: 0; transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 18px; color: var(--ink-soft); font-size: var(--text-sm); padding-right: 32px; }
 </style>
 <link rel="stylesheet" href="premium-system.css?v=20260529" />
 </head>
@@ -1156,6 +1195,31 @@
         <p>Sie bekommen ein klares Angebot — Quadratmeter-Preis oder Festpreis. Wenn Sie zustimmen, fixieren wir den Termin und legen los.</p>
       </li>
     </ol>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="container">
+    <p class="section-kicker">FAQ</p>
+    <h2>Häufige Fragen zur Beauftragung.</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Wie funktioniert die Beauftragung bei Maler Sert?</summary>
+        <p>Einfach anrufen (0173 8615002) oder per WhatsApp schreiben. Wir melden uns innerhalb eines Werktags zurück, vereinbaren einen kostenlosen Vor-Ort-Termin und machen anschließend ein schriftliches Festpreisangebot — ohne Stundensatz und ohne versteckte Kosten.</p>
+      </details>
+      <details>
+        <summary>In welchen Stadtteilen Hamburg arbeitet Maler Sert?</summary>
+        <p>Wir arbeiten im gesamten Hamburger Stadtgebiet sowie in Norderstedt, Pinneberg und Reinbek. Weitere Orte im näheren Umland auf Anfrage.</p>
+      </details>
+      <details>
+        <summary>Machen Sie auch Aufträge für Hausverwaltungen und Gewerbe?</summary>
+        <p>Ja. Wir betreuen Hausverwaltungen, WEGs und Gewerbekunden mit klarer Doku und verlässlichen Terminen. Typische Aufgaben: Treppenhäuser, Mieterwechsel-Renovierungen, Büros und Praxen — auf Wunsch auch außerhalb der regulären Geschäftszeiten.</p>
+      </details>
+      <details>
+        <summary>Wie schnell bekomme ich ein Angebot?</summary>
+        <p>Nach Ihrer Anfrage melden wir uns innerhalb eines Werktags. Der Vor-Ort-Termin findet in der Regel innerhalb weniger Tage statt. Das schriftliche Angebot erhalten Sie nach der Besichtigung — üblicherweise noch am gleichen oder nächsten Werktag.</p>
+      </details>
+    </div>
   </div>
 </section>
 
