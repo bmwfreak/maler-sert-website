@@ -890,3 +890,58 @@ footer a:hover {
     font-size: var(--text-section);
   }
 }
+
+/* ─── Trust band ─────────────────────────────────────────────────────────── */
+.trust {
+  background: #fff;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+.trust-grid {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+.trust-item {
+  padding: 14px 18px 16px;
+  border-left: 1px solid var(--line);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+.trust-item:first-child { border-left: 0; }
+.trust-label {
+  margin: 0 0 7px;
+  color: var(--warm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.trust-item h3 {
+  font-family: "Newsreader", Georgia, serif;
+  margin: 0 0 4px;
+  font-size: var(--text-section);
+  color: var(--accent-strong);
+  font-weight: 600;
+  line-height: 1.16;
+}
+.trust-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+@media (hover: hover) and (pointer: fine) {
+  .trust-item:hover { background: var(--accent-soft); }
+}
+@media (max-width: 860px) {
+  .trust { padding: 31px 0; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
+  .trust-item { padding: 10px; }
+  .trust-item:nth-child(odd) { border-left: 0; }
+  .trust-item h3 { font-size: var(--text-card-title); }
+}
+@media (max-width: 340px) {
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-item,
+  .trust-item:nth-child(even) { border-left: 0; padding: 10px 0; }
+}
