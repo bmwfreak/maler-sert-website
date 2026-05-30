@@ -900,7 +900,7 @@ footer a:hover {
 .trust-grid {
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
 }
 .trust-item {
@@ -933,15 +933,11 @@ footer a:hover {
 @media (hover: hover) and (pointer: fine) {
   .trust-item:hover { background: var(--accent-soft); }
 }
-@media (max-width: 860px) {
-  .trust { padding: 31px 0; }
-  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
-  .trust-item { padding: 10px; }
-  .trust-item:nth-child(odd) { border-left: 0; }
+@media (max-width: 540px) {
+  .trust { padding: 24px 0; }
+  .trust-grid { grid-template-columns: 1fr; gap: 0; }
+  .trust-item { padding: 12px 10px; }
+  .trust-item:nth-child(n) { border-left: 0; border-top: 1px solid var(--line); }
+  .trust-item:first-child { border-top: 0; }
   .trust-item h3 { font-size: var(--text-card-title); }
-}
-@media (max-width: 340px) {
-  .trust-grid { grid-template-columns: 1fr; }
-  .trust-item,
-  .trust-item:nth-child(even) { border-left: 0; padding: 10px 0; }
 }
