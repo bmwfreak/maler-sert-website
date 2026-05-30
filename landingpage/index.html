@@ -1429,6 +1429,18 @@
       lines.push('*Nachricht:* ' + msg);
       const waText = encodeURIComponent(lines.join('\n'));
 
+      /* GA4: Formular-Absendung als Lead tracken */
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'form_submit', {
+          event_category: 'Lead',
+          event_label: leistung || 'Keine Auswahl',
+          value: 1
+        });
+      }
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({ event: 'form_submit', leistung: leistung || 'Keine Auswahl' });
+      }
+
       window.open('https://wa.me/491738615002?text=' + waText, '_blank', 'noopener,noreferrer');
 
       /* Erfolgs-State anzeigen */
@@ -1465,5 +1477,6 @@
     elements.forEach((element) => observer.observe(element));
   })();
 </script>
+<script src="tracking.js" defer></script>
 </body>
 </html>
