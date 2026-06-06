@@ -92,7 +92,7 @@ function showBanner(): void {
   banner.innerHTML =
     '<p>Wir verwenden Google Analytics, um anonym zu verstehen, wie unsere Website genutzt wird. ' +
     'Das hilft uns, sie zu verbessern. Sie entscheiden frei — Ihre Anfrage funktioniert auch ohne. ' +
-    'Mehr dazu in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>' +
+    'Mehr dazu in der <a href="/datenschutz">Datenschutzerklärung</a>.</p>' +
     '<div class="ms-consent-row">' +
     '<button type="button" class="ms-decline">Nur notwendige</button>' +
     '<button type="button" class="ms-accept">Akzeptieren</button>' +

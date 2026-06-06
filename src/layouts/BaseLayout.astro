@@ -9,7 +9,7 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
-  /** Pfad inkl. .html, "/" für Startseite */
+  /** Extensionsloser Pfad, z. B. "/malerarbeiten-hamburg"; "/" für Startseite */
   path: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -96,7 +96,7 @@ const twImage = twitterImage ?? ogImage;
     ) : (
       <footer>
         <div class="container">
-          <a href="/">Startseite</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+          <a href="/">Startseite</a> · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
         </div>
       </footer>
     )}

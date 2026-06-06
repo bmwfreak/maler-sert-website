@@ -10,11 +10,11 @@ import { business, services } from '../data/business';
     </p>
     <p>
       {services.map((s, i) => (
-        <Fragment>{i > 0 ? ' · ' : ''}<a href={`/${s.slug}.html`}>{s.name}</a></Fragment>
+        <Fragment>{i > 0 ? ' · ' : ''}<a href={`/${s.slug}`}>{s.name}</a></Fragment>
       ))}
     </p>
     <p>
-      <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
     </p>
   </div>
 </footer>
