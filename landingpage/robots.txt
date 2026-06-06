@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://maler-sert.de/sitemap.xml
