@@ -3,6 +3,7 @@ import { business } from '../data/business';
 import type { FaqItem } from '../data/business';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import TrustBand from '../components/TrustBand.astro';
 import Faq from '../components/Faq.astro';
 import ServiceSchema from '../components/schema/ServiceSchema.astro';
 
@@ -98,6 +99,8 @@ const waCta = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent(waTe
     rollerCrop={rollerCrop}
     waText={waText}
   />
+
+  <TrustBand />
 
   <main id="hauptinhalt">
     <slot />

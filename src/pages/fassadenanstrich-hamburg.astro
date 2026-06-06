@@ -1,0 +1,79 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import LeistungList from '../components/LeistungList.astro';
+import Ablauf from '../components/Ablauf.astro';
+
+const bereiche = [
+  { h: 'Putzfassade', items: ['Rissverschluss und Putzreparaturen', 'Grundierung und Haftbrücke', 'Silikonharz- und Dispersionsfassadenfarben', 'Wärmedämmverbundsystem (WDVS) Neuanstrich'] },
+  { h: 'Klinkerfassade', items: ['Klinkeranstrich und Lasur', 'Fugenreinigung und -sanierung', 'Hydrophobierung gegen Feuchtigkeit', 'Farblich abstimmbare Klinkerfarben'] },
+  { h: 'Holzfassade &amp; Außenholz', items: ['Holzverkleidungen ölen und lasieren', 'Fensterrahmen und Türen streichen', 'Holzschutzgrundierung auftragen', 'Schäden und Fäulnis ausbessern'] },
+  { h: 'Nebengebäude &amp; Sonstiges', items: ['Garage, Carport und Schuppen', 'Balkon- und Terrassengeländer', 'Dachgesims, Ortgang und Regenrinnen', 'Kellersockel und Einfahrtswände'] },
+];
+
+const vorbereitung = [
+  { h: 'Untergrundvorbereitung', items: ['Hohlstellen abklopfen und auffüllen', 'Alten losen Anstrich abwaschen oder abschleifen', 'Risssanierung mit elastischer Fassadenmasse', 'Saugregulierende Grundierung aufbringen'] },
+  { h: 'Materialauswahl', items: ['Silikonharzfarbe: langlebig, diffusionsoffen', 'Mineralfarbe: ideal für Altbauten', 'Dispersionsfarbe: preisgünstig, bewährt', 'Alle Farben nach RAL oder NCS auf Wunsch'] },
+];
+
+const ablauf = [
+  { h: 'Kurz melden', p: 'Anrufen oder per WhatsApp schreiben — Mehmet Sert meldet sich innerhalb eines Werktags.' },
+  { h: 'Kostenloser Vor-Ort-Termin', p: 'Persönliche Besichtigung: Fassadenzustand, Maße, Vorschäden, Materialwahl und Gerüstbedarf.' },
+  { h: 'Schriftliches Festpreisangebot', p: 'Transparente Kalkulation, alle Leistungen aufgeführt — Zustimmung → Termin → Fertigstellung.' },
+];
+
+const faqItems: FaqItem[] = [
+  { q: 'Was kostet ein Fassadenanstrich in Hamburg?', a: 'Der Preis hängt von Fassadenfläche, Untergrundszustand, notwendigen Putzreparaturen und dem gewählten Farbsystem ab. Maler Sert kommt kostenlos zur Besichtigung und erstellt ein schriftliches Festpreisangebot — ohne versteckte Kosten.' },
+  { q: 'Wann ist die beste Jahreszeit für einen Fassadenanstrich in Hamburg?', a: 'Fassadenanstriche sollten bei 5–30 °C und trockener Witterung ausgeführt werden. In Hamburg empfehlen wir Frühjahr (April–Mai) oder Spätsommer (August–September) — außerhalb der Hauptregenzeit und vor dem ersten Frost.' },
+  { q: 'Wie lange hält ein Fassadenanstrich?', a: 'Ein fachgerecht ausgeführter Fassadenanstrich mit hochwertigen Produkten (z. B. Caparol Amphibolin oder Alpina Wetterschutzfarbe) hält 8–15 Jahre. Entscheidend sind Untergrundvorbereitung, Anzahl der Anstriche und die Witterungsbelastung der Fassade.' },
+  { q: 'Kümmern Sie sich auch um das Gerüst?', a: 'Ja, wir koordinieren Gerüstbau und Anstrich als Gesamtpaket. Die Gerüstkosten sind transparent im schriftlichen Angebot ausgewiesen — kein zusätzlicher Aufwand für Sie.' },
+  { q: 'Führen Sie vor dem Anstrich auch Putzreparaturen durch?', a: 'Ja, Putzreparaturen, Rissverschluss und Grundierung gehören zu unserem Standard. Ein Anstrich auf beschädigtem Untergrund hält nicht — deshalb bereiten wir jede Fläche sorgfältig vor, bevor die erste Farbe aufgeht.' },
+];
+---
+<ServiceLayout
+  title="Fassadenanstrich Hamburg — Maler Sert GmbH | Außenanstrich & Fassade"
+  description="Fassadenanstrich Hamburg — Maler Sert GmbH. Außenanstriche, Putzreparaturen, Grundierung. Festpreis nach kostenloser Besichtigung. ☎ 0173 8615002."
+  path="/fassadenanstrich-hamburg.html"
+  ogImage="https://maler-sert.de/img/hausverwaltung-gewerbe.webp"
+  ogImageAlt="Fassadenanstrich an Gewerbegebäude in Hamburg"
+  eyebrow="Fassadenanstrich · Hamburg · seit 2002"
+  heroTitle="Fassade gestrichen. <strong>Zum Festpreis.</strong>"
+  lead="Putzfassaden, Klinker, Holz — Mehmet Sert besichtigt persönlich, klärt Vorschäden und macht ein schriftliches Angebot. Kein Stundensatz, keine Überraschungen."
+  img="/img/hausverwaltung-gewerbe.jpg"
+  imgWebp="/img/hausverwaltung-gewerbe.webp"
+  imgAlt="Gepflegtes Mehrfamilienhaus als Beispiel für Fassadenpflege in Hamburg"
+  waText="Hallo Herr Sert, ich brauche einen Fassadenanstrich in Hamburg."
+  breadcrumbName="Fassadenanstrich Hamburg"
+  serviceName="Fassadenanstrich Hamburg"
+  serviceDescription="Professioneller Fassadenanstrich in Hamburg seit 2002. Außenanstrich, Putzreparaturen, Grundierung. Festpreis nach Besichtigung."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zum Fassadenanstrich in Hamburg."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Außenanstrich von der Vorbereitung bis zur Fertigstellung.</h2>
+      <p class="section-intro">
+        Fassadenanstrich ist mehr als Farbe auftragen: Vorschäden erkennen, Untergrund vorbereiten,
+        richtige Produkte wählen. Wir übernehmen alles aus einer Hand — inklusive Putzreparaturen und
+        Gerüstkoordination. Für Innenarbeiten danach: <a href="/malerarbeiten-hamburg.html">Malerarbeiten Hamburg</a>.
+      </p>
+      <LeistungList bereiche={bereiche} />
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Wichtig zu wissen</p>
+      <h2>Vorbereitung entscheidet über die Haltbarkeit.</h2>
+      <div class="hinweis-box">
+        <strong>Hinweis:</strong> Ein Fassadenanstrich auf schlecht vorbereitendem Untergrund hält
+        keine 3 Jahre. Wir prüfen beim kostenlosen Vor-Ort-Termin gezielt Risse, Feuchtigkeitsschäden
+        und die Haftung des Altanstrichs — und kalkulieren Vorarbeiten transparent im Angebot.
+      </div>
+      <LeistungList bereiche={vorbereitung} />
+    </div>
+  </section>
+
+  <Ablauf steps={ablauf} title="Vom Anruf bis zur sauberen Fassade." />
+</ServiceLayout>

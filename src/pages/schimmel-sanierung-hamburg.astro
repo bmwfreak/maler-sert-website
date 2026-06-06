@@ -1,0 +1,83 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import LeistungList from '../components/LeistungList.astro';
+import Ablauf from '../components/Ablauf.astro';
+
+const bereiche = [
+  { h: 'Schimmel fachgerecht entfernen', items: ['Befallene Stellen freilegen und desinfizieren', 'Schimmelsporen mit zertifizierten Mitteln abtöten', 'Untergrund trocknen und stabilisieren', 'Schimmelhemmende Grundierung und Abschlussbeschichtung'] },
+  { h: 'Ursachenanalyse &amp; Trocknung', items: ['Feuchtigkeitsmessung an Wand, Boden und Ecken', 'Wärmebrücken und Kältebrücken identifizieren', 'Professionelle Trocknung nach Wasserschaden', 'Lüftungsempfehlung und Nutzungsberatung'] },
+  { h: 'Sanierputz &amp; Schutzbeschichtung', items: ['Befallenen Altputz vollständig abnehmen', 'Diffusionsoffenen Sanierputz auftragen', 'Schimmelhemmende Grundierung (zertifiziert)', 'Oberflächenfinish — weiter mit <a href="/malerarbeiten-hamburg.html">Malerarbeiten und neuem Anstrich</a>'] },
+  { h: 'Dokumentation für Versicherung &amp; Hausverwaltung', items: ['Schriftliche Schadens- und Maßnahmendokumentation', 'Fotodokumentation vor und nach Sanierung', 'WEG-konforme Unterlagen für Hausverwaltungen', 'Nachweis für Versicherungsansprüche'] },
+];
+
+const ablauf = [
+  { h: 'Anrufen oder schreiben', p: 'Kurz beschreiben, was Ihnen aufgefallen ist. Wir melden uns innerhalb eines Werktags.' },
+  { h: 'Kostenloser Vor-Ort-Termin', p: 'Mehmet Sert kommt persönlich: Feuchtigkeitsmessung, Ursachenermittlung, Befallsumfang klären.' },
+  { h: 'Schriftliches Festpreisangebot', p: 'Klares Angebot mit allen Maßnahmen. Zustimmung → Termin vereinbaren → sauber sanieren.' },
+];
+
+const faqItems: FaqItem[] = [
+  { q: 'Was kostet eine Schimmel-Sanierung in Hamburg?', a: 'Der Preis hängt vom Ausmaß des Befalls, der betroffenen Fläche und den notwendigen Maßnahmen ab. Nach einem kostenlosen Vor-Ort-Termin mit Feuchtigkeitsmessung erhalten Sie ein schriftliches Festpreisangebot. Ein kleiner Schimmelfleck ist deutlich günstiger als ein großflächiger Befall mit Putzerneuerung.' },
+  { q: 'Ist der Schimmel nach der Sanierung wirklich dauerhaft weg?', a: 'Bei fachgerechter Sanierung ja. Wir entfernen nicht nur den sichtbaren Schimmel, sondern beheben auch die Ursache (Feuchtigkeit, Wärmebrücken) und tragen schimmelhemmenden Sanierputz und Anstriche auf. Einfaches Überstreichen ist keine Sanierung — der Schimmel kommt dann zurück.' },
+  { q: 'Müssen wir die Wohnung verlassen während der Sanierung?', a: 'Für die Dauer der Arbeiten im betroffenen Raum sollten Sie sich nicht aufhalten. Bei kleinerem Befall reicht kurzzeitiges Verlassen des Raums aus. Bei umfangreicheren Sanierungen besprechen wir den genauen Ablauf beim Vor-Ort-Termin individuell.' },
+  { q: 'Wer bezahlt die Schimmel-Sanierung — Mieter oder Vermieter?', a: 'Das hängt von der Ursache ab: Liegt ein Baumangel vor (Kältebrücke, undichtes Dach), trägt der Vermieter die Kosten. Bei falscher Nutzung (mangelndes Lüften, zu wenig Heizen) in der Regel der Mieter. Wir erstellen eine saubere Dokumentation, die bei Versicherungen und Hausverwaltungen anerkannt wird.' },
+  { q: 'Was ist der Unterschied zwischen Überstreichen und echter Sanierung?', a: 'Beim Überstreichen wird Schimmel nur kurzfristig abgedeckt — er wächst unter der Farbe weiter und befällt die Bausubstanz. Bei echter Sanierung werden befallene Flächen freigelegt, desinfiziert, ggf. Putz entfernt, Sanierputz aufgetragen und die eigentliche Ursache (Feuchtigkeit, Wärmebrücke) behoben. Nur so bleibt die Wand dauerhaft schimmelfrei.' },
+];
+---
+<ServiceLayout
+  title="Schimmel-Sanierung Hamburg — Maler Sert GmbH | Mit Zertifikat"
+  description="Schimmel-Sanierung Hamburg — Maler Sert GmbH. Zertifiziert: Schimmelentfernung, Ursachenanalyse und Sanierputz. Kein Überstreichen. Festpreis nach Besichtigung. ☎ 0173 8615002."
+  path="/schimmel-sanierung-hamburg.html"
+  ogImage="https://maler-sert.de/img/schimmel-sanierung.webp"
+  ogImageAlt="Schimmel-Sanierung an einer Wand in Hamburg"
+  eyebrow="Schimmel-Sanierung · Hamburg · zertifiziert"
+  heroTitle="Schimmel weg. <strong>Ursache behoben.</strong>"
+  lead="Professionelle Schimmelentfernung mit Zertifikat — wir entfernen Schimmel fachgerecht, beheben die Ursache und schützen die Wände dauerhaft. Kein Überstreichen, kein Kaschieren."
+  img="/img/schimmel-sanierung.jpg"
+  imgWebp="/img/schimmel-sanierung.webp"
+  imgAlt="Schimmel-Sanierung an einer Wand in Hamburg"
+  waText="Hallo Herr Sert, ich habe Schimmel in Hamburg und brauche Hilfe."
+  breadcrumbName="Schimmel-Sanierung Hamburg"
+  serviceName="Schimmel-Sanierung Hamburg"
+  serviceDescription="Professionelle Schimmelentfernung in Hamburg mit Zertifikat. Ursachenanalyse, Sanierputz, Trocknung. Festpreis nach Vor-Ort-Termin."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zur Schimmel-Sanierung."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Sanierung, nicht Kosmetik.</h2>
+      <p class="section-intro">
+        Schimmel ist ein Warnsignal. Wir suchen die Ursache, beheben sie fachgerecht und stellen
+        sicher, dass die Wände danach wirklich dauerhaft schimmelfrei sind.
+      </p>
+      <div class="hinweis-box">
+        <strong>Wichtig:</strong> Überstreichen mit normaler Farbe ist keine Schimmel-Sanierung. Der
+        Schimmel wächst weiter — unter der Farbe und in die Bausubstanz hinein. Nur eine fachgerechte
+        Sanierung mit Ursachenbeseitigung hält dauerhaft.
+      </div>
+      <LeistungList bereiche={bereiche} />
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Festpreisangebot nach Besichtigung.</h2>
+      <p class="section-intro">
+        Schimmel-Sanierungen sind nicht pauschal bepreisbar — der Aufwand hängt vom Befallsumfang, der
+        betroffenen Fläche und der notwendigen Maßnahme ab.
+      </p>
+      <p class="preis-text">
+        Beim kostenlosen Vor-Ort-Termin messen wir die Feuchtigkeit, begutachten den Befall und
+        besprechen die notwendigen Schritte. Danach erhalten Sie ein
+        <strong>schriftliches Festpreisangebot</strong> — klar aufgeschlüsselt, ohne versteckte Positionen.<br /><br />
+        Ein kleiner Schimmelfleck an einer Ecke ist natürlich deutlich günstiger als eine großflächige
+        Sanierung mit Putzerneuerung. Den genauen Preis können wir erst nach Besichtigung nennen.
+      </p>
+    </div>
+  </section>
+
+  <Ablauf steps={ablauf} title="Vom ersten Anruf bis zur sanierten Wand." />
+</ServiceLayout>

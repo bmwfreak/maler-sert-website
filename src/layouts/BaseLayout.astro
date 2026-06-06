@@ -21,6 +21,8 @@ interface Props {
   noindex?: boolean;
   /** zusätzliche <body>-Klasse, z. B. "legal-page" */
   bodyClass?: string;
+  /** "full" = volle Nav + Footer + Mobile-Bar; "legal" = schlichte Marke + einfacher Footer */
+  chrome?: 'full' | 'legal';
 }
 
 const {
@@ -34,6 +36,7 @@ const {
   twitterImage,
   noindex = false,
   bodyClass,
+  chrome = 'full',
 } = Astro.props;
 
 const base = business.url.replace(/\/$/, '');
@@ -76,12 +79,28 @@ const twImage = twitterImage ?? ogImage;
   <body class={bodyClass}>
     <a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
 
-    <Nav />
+    {chrome === 'full' ? (
+      <Nav />
+    ) : (
+      <div class="topbar">
+        <div class="container nav">
+          <a class="brand" href="/">Maler Sert</a>
+        </div>
+      </div>
+    )}
 
     <slot />
 
-    <Footer />
-    <MobileContactBar />
+    {chrome === 'full' ? (
+      <Footer />
+    ) : (
+      <footer>
+        <div class="container">
+          <a href="/">Startseite</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+        </div>
+      </footer>
+    )}
+    {chrome === 'full' && <MobileContactBar />}
 
     <script>
       import '../scripts/tracking.ts';

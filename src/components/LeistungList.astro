@@ -1,0 +1,20 @@
+---
+// Leistungs-Liste (Service-Seiten): 2-spaltiges Raster aus Bereichen.
+// h und items dürfen &shy; / <a> enthalten → set:html.
+interface Bereich {
+  h: string;
+  items: string[];
+}
+interface Props {
+  bereiche: Bereich[];
+}
+const { bereiche } = Astro.props;
+---
+<div class="leistung-list">
+  {bereiche.map((b) => (
+    <div class="leistung-item">
+      <h3 set:html={b.h}></h3>
+      <ul>{b.items.map((li) => <li set:html={li}></li>)}</ul>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,77 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import LeistungList from '../components/LeistungList.astro';
+import Ablauf from '../components/Ablauf.astro';
+
+const bereiche = [
+  { h: 'Bodenbelag verlegen', items: ['Vinyl &amp; Designboden (LVT, auch auf Fußbodenheizung)', 'Laminat (Klick- und Klebsystem)', 'Kork und Linoleum', 'Sockelleisten und Übergänge sauber abgeschlossen'] },
+  { h: 'Parkett schleifen &amp; versiegeln', items: ['Ausgeblichenes oder verkratztes Parkett aufarbeiten', '3-stufiges Schleifen für gleichmäßige Oberfläche', 'Ölen oder Versiegeln nach Wunsch', 'Wohnzimmer, Diele, Büro, Praxis'] },
+  { h: 'Fliesen legen', items: ['Bad, Küche, Flur und Terrasse', 'Alte Fliesen entfernen, Untergrund vorbereiten', 'Großformate und Mosaik', 'Fugenbild nach Wunsch, Silikonfugen sauber abgeschlossen'] },
+  { h: 'Untergrundvorbereitung &amp; Komplettservice', items: ['Alten Boden entfernen und entsorgen', 'Ausgleichsmasse auftragen (für ebene Flächen)', 'Fußbodenheizung berücksichtigen', 'Kombination mit <a href="/malerarbeiten-hamburg.html">Malerarbeiten</a> und <a href="/trockenbau-hamburg.html">Trockenbau</a> möglich'] },
+];
+
+const ablauf = [
+  { h: 'Anrufen oder schreiben', p: 'Kurz beschreiben, welchen Boden Sie erneuern möchten. Wir melden uns innerhalb eines Werktags.' },
+  { h: 'Kostenloser Vor-Ort-Termin', p: 'Mehmet Sert kommt persönlich: Untergrund prüfen, Fläche aufmessen, Materialauswahl besprechen.' },
+  { h: 'Schriftliches Festpreisangebot', p: 'Klares Angebot inkl. Material. Zustimmung → Termin vereinbaren → sauber verlegt.' },
+];
+
+const faqItems: FaqItem[] = [
+  { q: 'Was kostet ein neuer Bodenbelag in Hamburg?', a: 'Der Preis hängt vom Belag (Vinyl, Laminat, Parkett, Fliesen), der Raumgröße und dem Zustand des Untergrunds ab. Nach einem kostenlosen Vor-Ort-Termin erhalten Sie ein schriftliches Festpreisangebot inklusive Material und Verlegung — kein Stundensatz, keine versteckten Posten.' },
+  { q: 'Was ist günstiger — Parkett schleifen oder neu verlegen?', a: 'In der Regel ist das Schleifen vorhandenen Parketts günstiger als Neuverlegen, sofern die Dielenstärke noch ausreichend ist (mindestens 3–4 mm Restdicke über der Nut). Wir prüfen das beim Vor-Ort-Termin und sagen Ihnen ehrlich, was sinnvoller ist.' },
+  { q: 'Wie lange dauert die Bodenverlegung in einer 3-Zimmer-Wohnung?', a: 'Eine typische 3-Zimmer-Wohnung (~70 m²) ist in 1–2 Werktagen fertig verlegt — je nach Belag, Untergrundvorbereitung und ob Fußbodenheizung berücksichtigt werden muss. Parkett mit Schleifen und Versiegelung dauert etwas länger.' },
+  { q: 'Können Sie Boden- und Malerarbeiten gleichzeitig machen?', a: 'Ja, das ist einer unserer Vorteile: Maler Sert GmbH macht Böden, Malerei und Trockenbau aus einer Hand. Wir planen beides gemeinsam, damit die Gewerke in der richtigen Reihenfolge ablaufen — so sparen Sie Zeit und einen zweiten Ansprechpartner.' },
+  { q: 'Welchen Bodenbelag empfehlen Sie für Mietwohnungen?', a: 'Für Mietwohnungen empfehlen wir robusten Designvinyl (LVT) oder hochwertiges Laminat. Beide Beläge sind pflegeleicht, strapazierfähig und kostengünstig. Die genaue Empfehlung hängt von Nutzung, Budget und Untergrund ab — das besprechen wir beim Vor-Ort-Termin.' },
+];
+---
+<ServiceLayout
+  title="Bodenbelag Hamburg — Maler Sert GmbH | Parkett, Vinyl, Fliesen"
+  description="Bodenbelag Hamburg — Maler Sert GmbH. Vinyl, Laminat, Designboden verlegen, Parkett schleifen, Fliesen legen. Festpreis nach Besichtigung. ☎ 0173 8615002."
+  path="/bodenbelag-hamburg.html"
+  ogImage="https://maler-sert.de/img/boden.webp"
+  ogImageAlt="Frisch verlegter Bodenbelag in Hamburg"
+  eyebrow="Bodenbelag · Hamburg · seit 2002"
+  heroTitle="Neuer Boden. <strong>Auf den Punkt verlegt.</strong>"
+  lead="Vinyl, Laminat, Parkett schleifen, Fliesen — Maler Sert GmbH verlegt Böden in Hamburg sauber und termingerecht. Komplettservice: Alten Boden raus, Untergrund vorbereiten, neuen Belag verlegen."
+  img="/img/boden.jpg"
+  imgWebp="/img/boden.webp"
+  imgAlt="Frisch verlegter Bodenbelag in Hamburg"
+  waText="Hallo Herr Sert, ich brauche einen neuen Boden in Hamburg."
+  breadcrumbName="Bodenbelag Hamburg"
+  serviceName="Bodenbelag Hamburg"
+  serviceDescription="Bodenbelag verlegen in Hamburg: Vinyl, Laminat, Parkett schleifen, Fliesen. Festpreis nach kostenlosem Vor-Ort-Termin."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zu Bodenbelag in Hamburg."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Vom Untergrund bis zum fertigen Belag.</h2>
+      <p class="section-intro">
+        Jeder Boden beginnt mit einem sauber vorbereiteten Untergrund. Wir verlegen alle gängigen
+        Beläge und übernehmen den kompletten Ablauf — inklusive Demontage und Entsorgung des alten Bodens.
+      </p>
+      <LeistungList bereiche={bereiche} />
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Festpreisangebot nach Besichtigung.</h2>
+      <p class="section-intro">
+        Bodenpreise hängen von Belag, Raumgröße und Untergrundvorbereitung ab — pauschale Preise wären hier unehrlich.
+      </p>
+      <p class="preis-text">
+        Beim kostenlosen Vor-Ort-Termin beurteilen wir den Untergrund, besprechen die Materialwahl und
+        nehmen die Fläche auf. Sie erhalten danach ein <strong>schriftliches Festpreisangebot</strong>
+        inklusive Material, Verlegung und Entsorgung des Altbelags — kein Stundensatz, keine Überraschungen.<br /><br />
+        Auf Wunsch zeigen wir Ihnen verschiedene Belagmuster und beraten ehrlich, welche Option für Ihre
+        Nutzung und Ihr Budget am besten passt.
+      </p>
+    </div>
+  </section>
+
+  <Ablauf steps={ablauf} title="Vom ersten Anruf bis zum neuen Boden." />
+</ServiceLayout>

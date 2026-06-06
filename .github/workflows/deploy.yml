@@ -10,9 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (Astro → dist/)
+        run: npm run build
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 5503b8cdde7230f2c7e8d6f3c8326a1a
-          command: pages deploy landingpage --project-name=maler-sert --branch=master
+          command: pages deploy dist --project-name=maler-sert --branch=master

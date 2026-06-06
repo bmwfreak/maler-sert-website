@@ -1,0 +1,77 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import LeistungList from '../components/LeistungList.astro';
+import Ablauf from '../components/Ablauf.astro';
+
+const bereiche = [
+  { h: 'Trockenbau', items: ['Trennwände und Vorsatzschalen', 'Abgehängte Decken (inkl. Lichtkanäle)', 'Vorwandinstallationen (WC, Heizung, Leitungen)', 'Schallschutz- und Brandschutz-Trockenbau'] },
+  { h: 'Innenputz &amp; Putzreparaturen', items: ['Vollverputzung von Räumen', 'Putzausbesserungen und Reparaturen', 'Sanierputz nach Wasserschaden oder Schimmel', 'Kalkputz und Sichtputze nach Wunsch'] },
+  { h: 'Spachtelarbeiten', items: ['Wände und Decken Q2 / Q3 gespachtelt', 'Bestand ausgleichen und Risse schließen', 'Altputz und Altanstrich vorbereiten', 'Geglättete Oberflächen für Anstrich oder Tapete'] },
+  { h: 'Kombination mit Malerei &amp; Boden', items: ['Komplettleistung: Trockenbau → Putz → <a href="/malerarbeiten-hamburg.html">Streichen</a>', 'Kein Koordinationsaufwand, ein Ansprechpartner', 'Übergabe sauber gestrichen und abnahmebereit', 'Auch für Renovierungen bei laufendem Betrieb'] },
+];
+
+const ablauf = [
+  { h: 'Anrufen oder schreiben', p: 'Kurz beschreiben, was Sie vorhaben. Wir melden uns innerhalb eines Werktags und vereinbaren einen Termin.' },
+  { h: 'Kostenloser Vor-Ort-Termin', p: 'Mehmet Sert kommt persönlich: Konstruktion besprechen, Untergrund prüfen, Maß nehmen und Qualitätsgrad klären.' },
+  { h: 'Schriftliches Festpreisangebot', p: 'Klares Angebot mit allen Positionen. Zustimmung → Termin fixieren → sauber ausgeführt und übergeben.' },
+];
+
+const faqItems: FaqItem[] = [
+  { q: 'Was kostet Trockenbau in Hamburg?', a: 'Der Preis hängt von Art und Umfang der Arbeiten ab: Eine einfache Trockenbauwand kostet anders als eine abgehängte Decke mit Lichtkanal oder eine Vorwandinstallation. Nach einem kostenlosen Vor-Ort-Termin erhalten Sie ein schriftliches Festpreisangebot.' },
+  { q: 'Wie lange dauert der Einbau einer Trennwand?', a: 'Eine einfache Trockenbau-Trennwand ist in einem Werktag gestellt und verspachtelt. Bis sie gestrichen werden kann, muss die Spachtelmasse trocknen (meist 24–48 Stunden). Die genaue Zeitplanung besprechen wir beim Vor-Ort-Termin.' },
+  { q: 'Können Sie Trockenbau und Malerarbeiten in einem Auftrag machen?', a: 'Ja, das ist einer der größten Vorteile bei Maler Sert GmbH: Trockenbau, Putz, Spachteln und Streichen aus einer Hand. Kein zweiter Handwerker, kein Koordinationsaufwand — wir planen die Reihenfolge der Gewerke und übergeben fertig gestrichen.' },
+  { q: 'Welcher Spachtelqualitätsgrad (Q1–Q4) ist sinnvoll?', a: 'Q1 reicht für Flächen, die verputzt oder gefliest werden. Q2 ist der Standard für normale Wandanstriche. Q3 empfiehlt sich für Wandfarben mit Glanzgrad oder flaches Streiflicht. Q4 ist nur bei sehr hohen Anforderungen nötig. Wir beraten Sie beim Vor-Ort-Termin, was für Ihre Fläche sinnvoll ist.' },
+  { q: 'Können Trockenbauwände auch Schallschutz haben?', a: 'Ja. Durch doppelte Beplankung, spezielle Schallschutzplatten und entkoppelte Unterkonstruktion lässt sich ein guter Trittschall- und Luftschallschutz erreichen. Wir besprechen Ihre Anforderungen und die passende Konstruktion beim Vor-Ort-Termin.' },
+];
+---
+<ServiceLayout
+  title="Trockenbau Hamburg — Maler Sert GmbH | Putz & Spachtel"
+  description="Trockenbau Hamburg — Maler Sert GmbH. Trockenbauwände, Putz und Spachtelarbeiten in Hamburg. Direkt kombinierbar mit Malerarbeiten aus einer Hand. ☎ 0173 8615002."
+  path="/trockenbau-hamburg.html"
+  ogImage="https://maler-sert.de/img/trockenbau-spachtel.webp"
+  ogImageAlt="Spachtelarbeiten beim Trockenbau in Hamburg"
+  eyebrow="Trockenbau · Putz · Spachtel · Hamburg"
+  heroTitle="Perfekter Untergrund. <strong>Sauber umgesetzt.</strong>"
+  lead="Trockenbauwände, abgehängte Decken, Sanierputz — Maler Sert GmbH schafft die Basis für Ihren Anstrich. Alles aus einer Hand: vom Rohbau bis zur fertig gestrichenen Wand."
+  img="/img/trockenbau-spachtel.jpg"
+  imgWebp="/img/trockenbau-spachtel.webp"
+  imgAlt="Spachtelarbeiten beim Trockenbau in Hamburg"
+  waText="Hallo Herr Sert, ich brauche Trockenbau oder Putzarbeiten in Hamburg."
+  breadcrumbName="Trockenbau Hamburg"
+  serviceName="Trockenbau Hamburg"
+  serviceDescription="Trockenbau, Putz und Spachtelarbeiten in Hamburg. Trockenbauwände, abgehängte Decken, Sanierputz. Kombination mit Malerarbeiten aus einer Hand."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zu Trockenbau in Hamburg."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Alles zwischen Rohbau und Anstrich.</h2>
+      <p class="section-intro">
+        Trockenbau und Putz sind die Grundlage jedes guten Anstrichs. Weil wir beides machen, gibt es
+        keinen Bruch zwischen Gewerken und keine schlechten Übergaben.
+      </p>
+      <LeistungList bereiche={bereiche} />
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Festpreisangebot nach Besichtigung.</h2>
+      <p class="section-intro">
+        Trockenbau- und Putzarbeiten variieren stark — je nach Umfang, Konstruktionsart und gewünschter Oberflächenqualität.
+      </p>
+      <p class="preis-text">
+        Beim kostenlosen Vor-Ort-Termin besprechen wir Konstruktion, Materialauswahl und
+        Oberflächenqualität (Spachtelgrad Q1–Q3). Danach erhalten Sie ein
+        <strong>schriftliches Festpreisangebot</strong> — aufgeschlüsselt, ohne versteckte Positionen.<br /><br />
+        Wenn Sie Trockenbau und Malerarbeiten zusammen beauftragen, planen wir alles in einem Ablauf:
+        Sie sparen Koordinationsaufwand und einen zweiten Handwerker.
+      </p>
+    </div>
+  </section>
+
+  <Ablauf steps={ablauf} title="Vom ersten Anruf bis zur fertigen Wand." />
+</ServiceLayout>

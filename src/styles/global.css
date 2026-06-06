@@ -104,15 +104,7 @@
   header.hero {
     padding: 108px 0 102px;
     background-color: #252a2e;
-    background-image:
-      linear-gradient(90deg, rgba(29, 32, 35, 0.94) 0%, rgba(29, 32, 35, 0.88) 40%, rgba(29, 32, 35, 0.57) 64%, rgba(29, 32, 35, 0.22) 100%),
-      image-set(
-        url('/img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
-        url('/img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
-      );
-    background-position: center, center right;
-    background-repeat: no-repeat;
-    background-size: cover, cover;
+    /* Hintergrundbild kommt aus .hero-media (siehe Overrides) */
     color: #fff;
     min-height: 636px;
     display: flex;
@@ -343,15 +335,6 @@
       position: absolute;
       z-index: 0;
       inset: 0 0 0 52%;
-      background-image:
-        linear-gradient(90deg, rgba(29, 32, 35, 0.2), rgba(29, 32, 35, 0.1)),
-        image-set(
-          url('/img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
-          url('/img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
-        );
-      background-position: center, center top;
-      background-repeat: no-repeat;
-      background-size: cover, cover;
     }
     header.hero::after {
       content: "";
@@ -687,14 +670,6 @@
     header.hero {
       padding: 72px 0 68px;
       min-height: 560px;
-      background-image:
-        linear-gradient(90deg, rgba(29, 32, 35, 0.93) 0%, rgba(29, 32, 35, 0.79) 100%),
-        image-set(
-          url('/img/hero-fahrzeug-maler-sert.webp') type('image/webp'),
-          url('/img/hero-fahrzeug-maler-sert.jpg') type('image/jpeg')
-        );
-      background-position: center, 52% center;
-      background-size: cover, cover;
     }
     .eyebrow { margin-bottom: 18px; font-size: var(--text-xs); }
     header.hero h1 { font-size: var(--text-display); }
@@ -1636,3 +1611,13 @@ footer a:hover {
 .kontakt-cta .btn-primary:hover { background:var(--warm-strong); }
 .kontakt-cta .btn-secondary { color:#fff; border-color:rgba(255,255,255,0.45); }
 .kontakt-cta .btn-secondary:hover { background:rgba(255,255,255,0.1); }
+
+/* --- Service-Seiten: Hinweis-Box & Preis-Text --- */
+.hinweis-box { background:var(--warm-soft); border-left:3px solid var(--warm); border-radius:4px; padding:18px 22px; max-width:680px; margin-bottom:36px; font-size:var(--text-sm); color:var(--ink); }
+.hinweis-box strong { color:var(--warm-strong); }
+.preis-text { font-size: var(--text-base); color:var(--ink-soft); max-width:680px; line-height:1.7; }
+.preis-text strong { color:var(--ink); }
+
+/* --- Rechtsseiten --- */
+.placeholder { color: var(--ink-soft); font-style: italic; }
+.legal-page .lead { color: var(--ink-soft); }
