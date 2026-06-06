@@ -1,0 +1,68 @@
+---
+import { business, services } from '../../data/business';
+
+const base = business.url.replace(/\/$/, '');
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': ['Painter', 'HomeAndConstructionBusiness'],
+  name: business.name,
+  legalName: business.legalName,
+  description: business.description,
+  image: business.image,
+  logo: { '@type': 'ImageObject', url: business.logo, width: 64, height: 64 },
+  url: business.url,
+  telephone: business.phone.schema,
+  email: business.email,
+  address: { '@type': 'PostalAddress', ...business.address },
+  geo: { '@type': 'GeoCoordinates', latitude: business.geo.latitude, longitude: business.geo.longitude },
+  hasMap: business.hasMap,
+  priceRange: business.priceRange,
+  currenciesAccepted: business.currenciesAccepted,
+  paymentAccepted: business.paymentAccepted,
+  vatID: business.vatID,
+  foundingDate: business.foundingDate,
+  openingHoursSpecification: business.openingHours.map((o) => ({
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: o.days,
+    opens: o.opens,
+    closes: o.closes,
+  })),
+  areaServed: business.areaServed.map((c) => ({ '@type': 'City', name: c })),
+  founder: { '@type': 'Person', name: business.founder.name, jobTitle: business.founder.jobTitle },
+  sameAs: business.sameAs,
+  knowsAbout: business.knowsAbout,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `Leistungen ${business.name}`,
+    itemListElement: services.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.schemaName,
+        description: s.description,
+        url: `${base}/${s.slug}.html`,
+      },
+    })),
+  },
+  aggregateRating: { '@type': 'AggregateRating', ...business.aggregateRating },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: business.phone.schema,
+    contactType: 'customer service',
+    areaServed: 'DE',
+    availableLanguage: 'German',
+  },
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `tel:${business.phone.tel}`,
+      inLanguage: 'de-DE',
+      actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+    },
+    result: { '@type': 'Reservation', name: 'Kostenloser Vor-Ort-Termin' },
+  },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(ld)} is:inline />

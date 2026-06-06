@@ -1,0 +1,19 @@
+---
+import { business } from '../data/business';
+---
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="brand-name">Maler Sert</span>
+      <span class="brand-location">Hamburg</span>
+    </a>
+    <div class="nav-actions">
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/#ablauf">Ablauf</a>
+        <a href="/#kontakt">Kontakt</a>
+      </nav>
+      <a class="call-link" href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+import { business } from '../data/business';
+const profileUrl = `https://www.google.com/search?kgmid=${business.kgmid}`;
+---
+<header class="hero" id="top">
+  <picture class="hero-media">
+    <source srcset="/img/hero-fahrzeug-maler-sert.webp" type="image/webp" />
+    <img
+      src="/img/hero-fahrzeug-maler-sert.jpg"
+      alt="Mehmet Sert vor dem Firmenfahrzeug der Maler Sert GmbH"
+      width="1672"
+      height="941"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </picture>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-content reveal">
+    <div class="eyebrow">Malerbetrieb in Hamburg · seit 2002</div>
+    <h1>Saubere Oberflächen. <strong>Präzises Handwerk.</strong></h1>
+    <p class="lead">
+      Malerarbeiten, Böden und Sanierungen für private Räume, Hausverwaltungen und Gewerbe.
+      Persönlich besichtigt, klar angeboten und sauber übergeben.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#kontakt">Kostenlosen Termin vereinbaren</a>
+      <a class="btn btn-secondary" href={`tel:${business.phone.tel}`}>Direkt anrufen</a>
+    </div>
+    <aside class="hero-proof" aria-label="Qualifikationen und Zusagen">
+      <div><strong>Persönlich vor Ort</strong><span>Besichtigung durch Mehmet Sert</span></div>
+      <div><strong>Seit 2002</strong><span>Familienbetrieb in Hamburg</span></div>
+      <div><strong>Sanierung mit Zertifikat</strong><span>Fachgerecht dokumentiert</span></div>
+      <a class="hero-profile-link" href={profileUrl} target="_blank" rel="noopener">
+        Google-Unternehmensprofil ansehen
+      </a>
+    </aside>
+  </div>
+</header>

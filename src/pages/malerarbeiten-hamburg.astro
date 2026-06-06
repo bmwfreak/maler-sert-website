@@ -1,0 +1,159 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const bereiche = [
+  {
+    h: 'Innenanstriche',
+    items: [
+      'Wände und Decken (ein- oder mehrlagig)',
+      'Türen, Fensterrahmen, Heizkörper',
+      'Treppenhaus und Gemeinschaftsflächen',
+      'Keller und Tiefgarage',
+    ],
+  },
+  {
+    h: 'Tapezieren',
+    items: [
+      'Vlies- und Raufasertapeten',
+      'Designtapeten und Mustertapeten',
+      'Alte Tapete entfernen, Untergrund glätten',
+      'Strukturtapeten und Glasvlies',
+    ],
+  },
+  {
+    h: 'Fassaden &amp; Außenanstriche',
+    items: [
+      'Fassadenanstriche und Putzreparaturen',
+      'Balkone, Garagen, Carports',
+      'Holzverkleidungen und Fensterläden',
+      'Grundierung und Tiefenprimer',
+    ],
+  },
+  {
+    h: 'Holz, Lack &amp; Lasur',
+    items: [
+      'Holzböden ölen und versiegeln',
+      'Treppen lackieren oder lasieren',
+      'Möbel und Einbauten lackieren',
+      'Rostschutz auf Stahl und Metall',
+    ],
+  },
+];
+
+const faqItems: FaqItem[] = [
+  {
+    q: 'Was kostet Streichen in Hamburg?',
+    a: 'Wände zweimal streichen (weiß) kostet bei uns ab 8,10 € pro m², Decken ab 9,10 € pro m² (netto). Für Tapezierarbeiten, Fassaden und Sonderfarben gibt es nach einem kostenlosen Vor-Ort-Termin ein schriftliches Festpreisangebot.',
+  },
+  {
+    q: 'Wie lange dauert es, eine 3-Zimmer-Wohnung zu streichen?',
+    a: 'Eine normale 3-Zimmer-Wohnung (~70 m²) ist in 2–3 Werktagen fertig gestrichen — je nach Wandzustand, Anzahl der Anstriche und ob Tapezierarbeiten dazukommen.',
+  },
+  {
+    q: 'Streichen Sie auch Fassaden in Hamburg?',
+    a: 'Ja, wir machen Fassadenanstriche, Balkone und Garagen in Hamburg und Umland, inklusive Putzreparaturen und Grundierung. Den Preis ermitteln wir nach Besichtigung als schriftliches Festpreisangebot.',
+  },
+  {
+    q: 'Müssen wir die Möbel selbst ausräumen?',
+    a: 'Wir decken Böden und Möbel sorgfältig ab. Großmöbel schützen wir an Ort und Stelle. Was umgestellt werden sollte, besprechen wir beim kostenlosen Vor-Ort-Termin.',
+  },
+  {
+    q: 'Welche Farben und Materialien verwenden Sie?',
+    a: 'Wir arbeiten mit Markenprodukten von Alpina, Caparol und Dulux. Eigene Wunschfarben und RAL-Töne sind kein Problem. Alles besprechen wir beim Vor-Ort-Termin.',
+  },
+];
+---
+<ServiceLayout
+  title="Malerarbeiten Hamburg — Maler Sert GmbH | Seit 2002"
+  description="Malerarbeiten in Hamburg — Maler Sert GmbH. Innenanstriche, Tapezieren, Fassaden, Holzlasuren. Festpreis nach Besichtigung, kostenloser Vor-Ort-Termin. ☎ 0173 8615002."
+  path="/malerarbeiten-hamburg.html"
+  ogImage="https://maler-sert.de/img/malerarbeiten-weisse-farbrolle.webp"
+  ogImageAlt="Malerarbeiten mit weißer Farbrolle in Hamburg"
+  eyebrow="Malerarbeiten · Hamburg · seit 2002"
+  heroTitle="Sauber gestrichen. <strong>Zum Festpreis.</strong>"
+  lead="Innenanstriche, Tapezieren, Fassaden — Mehmet Sert besichtigt jeden Auftrag persönlich und macht ein schriftliches Angebot. Kein Stundensatz, keine Überraschungen."
+  img="/img/malerarbeiten-weisse-farbrolle.jpg"
+  imgWebp="/img/malerarbeiten-weisse-farbrolle.webp"
+  imgAlt="Weiße Farbrolle für saubere Malerarbeiten"
+  rollerCrop={true}
+  waText="Hallo Herr Sert, ich brauche Malerarbeiten in Hamburg."
+  breadcrumbName="Malerarbeiten Hamburg"
+  serviceName="Malerarbeiten Hamburg"
+  serviceDescription="Professionelle Malerarbeiten in Hamburg: Innenanstriche, Tapezieren, Fassadenanstriche, Holzlasuren. Festpreis nach Vor-Ort-Termin. Maler Sert GmbH seit 2002."
+  offers={[
+    { name: 'Wand zweimal streichen (weiß)', price: '8.10' },
+    { name: 'Decke zweimal streichen', price: '9.10' },
+  ]}
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zu Malerarbeiten in Hamburg."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Vom Deckenanstrich bis zur Fassade.</h2>
+      <p class="section-intro">
+        Alles rund um Farbe, Anstrich und Tapete — aus einer Hand, ein Ansprechpartner. Bei
+        Schimmelbefall starten wir mit der <a href="/schimmel-sanierung-hamburg.html">Schimmel-Sanierung</a>,
+        bei Umbauten übernehmen wir auch den <a href="/trockenbau-hamburg.html">Trockenbau</a>.
+      </p>
+      <div class="leistung-list">
+        {bereiche.map((b) => (
+          <div class="leistung-item">
+            <h3 set:html={b.h}></h3>
+            <ul>{b.items.map((li) => <li>{li}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Klar kalkuliert, schriftlich bestätigt.</h2>
+      <p class="section-intro">
+        Für Standardstreicharbeiten gibt es feste Quadratmeterpreise — für alles andere ein
+        Festpreisangebot nach Besichtigung.
+      </p>
+      <div class="preis-grid">
+        <div class="preis-card">
+          <div class="label">Wand zweimal streichen, weiß</div>
+          <div class="preis">ab 8,10 € <small>/ m²</small></div>
+        </div>
+        <div class="preis-card">
+          <div class="label">Decke zweimal streichen</div>
+          <div class="preis">ab 9,10 € <small>/ m²</small></div>
+        </div>
+      </div>
+      <p class="preis-hint">
+        Alle Preise netto, zzgl. MwSt. Für Tapezierarbeiten, Fassaden und Sonderfarben erhalten Sie
+        nach dem kostenlosen Vor-Ort-Termin ein schriftliches Festpreisangebot.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="section-kicker">Ablauf</p>
+      <h2>Einfach, verlässlich, ohne Umwege.</h2>
+      <ol class="ablauf">
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Anrufen oder schreiben</h3>
+          <p>Kurz beschreiben, was ansteht. Meldung innerhalb eines Werktags.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Kostenloser Vor-Ort-Termin</h3>
+          <p>Mehmet Sert kommt persönlich, berät zu Farbe und Material, nimmt Maß.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Schriftliches Festpreisangebot</h3>
+          <p>Klares Angebot per m² oder Festpreis — Zustimmung → Termin → los.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</ServiceLayout>

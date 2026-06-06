@@ -1,0 +1,39 @@
+---
+import type { FaqItem } from '../data/business';
+
+interface Props {
+  items: FaqItem[];
+  title?: string;
+  kicker?: string;
+  /** helle Bandfarbe (.alt) */
+  alt?: boolean;
+}
+
+const { items, title = 'Häufige Fragen', kicker = 'FAQ', alt = false } = Astro.props;
+
+// Eine Datenquelle → sichtbares Markup UND FAQPage-JSON-LD (kein Drift mehr).
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((it) => ({
+    '@type': 'Question',
+    name: it.q,
+    acceptedAnswer: { '@type': 'Answer', text: it.a },
+  })),
+};
+---
+<section id="faq" class={alt ? 'alt' : undefined}>
+  <div class="container">
+    <p class="section-kicker">{kicker}</p>
+    <h2>{title}</h2>
+    <div class="faq-list">
+      {items.map((it) => (
+        <details>
+          <summary>{it.q}</summary>
+          <p>{it.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+<script type="application/ld+json" set:html={JSON.stringify(jsonld)} is:inline />

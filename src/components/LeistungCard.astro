@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;        // darf &shy; enthalten → set:html
+  lead: string;
+  items: string[];      // dürfen &shy; enthalten → set:html
+  img: string;
+  imgWebp: string;
+  alt: string;
+  href?: string;
+  linkText?: string;
+}
+const { title, lead, items, img, imgWebp, alt, href, linkText } = Astro.props;
+---
+<article class="leistung-card reveal">
+  <div class="card-image">
+    <picture>
+      <source srcset={imgWebp} type="image/webp" />
+      <img src={img} alt={alt} width="400" height="200" loading="lazy" decoding="async" />
+    </picture>
+  </div>
+  <div class="card-body">
+    <h3 set:html={title}></h3>
+    <p>{lead}</p>
+    <ul>{items.map((li) => <li set:html={li}></li>)}</ul>
+    {href && linkText && <a class="card-link" href={href}>{linkText}</a>}
+  </div>
+</article>

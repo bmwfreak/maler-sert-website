@@ -1,0 +1,46 @@
+---
+import { business } from '../data/business';
+
+interface Props {
+  eyebrow: string;
+  title: string;       // darf &shy;/<strong> enthalten → set:html
+  lead: string;
+  img: string;
+  imgWebp: string;
+  imgAlt: string;
+  /** Bild-Crop für die Farbrollen-Aufnahme */
+  rollerCrop?: boolean;
+  /** vorbefüllter WhatsApp-Text */
+  waText?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  img,
+  imgWebp,
+  imgAlt,
+  rollerCrop = false,
+  waText = 'Hallo Herr Sert, ich brauche Malerarbeiten in Hamburg.',
+} = Astro.props;
+
+const wa = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent(waText)}`;
+const mediaClass = rollerCrop ? 'page-hero-media page-hero-media--roller' : 'page-hero-media';
+---
+<header class="page-hero">
+  <picture class={mediaClass}>
+    <source srcset={imgWebp} type="image/webp" />
+    <img src={img} alt={imgAlt} width="1672" height="941" fetchpriority="high" decoding="async" />
+  </picture>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1 set:html={title}></h1>
+    <p class="lead">{lead}</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href={`tel:${business.phone.tel}`}>Jetzt anrufen</a>
+      <a class="btn btn-secondary" href={wa} rel="noopener">Per WhatsApp anfragen</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,90 @@
+---
+import { business } from '../data/business';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import MobileContactBar from '../components/MobileContactBar.astro';
+import '../styles/tokens.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Pfad inkl. .html, "/" für Startseite */
+  path: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  /** absolute Bild-URL */
+  ogImage?: string;
+  ogImageAlt?: string;
+  /** absolute Bild-URL (Default = ogImage) */
+  twitterImage?: string;
+  noindex?: boolean;
+  /** zusätzliche <body>-Klasse, z. B. "legal-page" */
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = business.image,
+  ogImageAlt = 'Mehmet Sert vor dem Firmenwagen der Maler Sert GmbH',
+  twitterImage,
+  noindex = false,
+  bodyClass,
+} = Astro.props;
+
+const base = business.url.replace(/\/$/, '');
+const canonical = path === '/' ? business.url : `${base}${path}`;
+const twImage = twitterImage ?? ogImage;
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#252a2e" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/source-sans-3-latin-400-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/newsreader-latin-500-600.woff2" as="font" type="font/woff2" crossorigin />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Maler Sert GmbH" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={twImage} />
+
+    <slot name="schema" />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
+
+    <Nav />
+
+    <slot />
+
+    <Footer />
+    <MobileContactBar />
+
+    <script>
+      import '../scripts/tracking.ts';
+    </script>
+  </body>
+</html>

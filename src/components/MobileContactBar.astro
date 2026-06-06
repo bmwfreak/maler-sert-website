@@ -1,0 +1,8 @@
+---
+import { business } from '../data/business';
+const wa = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('Hallo Herr Sert, ich interessiere mich für Malerarbeiten.')}`;
+---
+<nav class="mobile-contact-bar" aria-label="Schnellkontakt">
+  <a class="mobile-call" href={`tel:${business.phone.tel}`}>Anrufen</a>
+  <a class="mobile-message" href={wa} target="_blank" rel="noopener">WhatsApp</a>
+</nav>

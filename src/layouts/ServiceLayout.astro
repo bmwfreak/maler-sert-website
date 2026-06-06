@@ -1,0 +1,119 @@
+---
+import { business } from '../data/business';
+import type { FaqItem } from '../data/business';
+import BaseLayout from './BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Faq from '../components/Faq.astro';
+import ServiceSchema from '../components/schema/ServiceSchema.astro';
+
+interface Offer {
+  name: string;
+  price: string;
+}
+
+interface Props {
+  // Meta
+  title: string;
+  description: string;
+  path: string;
+  ogImage: string;
+  ogImageAlt: string;
+  twitterImage?: string;
+  // Hero
+  eyebrow: string;
+  heroTitle: string;
+  lead: string;
+  img: string;
+  imgWebp: string;
+  imgAlt: string;
+  rollerCrop?: boolean;
+  waText?: string;
+  // Schema
+  breadcrumbName: string;
+  serviceName: string;
+  serviceDescription: string;
+  offers?: Offer[];
+  // FAQ
+  faqItems: FaqItem[];
+  faqTitle: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  ogImage,
+  ogImageAlt,
+  twitterImage,
+  eyebrow,
+  heroTitle,
+  lead,
+  img,
+  imgWebp,
+  imgAlt,
+  rollerCrop,
+  waText,
+  breadcrumbName,
+  serviceName,
+  serviceDescription,
+  offers,
+  faqItems,
+  faqTitle,
+} = Astro.props;
+
+const waCta = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent(waText ?? 'Hallo Herr Sert, ich brauche Malerarbeiten in Hamburg.')}`;
+---
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  ogImage={ogImage}
+  ogImageAlt={ogImageAlt}
+  twitterImage={twitterImage}
+>
+  <ServiceSchema
+    slot="schema"
+    name={serviceName}
+    description={serviceDescription}
+    path={path}
+    breadcrumbName={breadcrumbName}
+    offers={offers}
+  />
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="/">Startseite</a>
+      <span aria-hidden="true">›</span>
+      <strong aria-current="page">{breadcrumbName}</strong>
+    </div>
+  </nav>
+
+  <PageHero
+    eyebrow={eyebrow}
+    title={heroTitle}
+    lead={lead}
+    img={img}
+    imgWebp={imgWebp}
+    imgAlt={imgAlt}
+    rollerCrop={rollerCrop}
+    waText={waText}
+  />
+
+  <main id="hauptinhalt">
+    <slot />
+
+    <Faq items={faqItems} title={faqTitle} alt={true} />
+
+    <div class="kontakt-cta">
+      <div class="container">
+        <p class="section-kicker">Kostenlos anfragen</p>
+        <h2>Vor-Ort-Termin vereinbaren.</h2>
+        <p>Wir schauen uns alles an und machen ein schriftliches Festpreisangebot — ohne Druck, ohne Stundensatz.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href={`tel:${business.phone.tel}`}>{business.phone.display} anrufen</a>
+          <a class="btn btn-secondary" href={waCta} rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,11 @@
+# Cloudflare Pages — Cache-Header
+# Gehashte Build-Assets und unveränderliche statische Dateien dürfen ewig gecacht werden.
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable

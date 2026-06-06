@@ -1,0 +1,20 @@
+---
+import { business, services } from '../data/business';
+---
+<footer>
+  <div class="container">
+    <p><strong>{business.name}</strong> · Hamburg · {business.address.postalCode}</p>
+    <p>
+      Telefon: <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
+      · E-Mail: <a href={`mailto:${business.email}`}>{business.email}</a>
+    </p>
+    <p>
+      {services.map((s, i) => (
+        <Fragment>{i > 0 ? ' · ' : ''}<a href={`/${s.slug}.html`}>{s.name}</a></Fragment>
+      ))}
+    </p>
+    <p>
+      <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>

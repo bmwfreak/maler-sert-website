@@ -1,0 +1,368 @@
+---
+import { business } from '../data/business';
+import type { FaqItem } from '../data/business';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
+import Hero from '../components/Hero.astro';
+import TrustBand from '../components/TrustBand.astro';
+import LeistungCard from '../components/LeistungCard.astro';
+import Faq from '../components/Faq.astro';
+
+const leistungen = [
+  {
+    title: 'Maler­arbeiten',
+    lead: 'Streichen, Tapezieren, Lasieren — innen und außen.',
+    items: [
+      'Innen­anstriche, Wände, Decken, Türen',
+      'Tapezieren (Vlies, Raufaser, Designtapeten)',
+      'Fassaden, Balkone, Garagen',
+      'Holz­anstriche, Lasuren, Lackieren',
+      'Treppenhaus, Tiefgarage',
+    ],
+    img: '/img/malerarbeiten-weisse-farbrolle.jpg',
+    imgWebp: '/img/malerarbeiten-weisse-farbrolle.webp',
+    alt: 'Maler streicht Wand mit weißer Farbrolle in Hamburg',
+    href: '/malerarbeiten-hamburg.html',
+    linkText: 'Mehr zu Malerarbeiten →',
+  },
+  {
+    title: 'Boden',
+    lead: 'Vom neuen Belag bis zum aufgefrischten Parkett.',
+    items: [
+      'Bodenbelag (Vinyl, Laminat, Designboden)',
+      'Parkett schleifen und versiegeln',
+      'Fliesen­legen (Bad, Küche, Flur)',
+      'Alten Boden raus, Untergrund vorbereiten',
+    ],
+    img: '/img/boden.jpg',
+    imgWebp: '/img/boden.webp',
+    alt: 'Neuer Designboden in Hamburger Wohnung verlegt',
+    href: '/bodenbelag-hamburg.html',
+    linkText: 'Mehr zu Bodenbelag →',
+  },
+  {
+    title: 'Trockenbau, Putz &amp; Spachtel',
+    lead: 'Alles zwischen Rohbau und Anstrich.',
+    items: [
+      'Trennwände, abgehängte Decken',
+      'Vorwand­installationen',
+      'Innenputz, Putz­reparaturen, Sanier­putz',
+      'Spachtel­arbeiten als Vorbereitung',
+    ],
+    img: '/img/trockenbau-spachtel.jpg',
+    imgWebp: '/img/trockenbau-spachtel.webp',
+    alt: 'Spachtelarbeiten und Trockenbau in Hamburg',
+    href: '/trockenbau-hamburg.html',
+    linkText: 'Mehr zu Trockenbau →',
+  },
+  {
+    title: 'Schimmel-Sanierung &amp; Trocknung',
+    lead: 'Mit Zertifikat — und vor allem mit Blick auf die Ursache.',
+    items: [
+      'Schimmel professionell entfernen',
+      'Trocknung nach Wasser­schaden',
+      'Sanier­putz und vorbeugende Anstriche',
+      'Saubere Doku für Versicherung oder Hausverwaltung',
+    ],
+    img: '/img/schimmel-sanierung.jpg',
+    imgWebp: '/img/schimmel-sanierung.webp',
+    alt: 'Schimmel-Sanierung an Hamburger Wand durch Fachbetrieb',
+    href: '/schimmel-sanierung-hamburg.html',
+    linkText: 'Mehr zur Schimmel-Sanierung →',
+  },
+  {
+    title: 'Montage &amp; Reparatur',
+    lead: 'Das, was sonst zwischen den Gewerken liegen bleibt.',
+    items: [
+      'Küchen­montage',
+      'Schrank­montage',
+      'Kleine Elektro­arbeiten (Lampen, Steckdosen)',
+      'Reparaturen rund ums Haus',
+    ],
+    img: '/img/montage-reparatur.jpg',
+    imgWebp: '/img/montage-reparatur.webp',
+    alt: 'Küchenmontage und Handwerksreparatur in Hamburg',
+  },
+  {
+    title: 'Hausverwaltungen &amp; Gewerbe',
+    lead: 'Wiederkehrende Aufträge, mit Doku, auf Wunsch auch außerhalb der Geschäftszeiten.',
+    items: [
+      'Treppenhaus- und Gemeinschafts­flächen',
+      'Mieterwechsel-Renovierungen',
+      'WEG-Aufträge mit Hausverwaltungs-Doku',
+      'Büros, Praxen, Gastronomie',
+      'Schaden­behebung nach Wasser, Brand, Vandalismus',
+    ],
+    img: '/img/hausverwaltung-gewerbe.jpg',
+    imgWebp: '/img/hausverwaltung-gewerbe.webp',
+    alt: 'Treppenhaus-Renovierung für Hausverwaltung in Hamburg',
+  },
+];
+
+const faqItems: FaqItem[] = [
+  {
+    q: 'Wie funktioniert die Beauftragung bei Maler Sert?',
+    a: 'Einfach anrufen (0173 8615002) oder per WhatsApp schreiben. Wir melden uns innerhalb eines Werktags zurück, vereinbaren einen kostenlosen Vor-Ort-Termin und machen anschließend ein schriftliches Festpreisangebot — ohne Stundensatz und ohne versteckte Kosten.',
+  },
+  {
+    q: 'In welchen Stadtteilen Hamburg arbeitet Maler Sert?',
+    a: 'Wir arbeiten im gesamten Hamburger Stadtgebiet sowie in Norderstedt, Pinneberg und Reinbek. Weitere Orte im näheren Umland auf Anfrage.',
+  },
+  {
+    q: 'Machen Sie auch Aufträge für Hausverwaltungen und Gewerbe?',
+    a: 'Ja. Wir betreuen Hausverwaltungen, WEGs und Gewerbekunden mit klarer Doku und verlässlichen Terminen. Typische Aufgaben: Treppenhäuser, Mieterwechsel-Renovierungen, Büros und Praxen — auf Wunsch auch außerhalb der regulären Geschäftszeiten.',
+  },
+  {
+    q: 'Wie schnell bekomme ich ein Angebot?',
+    a: 'Nach Ihrer Anfrage melden wir uns innerhalb eines Werktags. Der Vor-Ort-Termin findet in der Regel innerhalb weniger Tage statt. Das schriftliche Angebot erhalten Sie nach der Besichtigung — üblicherweise noch am gleichen oder nächsten Werktag.',
+  },
+];
+
+const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('Hallo Herr Sert, ich möchte eine Anfrage stellen.')}`;
+---
+<BaseLayout
+  title="Maler Sert GmbH — Malerarbeiten, Böden & Handwerk in Hamburg"
+  description="Maler Sert GmbH Hamburg: Malerarbeiten, Böden & Sanierung seit 2002. Kostenlose Besichtigung, schriftlicher Festpreis. ☎ 0173 8615002"
+  path="/"
+  ogTitle="Maler Sert GmbH — Präzise Malerarbeiten in Hamburg"
+  ogDescription="Saubere Oberflächen, präzises Handwerk: Maler Sert GmbH in Hamburg seit 2002."
+>
+  <LocalBusinessSchema slot="schema" />
+
+  <Hero />
+
+  <TrustBand />
+
+  <main id="hauptinhalt">
+    <section id="leistungen">
+      <div class="container">
+        <p class="section-kicker">Leistungen</p>
+        <h2>Von der Fläche bis zur fertigen Übergabe.</h2>
+        <p class="section-intro">
+          Malerarbeiten sind der Kern. Ergänzend übernehmen wir Böden, Trockenbau, Sanierungen und
+          Montagearbeiten mit einem klaren Ansprechpartner.
+        </p>
+        <div class="leistungen">
+          {leistungen.map((l) => <LeistungCard {...l} />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="work-proof" aria-labelledby="arbeitsbeispiele-title">
+      <div class="container">
+        <p class="section-kicker">Arbeitsbeispiele</p>
+        <h2 id="arbeitsbeispiele-title">Ergebnisqualität, die man sehen kann.</h2>
+        <p class="section-intro">
+          Saubere Kanten, ruhige Flächen und belastbare Übergaben sind der sichtbare Maßstab. Diese
+          Bildsprache macht klar, welche Art Ausführung Maler Sert anstrebt.
+        </p>
+        <div class="proof-grid">
+          <article class="proof-card proof-card--wide reveal">
+            <picture>
+              <source srcset="/img/malerarbeiten-weisse-farbrolle.webp" type="image/webp" />
+              <img src="/img/malerarbeiten-weisse-farbrolle.jpg" alt="Weiße Farbrolle für gleichmäßige Malerarbeiten an einer Wand" width="1200" height="1800" loading="lazy" decoding="async" />
+            </picture>
+            <div class="proof-copy">
+              <span>Innenflächen</span>
+              <h3>Ruhiger Auftrag, klare Kanten.</h3>
+              <p>Abdecken, Untergrund prüfen, sauberer Farbauftrag und eine Übergabe ohne Farbreste an Beschlägen, Böden oder Sockeln.</p>
+            </div>
+          </article>
+          <article class="proof-card reveal">
+            <picture>
+              <source srcset="/img/boden.webp" type="image/webp" />
+              <img src="/img/boden.jpg" alt="Sauber verlegter Bodenbelag mit ruhigem Oberflächenbild" width="1200" height="800" loading="lazy" decoding="async" />
+            </picture>
+            <div class="proof-copy">
+              <span>Boden &amp; Abschluss</span>
+              <h3>Gerade Übergänge.</h3>
+              <p>Untergrund vorbereitet, Belag sauber geführt und Anschlüsse stimmig gelöst.</p>
+            </div>
+          </article>
+          <article class="proof-card reveal">
+            <picture>
+              <source srcset="/img/hausverwaltung-gewerbe.webp" type="image/webp" />
+              <img src="/img/hausverwaltung-gewerbe.jpg" alt="Gepflegtes Mehrfamilienhaus für Hausverwaltungen und Gewerbe" width="1200" height="800" loading="lazy" decoding="async" />
+            </picture>
+            <div class="proof-copy">
+              <span>Objekte</span>
+              <h3>Sauber dokumentiert.</h3>
+              <p>Für Eigentümer, Hausverwaltungen und Gewerbe mit klarer Abstimmung und belastbarer Übergabe.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="preise">
+      <div class="container">
+        <p class="section-kicker">Preise</p>
+        <h2>Was Sie ungefähr einplanen können.</h2>
+        <p class="section-intro">
+          Für Standardstreicharbeiten gibt es feste Quadratmeterpreise. Den verbindlichen Preis
+          erhalten Sie schriftlich — nach dem kostenlosen Vor-Ort-Termin.
+        </p>
+        <div class="preis-grid">
+          <div class="preis-card reveal">
+            <div class="label">Wand zweimal streichen, weiß</div>
+            <div class="preis">ab 8,10 € <small>/ m²</small></div>
+          </div>
+          <div class="preis-card reveal">
+            <div class="label">Decke zweimal streichen</div>
+            <div class="preis">ab 9,10 € <small>/ m²</small></div>
+          </div>
+        </div>
+        <p class="preis-hint">
+          Richtpreise netto, zzgl. gesetzlicher MwSt. Die Richtpreise setzen einen tragfähigen,
+          vorbereiteten Untergrund voraus. Material, Abdeckarbeiten und Ausbesserungen werden im
+          schriftlichen Angebot konkret benannt.
+        </p>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="container">
+        <p class="section-kicker">Ablauf</p>
+        <h2>Drei Schritte zum Festpreis.</h2>
+        <p class="section-intro">
+          Kein Stundensatz, keine Überraschungen — vom ersten Anruf bis zur sauberen Übergabe.
+        </p>
+        <ol class="ablauf">
+          <li class="ablauf-step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Anrufen oder schreiben</h3>
+            <p>Kurz beschreiben, was ansteht. Wir melden uns innerhalb eines Werktags zurück und vereinbaren einen Termin vor Ort.</p>
+          </li>
+          <li class="ablauf-step reveal">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Vor-Ort-Termin — kostenlos</h3>
+            <p>Wir schauen uns alles in Ruhe an, beraten zu Material und Aufwand und nehmen die wichtigsten Maße auf.</p>
+          </li>
+          <li class="ablauf-step reveal">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Schriftliches Festpreis-Angebot</h3>
+            <p>Sie bekommen ein klares Angebot — Quadratmeter-Preis oder Festpreis. Wenn Sie zustimmen, fixieren wir den Termin und legen los.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <Faq items={faqItems} title="Fragen vor dem ersten Anruf." alt={true} />
+
+    <section id="team" class="alt">
+      <div class="container">
+        <div class="about-grid reveal">
+          <picture>
+            <source srcset="/img/mehmet-sert-portrait.webp" type="image/webp" />
+            <img class="about-portrait" src="/img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer der Maler Sert GmbH" width="290" height="516" loading="lazy" decoding="async" />
+          </picture>
+          <div class="about-text">
+            <p class="section-kicker">Persönlicher Betrieb</p>
+            <h2>Direkt mit Mehmet Sert.</h2>
+            <p class="person-title">Inhaber &amp; Geschäftsführer</p>
+            <p>Jeder Auftrag wird persönlich besichtigt und klar kalkuliert. Sie sprechen nicht mit einer Vermittlung oder Hotline, sondern direkt mit dem Betrieb, der die Arbeit ausführt.</p>
+            <p>Seit 2002 arbeitet Maler Sert in Hamburg für private Eigentümer, Hausverwaltungen und Gewerbekunden.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gebiet">
+      <div class="container">
+        <p class="section-kicker">Einsatzgebiet</p>
+        <h2>Hamburg und Umland.</h2>
+        <p class="section-intro">
+          Tätig im gesamten Hamburger Stadtgebiet und Umland. Für weitere Anfahrten einfach kurz anfragen.
+        </p>
+        <div class="einzugsgebiet-list">
+          <span class="pill">Hamburg (alle Stadtteile)</span>
+          <span class="pill">Norderstedt</span>
+          <span class="pill">Pinneberg</span>
+          <span class="pill">Reinbek</span>
+          <span class="pill">weitere Orte auf Anfrage</span>
+        </div>
+        <p class="map-link">
+          <a href="https://www.openstreetmap.org/?mlat=53.5511&mlon=10.0193#map=11/53.55/10.02" target="_blank" rel="noopener">Standort auf OpenStreetMap ansehen →</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="kontakt-dark" id="kontakt">
+      <div class="container">
+        <div class="kontakt-layout">
+          <div class="kontakt-form-col">
+            <p class="section-kicker">Anfrage</p>
+            <h2>Termin anfragen.</h2>
+            <p class="kontakt-sub">
+              Kurz beschreiben, was ansteht — Mehmet Sert meldet sich innerhalb eines Werktags zurück.
+            </p>
+            <div class="anfrage-form-card">
+              <form id="anfrage-form" novalidate>
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="anf-name">Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="anf-name" name="name" placeholder="Ihr Name" required autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="anf-telefon">Telefon</label>
+                    <input type="tel" id="anf-telefon" name="telefon" placeholder="Für Rückruf" autocomplete="tel" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="anf-leistung">Leistung</label>
+                    <select id="anf-leistung" name="leistung">
+                      <option value="">Bitte wählen</option>
+                      <option value="Malerarbeiten">Malerarbeiten</option>
+                      <option value="Bodenbelag">Bodenbelag</option>
+                      <option value="Trockenbau / Putz">Trockenbau / Putz</option>
+                      <option value="Schimmel-Sanierung">Schimmel-Sanierung</option>
+                      <option value="Montage &amp; Reparatur">Montage &amp; Reparatur</option>
+                      <option value="Hausverwaltung / Gewerbe">Hausverwaltung / Gewerbe</option>
+                      <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="anf-nachricht">Kurze Beschreibung <span aria-hidden="true">*</span></label>
+                    <textarea id="anf-nachricht" name="nachricht" rows="4" placeholder="Was soll gemacht werden? In welchem Stadtteil? Wohnungsgröße ca.?" required></textarea>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button type="submit" class="btn btn-primary form-submit">Anfrage senden →</button>
+                </div>
+                <p class="form-hinweis">* Pflichtfeld. Ihre Nachricht öffnet WhatsApp direkt an Mehmet Sert.</p>
+              </form>
+              <div class="form-success" id="anfrage-success" hidden>
+                <p>✓ <strong>Vielen Dank!</strong> Mehmet Sert meldet sich innerhalb eines Werktags bei Ihnen.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="kontakt-direct-col">
+            <p class="section-kicker">Oder direkt</p>
+            <a class="direct-item" href={`tel:${business.phone.tel}`}>
+              <span class="direct-label">Anrufen</span>
+              <span class="direct-value">{business.phone.display}</span>
+              <span class="direct-note">Mo–Fr 9–17 Uhr · Sa 9–13 Uhr</span>
+            </a>
+            <a class="direct-item" href={waDirect} target="_blank" rel="noopener">
+              <span class="direct-label">WhatsApp</span>
+              <span class="direct-value">Direkt schreiben</span>
+              <span class="direct-note">Antwort am nächsten Werktag</span>
+            </a>
+            <a class="direct-item" href={`mailto:${business.email}`}>
+              <span class="direct-label">E-Mail</span>
+              <span class="direct-value">{business.email}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    import '../scripts/form.ts';
+  </script>
+</BaseLayout>

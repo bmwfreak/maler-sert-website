@@ -1,0 +1,73 @@
+/* Design-Tokens & Schriften — Single Source of Truth.
+   Diese Datei wird als erstes (vor global.css) in BaseLayout importiert. */
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/source-sans-3-latin-400-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url("/fonts/newsreader-latin-500-600.woff2") format("woff2");
+}
+
+:root {
+  --color-ink: #25282b;
+  --color-ink-muted: #686c70;
+  --color-line: #d9d7d3;
+  --color-line-dark: rgba(234, 225, 213, 0.2);
+  --surface-base: #fcfbf8;
+  --surface-raised: #ffffff;
+  --surface-soft: #f2f0eb;
+  --surface-deep: #252a2e;
+  --surface-panel: #30353a;
+  --accent-graphite: #555c61;
+  --accent-graphite-deep: #2a3034;
+  --accent-copper: #9b572f;
+  --accent-copper-deep: #8d4b2a;
+  --accent-sand: #dfb28f;
+
+  --ink: var(--color-ink);
+  --ink-soft: var(--color-ink-muted);
+  --line: var(--color-line);
+  --bg: var(--surface-base);
+  --bg-band: var(--surface-soft);
+  --bg-card: var(--surface-raised);
+  --accent: var(--accent-graphite);
+  --accent-strong: var(--accent-graphite-deep);
+  --accent-soft: #ecebea;
+  --warm: var(--accent-copper);
+  --warm-strong: var(--accent-copper-deep);
+  --warm-soft: #f2e7df;
+
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --text-xs: clamp(0.76rem, 0.74rem + 0.08vw, 0.82rem);
+  --text-sm: clamp(0.88rem, 0.85rem + 0.14vw, 0.98rem);
+  --text-base: clamp(1rem, 0.97rem + 0.14vw, 1.12rem);
+  --text-lead: clamp(1.06rem, 0.98rem + 0.34vw, 1.27rem);
+  --text-card-title: clamp(1.42rem, 1.27rem + 0.46vw, 1.82rem);
+  --text-section: clamp(2.04rem, 1.58rem + 1.42vw, 2.86rem);
+  --text-display: clamp(2.6rem, 1.82rem + 2.38vw, 4.08rem);
+  --text-brand: clamp(1.58rem, 1.43rem + 0.34vw, 1.94rem);
+
+  --space-1: clamp(0.4rem, 0.36rem + 0.12vw, 0.5rem);
+  --space-2: clamp(0.68rem, 0.6rem + 0.2vw, 0.84rem);
+  --space-3: clamp(0.95rem, 0.86rem + 0.3vw, 1.18rem);
+  --space-4: clamp(1.36rem, 1.12rem + 0.68vw, 1.9rem);
+  --space-5: clamp(1.85rem, 1.45rem + 1vw, 2.72rem);
+  --space-6: clamp(2.7rem, 2rem + 1.8vw, 4.25rem);
+  --space-7: clamp(3.8rem, 2.5rem + 3.2vw, 6.2rem);
+  --section-space: clamp(3.8rem, 2.7rem + 3.4vw, 6.25rem);
+  --gutter: clamp(1.25rem, 0.75rem + 2vw, 1.9rem);
+  --container-max: 71.25rem;
+  --radius-sm: 0.18rem;
+  --radius-md: 0.32rem;
+  --shadow-lift: 0 1.4rem 2.8rem rgba(23, 26, 29, 0.11);
+}
