@@ -48,8 +48,7 @@ export const business = {
   founder: { name: 'Mehmet Sert', jobTitle: 'Inhaber & Geschäftsführer' },
 
   openingHours: [
-    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
-    { days: ['Saturday'], opens: '09:00', closes: '13:00' },
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '18:00' },
   ],
 
   areaServed: ['Hamburg', 'Norderstedt', 'Pinneberg', 'Reinbek'],
