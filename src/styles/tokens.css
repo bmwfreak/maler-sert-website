@@ -70,4 +70,5 @@
   --radius-sm: 0.18rem;
   --radius-md: 0.32rem;
   --shadow-lift: 0 1.4rem 2.8rem rgba(23, 26, 29, 0.11);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }

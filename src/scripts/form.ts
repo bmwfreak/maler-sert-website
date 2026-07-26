@@ -58,7 +58,9 @@
     window.open('https://wa.me/491738615002?text=' + waText, '_blank', 'noopener,noreferrer');
 
     form.hidden = true;
-    byId<HTMLElement>('anfrage-success').hidden = false;
+    const success = byId<HTMLElement>('anfrage-success');
+    success.hidden = false;
+    requestAnimationFrame(() => success.classList.add('is-visible'));
   });
 
   ['anf-name', 'anf-nachricht'].forEach((id) => {

@@ -65,7 +65,7 @@ function injectStyles(): void {
     'width:min(640px,calc(100% - 2rem));background:#1d2023;color:#f2ede6;border:1px solid rgba(255,255,255,.12);' +
     'border-radius:8px;box-shadow:0 1.4rem 2.8rem rgba(0,0,0,.35);padding:20px 22px;' +
     'font-family:"Source Sans 3","Segoe UI",Arial,sans-serif;font-size:.92rem;line-height:1.55;' +
-    'opacity:0;transition:opacity .25s ease,transform .25s ease;}' +
+    'opacity:0;transition:opacity .25s var(--ease-out,ease);}' +
     '.ms-consent.is-visible{opacity:1;}' +
     '.ms-consent p{margin:0 0 14px;color:rgba(242,237,230,.82);}' +
     '.ms-consent a{color:#dfb28f;text-decoration:underline;}' +

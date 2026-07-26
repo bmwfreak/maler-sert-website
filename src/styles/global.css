@@ -158,9 +158,12 @@
     font-weight: 600;
     font-size: var(--text-base);
     border: 1px solid transparent;
-    transition: transform 0.08s ease, background 0.15s;
+    transition: transform 0.08s var(--ease-out), background 0.15s var(--ease-out);
   }
-  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: scale(0.97); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { transform: translateY(-1px); }
+  }
   .btn-primary { background: var(--warm); color: white; }
   .btn-primary:hover { background: var(--warm-strong); color: white; }
   .btn-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
@@ -309,7 +312,7 @@
   .js .reveal {
     opacity: 0;
     transform: translateY(22px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
   }
   .js .reveal.visible {
     opacity: 1;
@@ -628,6 +631,13 @@
     padding: 22px 24px;
     color: var(--ink);
     font-size: var(--text-base);
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+  }
+  .form-success.is-visible { opacity: 1; transform: scale(1); }
+  @media (prefers-reduced-motion: reduce) {
+    .form-success { transition: opacity 0.2s; transform: none; }
   }
   .form-success p { margin: 0; }
   @media (max-width: 700px) {
@@ -702,7 +712,8 @@
     .call-link,
     .leistung-card,
     .leistung-card .card-image img { transition: none; }
-    .btn:hover { transform: none; }
+    .btn:hover,
+    .btn:active { transform: none; }
     .leistung-card:hover,
     .leistung-card:hover .card-image img { transform: none; }
   }
@@ -713,9 +724,23 @@
   details:first-child { border-top: 1px solid var(--line); }
   summary { padding: 18px 0; font-weight: 700; font-size: var(--text-base); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--ink); }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; font-size: var(--text-card-title); font-weight: 400; color: var(--warm); flex-shrink: 0; transition: transform .2s; }
+  summary::after { content: "+"; font-size: var(--text-card-title); font-weight: 400; color: var(--warm); flex-shrink: 0; transition: transform 0.2s var(--ease-out); }
   details[open] summary::after { transform: rotate(45deg); }
-  details p { margin: 0 0 18px; color: var(--ink-soft); font-size: var(--text-sm); padding-right: 32px; }
+  details p {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    margin: 0;
+    padding-bottom: 0;
+    color: var(--ink-soft);
+    font-size: var(--text-sm);
+    padding-right: 32px;
+    transition: grid-template-rows 0.3s var(--ease-out), padding-bottom 0.3s var(--ease-out);
+  }
+  details[open] p { grid-template-rows: 1fr; padding-bottom: 18px; }
+  @media (prefers-reduced-motion: reduce) {
+    details p { transition: none; }
+  }
 
 /* === Overrides (vormals premium-system.css) === */
 body {
