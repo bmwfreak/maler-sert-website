@@ -40,7 +40,9 @@ const {
 } = Astro.props;
 
 const base = business.url.replace(/\/$/, '');
-const canonical = path === '/' ? business.url : `${base}${path}`;
+// @astrojs/sitemap zwingt die Homepage-URL im Sitemap-File auf "ohne Slash" (build.format: 'file').
+// Canonical muss exakt dem entsprechen, sonst Mismatch zwischen <link rel="canonical"> und Sitemap-<loc>.
+const canonical = path === '/' ? base : `${base}${path}`;
 const twImage = twitterImage ?? ogImage;
 ---
 <!doctype html>

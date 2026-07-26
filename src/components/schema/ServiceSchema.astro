@@ -15,9 +15,11 @@ interface Props {
   /** Breadcrumb-Anzeigename */
   breadcrumbName: string;
   offers?: Offer[];
+  /** Root-relativer Pfad, z. B. "/img/malerarbeiten-weisse-farbrolle.jpg" */
+  image?: string;
 }
 
-const { name, description, path, breadcrumbName, offers } = Astro.props;
+const { name, description, path, breadcrumbName, offers, image } = Astro.props;
 const base = business.url.replace(/\/$/, '');
 const pageUrl = `${base}${path}`;
 
@@ -26,6 +28,7 @@ const service = {
   '@type': 'Service',
   name,
   description,
+  ...(image ? { image: `${base}${image}` } : {}),
   provider: {
     '@type': 'Painter',
     name: business.name,
@@ -38,7 +41,6 @@ const service = {
       postalCode: business.address.postalCode,
       addressCountry: business.address.addressCountry,
     },
-    aggregateRating: { '@type': 'AggregateRating', ...business.aggregateRating },
   },
   areaServed: { '@type': 'City', name: 'Hamburg' },
   ...(offers && offers.length
