@@ -329,13 +329,16 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
                     <textarea id="anf-nachricht" name="nachricht" rows="4" placeholder="Was soll gemacht werden? In welchem Stadtteil? Wohnungsgröße ca.?" required></textarea>
                   </div>
                 </div>
+                <p class="form-hinweis">* Pflichtfeld. Beim Absenden öffnet sich WhatsApp mit Ihrer fertigen Nachricht — dort noch auf <strong>Senden</strong> tippen.</p>
                 <div class="form-row">
-                  <button type="submit" class="btn btn-primary form-submit">Anfrage senden →</button>
+                  <button type="submit" class="btn btn-primary form-submit">Anfrage per WhatsApp senden →</button>
                 </div>
-                <p class="form-hinweis">* Pflichtfeld. Ihre Nachricht öffnet WhatsApp direkt an Mehmet Sert.</p>
               </form>
               <div class="form-success" id="anfrage-success" hidden>
-                <p>✓ <strong>Vielen Dank!</strong> Mehmet Sert meldet sich innerhalb eines Werktags bei Ihnen.</p>
+                <p>
+                  ✓ <strong>Fast geschafft!</strong> Tippen Sie in WhatsApp jetzt noch auf <strong>Senden</strong>.
+                  Kein WhatsApp? Dann einfach anrufen: <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a>.
+                </p>
               </div>
             </div>
           </div>
@@ -345,12 +348,12 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
             <a class="direct-item" href={`tel:${business.phone.tel}`}>
               <span class="direct-label">Anrufen</span>
               <span class="direct-value">{business.phone.display}</span>
-              <span class="direct-note">Mo–Fr 9–17 Uhr · Sa 9–13 Uhr</span>
+              <span class="direct-note">{business.openingHoursDisplay}</span>
             </a>
             <a class="direct-item" href={waDirect} target="_blank" rel="noopener">
               <span class="direct-label">WhatsApp</span>
               <span class="direct-value">Direkt schreiben</span>
-              <span class="direct-note">Antwort am nächsten Werktag</span>
+              <span class="direct-note">Meist Antwort innerhalb weniger Stunden</span>
             </a>
             <a class="direct-item" href={`mailto:${business.email}`}>
               <span class="direct-label">E-Mail</span>

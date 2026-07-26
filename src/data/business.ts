@@ -50,6 +50,8 @@ export const business = {
   openingHours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '18:00' },
   ],
+  /** Anzeigeform der Öffnungszeiten — an einer Stelle pflegen, damit Seite und Schema nie auseinanderlaufen. */
+  openingHoursDisplay: 'Mo–Sa 8–18 Uhr · außerhalb nach Absprache',
 
   areaServed: ['Hamburg', 'Norderstedt', 'Pinneberg', 'Reinbek'],
 
