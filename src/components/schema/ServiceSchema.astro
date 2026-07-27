@@ -45,11 +45,17 @@ const service = {
   areaServed: { '@type': 'City', name: 'Hamburg' },
   ...(offers && offers.length
     ? {
+        // priceSpecification.minPrice statt price: sichtbar ist ein "ab"-Preis (m2-Mindestpreis),
+        // ein fixer 'price' würde einen exakten Festpreis behaupten, der so nicht stimmt.
         offers: offers.map((o) => ({
           '@type': 'Offer',
           name: o.name,
-          priceCurrency: 'EUR',
-          price: o.price,
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'EUR',
+            minPrice: o.price,
+            unitText: 'm²',
+          },
         })),
       }
     : {}),

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { business } from '../data/business';
 ---
 <BaseLayout
   title="Impressum — Maler Sert GmbH"
@@ -16,19 +17,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <h2>Anbieter</h2>
       <p>
-        Maler Sert GmbH<br />
-        In der Niederung 15<br />
-        22047 Hamburg<br />
+        {business.name}<br />
+        {business.address.streetAddress}<br />
+        {business.address.postalCode} {business.address.addressLocality}<br />
         Deutschland
       </p>
 
       <h2>Vertretungsberechtigter Geschäftsführer</h2>
-      <p>Mehmet Sert</p>
+      <p>{business.founder.name}</p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: <a href="tel:+491738615002">0173 8615002</a><br />
-        E-Mail: <a href="mailto:malersert@yahoo.de">malersert@yahoo.de</a>
+        Telefon: <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a><br />
+        E-Mail: <a href={`mailto:${business.email}`}>{business.email}</a>
       </p>
 
       <h2>Registereintrag</h2>

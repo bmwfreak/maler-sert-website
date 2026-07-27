@@ -1553,9 +1553,7 @@ footer a:hover {
     font-size: var(--text-base);
   }
 
-  h1,
-  .page-hero h1,
-  header.hero h1 {
+  h1 {
     font-size: var(--text-display);
   }
 

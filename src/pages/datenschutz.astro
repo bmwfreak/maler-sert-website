@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { business } from '../data/business';
 ---
 <BaseLayout
   title="Datenschutz — Maler Sert GmbH"
@@ -17,12 +18,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2>1. Verantwortlicher</h2>
       <p>
         Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:<br /><br />
-        Maler Sert GmbH<br />
-        In der Niederung 15<br />
-        22047 Hamburg<br />
-        Geschäftsführer: Mehmet Sert<br />
-        Telefon: <a href="tel:+491738615002">0173 8615002</a><br />
-        E-Mail: <a href="mailto:malersert@yahoo.de">malersert@yahoo.de</a>
+        {business.name}<br />
+        {business.address.streetAddress}<br />
+        {business.address.postalCode} {business.address.addressLocality}<br />
+        Geschäftsführer: {business.founder.name}<br />
+        Telefon: <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a><br />
+        E-Mail: <a href={`mailto:${business.email}`}>{business.email}</a>
       </p>
 
       <h2>2. Welche Daten beim Aufruf dieser Website verarbeitet werden</h2>

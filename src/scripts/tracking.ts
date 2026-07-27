@@ -76,7 +76,9 @@ function injectStyles(): void {
     '.ms-consent .ms-accept:hover{background:#8d4b2a;}' +
     '.ms-consent .ms-decline{background:rgba(255,255,255,.08);color:#f2ede6;border:1px solid rgba(255,255,255,.16);}' +
     '.ms-consent .ms-decline:hover{background:rgba(255,255,255,.14);}' +
-    '@media(max-width:480px){.ms-consent-row{flex-direction:column-reverse;}}';
+    '@media(max-width:480px){.ms-consent-row{flex-direction:column-reverse;}}' +
+    /* Mobile-Kontaktleiste ist bei dieser Breite ~4.4rem hoch (fixed, bottom:0) - Banner muss darüber sitzen. */
+    '@media(max-width:47.99rem){.ms-consent{bottom:calc(4.4rem + .5rem);}}';
   const style = document.createElement('style');
   style.id = 'ms-consent-style';
   style.textContent = css;
@@ -88,6 +90,7 @@ function showBanner(): void {
   const banner = document.createElement('div');
   banner.className = 'ms-consent';
   banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-modal', 'true');
   banner.setAttribute('aria-label', 'Cookie-Einwilligung');
   banner.innerHTML =
     '<p>Wir verwenden Google Analytics, um anonym zu verstehen, wie unsere Website genutzt wird. ' +
@@ -100,9 +103,13 @@ function showBanner(): void {
   document.body.appendChild(banner);
   requestAnimationFrame(() => banner.classList.add('is-visible'));
 
+  const previouslyFocused = document.activeElement as HTMLElement | null;
+  banner.querySelector<HTMLButtonElement>('.ms-accept')!.focus();
+
   const close = () => {
     banner.classList.remove('is-visible');
     setTimeout(() => banner.remove(), 250);
+    previouslyFocused?.focus();
   };
   banner.querySelector('.ms-accept')!.addEventListener('click', () => {
     try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch { /* ignore */ }
