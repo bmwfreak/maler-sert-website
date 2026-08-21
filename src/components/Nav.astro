@@ -1,5 +1,5 @@
 ---
-import { business } from '../data/business';
+import { business, services } from '../data/business';
 ---
 <div class="topbar">
   <div class="container nav">
@@ -9,7 +9,14 @@ import { business } from '../data/business';
     </a>
     <div class="nav-actions">
       <nav class="nav-links" aria-label="Hauptnavigation">
-        <a href="/#leistungen">Leistungen</a>
+        <div class="nav-dropdown">
+          <a href="/#leistungen">Leistungen</a>
+          <ul class="nav-dropdown-menu">
+            {services.map((s) => (
+              <li><a href={`/${s.slug}`}>{s.name}</a></li>
+            ))}
+          </ul>
+        </div>
         <a href="/#ablauf">Ablauf</a>
         <a href="/#kontakt">Kontakt</a>
       </nav>

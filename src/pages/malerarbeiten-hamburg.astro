@@ -24,7 +24,7 @@ const bereiche = [
   {
     h: 'Fassaden &amp; Außenanstriche',
     items: [
-      'Fassadenanstriche und Putzreparaturen',
+      '<a href="/fassadenanstrich-hamburg">Fassadenanstriche</a> und Putzreparaturen',
       'Balkone, Garagen, Carports',
       'Holzverkleidungen und Fensterläden',
       'Grundierung und Tiefenprimer',
@@ -101,7 +101,7 @@ const faqItems: FaqItem[] = [
         {bereiche.map((b) => (
           <div class="leistung-item">
             <h3 set:html={b.h}></h3>
-            <ul>{b.items.map((li) => <li>{li}</li>)}</ul>
+            <ul>{b.items.map((li) => <li set:html={li}></li>)}</ul>
           </div>
         ))}
       </div>
