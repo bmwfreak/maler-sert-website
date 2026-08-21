@@ -44,16 +44,33 @@ function track(eventName: string, params?: Record<string, unknown>): void {
   }
 }
 
-/* Telefon- und WhatsApp-Klicks (immer registriert, sendet nur nach Einwilligung) */
+/* Kontakt-Klicks: zentral in BaseLayout eingebunden, daher auf allen Seiten identisch. */
 document.addEventListener('click', (e) => {
   const target = e.target as HTMLElement;
   const el = target.closest('a[href]') as HTMLAnchorElement | null;
   if (!el) return;
   const href = el.getAttribute('href') || '';
   if (href.indexOf('tel:') === 0) {
-    track('phone_click', { event_category: 'Kontakt', event_label: 'Telefon', value: 1 });
+    track('phone_click', {
+      event_category: 'Kontakt',
+      contact_method: 'phone',
+      event_label: 'Telefon',
+      value: 1,
+    });
+  } else if (href.indexOf('mailto:') === 0) {
+    track('email_click', {
+      event_category: 'Kontakt',
+      contact_method: 'email',
+      event_label: 'E-Mail',
+      value: 1,
+    });
   } else if (href.indexOf('wa.me') !== -1) {
-    track('whatsapp_click', { event_category: 'Kontakt', event_label: 'WhatsApp', value: 1 });
+    track('whatsapp_click', {
+      event_category: 'Kontakt',
+      contact_method: 'whatsapp',
+      event_label: 'WhatsApp',
+      value: 1,
+    });
   }
 });
 
