@@ -16,16 +16,12 @@ Grundlage: `SEO_BASELINE_2026-08-22.md`. Nur priorisierte Maßnahmen, keine auto
 
 ## P1 — Sitemap, Canonicals, interne Verlinkung, Indexierung
 
-2. **`/fassadenanstrich-hamburg` fehlt komplett auf der Startseite.** Kein Homepage-Karte (Leistungs-Array in `src/pages/index.astro` hat nur 6 Einträge, "Fassadenanstrich" fehlt als eigene Karte — Fassaden werden nur als Unterpunkt bei "Malerarbeiten" erwähnt, ohne Link). Einzige Verlinkung ist der Footer. Das ist die am schwächsten intern verlinkte Seite im ganzen Projekt.
-   - Vorschlag: eigene `LeistungCard` für Fassadenanstrich auf der Startseite ergänzen (analog zu den anderen 4), ODER mindestens einen Cross-Link von `/malerarbeiten-hamburg` aus setzen (dort wird "Fassaden & Außenanstriche" bereits als Text-Punkt gelistet, aber unverlinkt).
-   - Kein Text umschreiben nötig, nur `href`/Link ergänzen.
+2. ~~`/fassadenanstrich-hamburg` fehlt komplett auf der Startseite.~~ **Behoben (22.08.2026, Commit `9066398`).** Cross-Link von der Homepage-Karte "Malerarbeiten" ("Fassaden" → `/fassadenanstrich-hamburg`) und vom Bereich "Fassaden & Außenanstriche" auf `/malerarbeiten-hamburg` ergänzt. Keine neue Karte hinzugefügt (Risiko: Grid-Layout), nur bestehende Text-Punkte verlinkt.
+   - Nebenbefund dabei: `/malerarbeiten-hamburg` rendert seine Bereiche-Items ohne `set:html` (anders als `LeistungList.astro`/`LeistungCard.astro`) — wäre als kaputter Rohtext sichtbar gewesen, mitgefixt.
 
-3. **Keine Leistungsseite ist aus der globalen Navigation (`Nav.astro`) direkt erreichbar.** Nav verlinkt nur zu Homepage-Ankern. Alle 5 Leistungsseiten hängen an Footer + (teilweise) Homepage-Karten + vereinzelten Cross-Links.
-   - Vorschlag: Dropdown oder einfache Linkliste "Leistungen" in der Nav ergänzen, mit Links zu allen 5 Slugs aus `services` (`src/data/business.ts`) — Datenquelle existiert bereits, keine neue Architektur nötig.
-   - Niedrigeres Risiko, klarer SEO-Standardfix (bessere Klickpfadtiefe von jeder Seite aus, nicht nur von der Startseite).
+3. ~~Keine Leistungsseite ist aus der globalen Navigation (`Nav.astro`) direkt erreichbar.~~ **Behoben (22.08.2026, Commit `9066398`).** "Leistungen" in der Nav ist jetzt ein CSS-Dropdown (hover/focus-within, keine neue JS-Architektur) mit Links zu allen 5 Slugs aus `services`. Bekannte Einschränkung: `.nav-links` ist unterhalb 940px komplett `display:none` (vorbestehend, nicht durch diese Änderung verursacht) — auf Mobile bleiben Footer + Homepage-Karten weiterhin die einzigen Pfade zu den Leistungsseiten. Mobile-Nav wäre ein separates, größeres Vorhaben.
 
-4. **Cross-Linking zwischen Leistungsseiten ist lückenhaft, aber teilweise vorhanden.** Bodenbelag→Malerarbeiten+Trockenbau, Trockenbau→Malerarbeiten, Schimmel→Malerarbeiten sind bereits verlinkt. Fehlend: keine Seite verlinkt auf Schimmel-Sanierung oder Fassadenanstrich zurück.
-   - Vorschlag (nur wo inhaltlich passend, keine künstliche Keyword-Verlinkung): z. B. von Trockenbau/Bodenbelag aus auf Schimmel-Sanierung verlinken (Wasserschaden-Kontext ist bereits Thema auf der Trockenbau-Seite).
+4. **Cross-Linking zwischen Leistungsseiten teilweise ergänzt.** Bodenbelag→Malerarbeiten+Trockenbau, Trockenbau→Malerarbeiten, Schimmel→Malerarbeiten waren bereits verlinkt. Neu (22.08.2026): Trockenbau → Schimmel-Sanierung ("Sanierputz nach Wasserschaden oder Schimmel"). Weiterhin fehlend: keine Seite verlinkt auf Fassadenanstrich zurück außer den beiden neuen Homepage-/Malerarbeiten-Links — Bodenbelag/Schimmel haben keinen inhaltlich passenden Anknüpfungspunkt gefunden, keine künstliche Verlinkung erzwungen.
 
 ## P2 — CTR-/Snippet-Optimierung
 
