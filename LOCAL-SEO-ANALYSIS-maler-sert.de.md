@@ -145,17 +145,21 @@ Fehlend: Handwerkskammer Hamburg (deutsches Pendant zu Chamber of Commerce/BBB),
 
 ### Kritisch
 
-1. **Veraltete Verzeichniseinträge korrigieren (geklärt: Website ist korrekt).** Pro Anbieter direkt im eigenen Business-Profil ändern — Telefon 040 687045 → 0173 8615002, Adresse „15 A"/„15a" → „15", E-Mail auf malersert@yahoo.de vereinheitlichen, Gründungsjahr auf 2002:
-   - [Cylex](https://web2.cylex.de/firma-home/maler-sert-gmbh-2702025.html)
-   - [Firmania](https://firmania.de/hamburg/maler-sert-gmbh-1259206)
-   - [Stadtbranchenbuch Hamburg](https://hamburg.stadtbranchenbuch.com/1366810.html)
-   - [meinestadt.de](https://branchenbuch.meinestadt.de/hamburg/company/865249)
-   - [Öffnungszeitenbuch](https://www.oeffnungszeitenbuch.de/filiale/Hamburg-Maler%2520Sert%2520GmbH-2268203S.html)
-   - [branchen-info.net](https://hamburg.branchen-info.net/fp_4196323.php)
-   - [maler-finden.org](https://www.maler-finden.org/hamburg/maler-sert-gmbh-1530757.html)
-   - [malerbetriebe.online](https://malerbetriebe.online/maler-sert-gmbh/00027396)
-   - [Yelp](https://www.yelp.com/biz/maler-sert-hamburg) — **Priorität**, da ChatGPT/Perplexity daraus zitieren
-   - Northdata/Creditreform sind reine Register-Spiegel (HRB 76146) — ziehen sich meist automatisch nach, kein direkter Login nötig, nur beobachten
+1. **Veraltete Verzeichniseinträge korrigieren — pro Anbieter live geprüft (22.08.2026):**
+
+   | Verzeichnis | Adresse | Telefon | Korrektur-Weg |
+   |---|---|---|---|
+   | [Cylex](https://web2.cylex.de/firma-home/maler-sert-gmbh-2702025.html) | korrekt | falsch (040 687045) | „Fehlerhafte Daten melden" — öffentlich, kein Login |
+   | [Firmania](https://firmania.de/hamburg/maler-sert-gmbh-1259206) | korrekt | falsch | spiegelt Cylex-Daten, Cylex-Fix zieht vermutlich mit |
+   | [Stadtbranchenbuch](https://hamburg.stadtbranchenbuch.com/1366810.html) | korrekt | falsch | „Eintrag bearbeiten" — öffentlich |
+   | [Öffnungszeitenbuch](https://www.oeffnungszeitenbuch.de/filiale/Hamburg-Maler%2520Sert%2520GmbH-2268203S.html) | korrekt | falsch | „Fehler melden" / „Eintrag bearbeiten" — öffentlich |
+   | [branchen-info.net](https://hamburg.branchen-info.net/fp_4196323.php) | **„15 A" — Quelle des Hausnummer-Fehlers** | falsch | „Eintrag bearbeiten" — öffentlich, direkt an Inhaber adressiert |
+   | [maler-finden.org](https://www.maler-finden.org/hamburg/maler-sert-gmbh-1530757.html) | korrekt | falsch (+ Fax) | „Änderung vorschlagen" — öffentlich |
+   | meinestadt.de | — | — | 404, Eintrag existiert nicht mehr, nichts zu tun |
+   | [malerbetriebe.online](https://malerbetriebe.online/maler-sert-gmbh/00027396) | konnte nicht geladen werden | — | manuell nachprüfen |
+   | [Yelp](https://www.yelp.com/biz/maler-sert-hamburg) | korrekt | keine Nummer hinterlegt | „Unclaimed" — Korrektur nur über eigenen Yelp-Account möglich; **Priorität wegen ChatGPT/Perplexity-Zitaten** |
+
+   Northdata/Creditreform: reine Handelsregister-Spiegel (HRB 76146), ziehen sich meist automatisch nach — nur beobachten, kein Handlungsbedarf.
 2. **Handwerkskammer-Zugehörigkeit + Berufshaftpflicht ins Impressum.** Doppelt begründet: Pflichtangabe nach §5 DDG (der Platzhalter „[wird ergänzt]" steht dort seit Monaten) und stärkstes verfügbares Autoritätssignal. Rechtlich kurz absichern lassen.
 
 ### Hoch
