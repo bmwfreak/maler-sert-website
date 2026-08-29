@@ -21,6 +21,8 @@ import { business, services } from '../data/business';
         <a href="/#kontakt">Kontakt</a>
       </nav>
       <a class="call-link" href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menü öffnen">☰</label>
     </div>
   </div>
 </div>

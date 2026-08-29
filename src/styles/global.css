@@ -136,6 +136,24 @@
   }
   .call-link:hover { background: var(--accent-strong); color: #fff; }
 
+  /* Mobile-Menü-Toggle: reiner Checkbox-Hack, kein JS nötig */
+  .nav-toggle-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .nav-toggle-btn { display: none; }
+  .nav-toggle-checkbox:focus-visible + .nav-toggle-btn {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 2px;
+  }
+
   /* Hero */
   header.hero {
     padding: 108px 0 102px;
@@ -700,6 +718,53 @@
 
   @media (max-width: 940px) {
     .nav-links { display: none; }
+    .nav-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      line-height: 1;
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .nav-toggle-btn:hover { background: var(--accent-soft); }
+    .nav-actions:has(.nav-toggle-checkbox:checked) .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 2px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow-lift);
+      padding: 6px 22px 18px;
+      z-index: 15;
+    }
+    .nav-actions:has(.nav-toggle-checkbox:checked) .nav-links a {
+      padding: 12px 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    /* Leistungen-Untermenü: auf Mobile immer sichtbar statt Hover-Dropdown */
+    .nav-actions:has(.nav-toggle-checkbox:checked) .nav-dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      min-width: 0;
+      padding: 0 0 0 14px;
+    }
+    .nav-actions:has(.nav-toggle-checkbox:checked) .nav-dropdown-menu a {
+      border-bottom: none;
+      padding: 8px 4px;
+    }
   }
 
   /* Small screen tweaks */
