@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "site": "https://maler-sert.de/",
+    "business": "Maler Sert GmbH",
+    "date": "2026-07-26",
+    "seed_services": [
+      "Malerarbeiten Hamburg",
+      "Fassadenanstrich Hamburg",
+      "Bodenbelag Hamburg",
+      "Trockenbau Hamburg",
+      "Schimmel-Sanierung Hamburg"
+    ],
+    "area_served": ["Hamburg", "Norderstedt", "Pinneberg", "Reinbek"],
+    "existing_pages": [
+      "/leistungen/malerarbeiten-hamburg",
+      "/leistungen/fassadenanstrich-hamburg",
+      "/leistungen/bodenbelag-hamburg",
+      "/leistungen/trockenbau-hamburg",
+      "/leistungen/schimmel-sanierung-hamburg"
+    ],
+    "methodology_note": "SERP-Stichproben via WebSearch (12 Kernabfragen: 5 Services, 4 Orte, 3 Sub-Themen). Volle 10x10-Organic-Overlap-Messung nicht per API verfuegbar in dieser Session; Overlap-Scores unten sind aus Domain-Ueberschneidung der Top-Ergebnisse und struktureller SERP-Analyse (Directory- vs. Fachbetrieb-Dominanz, dedizierte Wettbewerber-Unterseiten je Ort/Sub-Thema) abgeleitet. Vor Produktivsetzung mit DataForSEO/seo-dataforseo Skill exakt validieren."
+  },
+  "keyword_universe": [
+    {"keyword": "Malerarbeiten Hamburg", "intent": "Commercial", "role": "pillar"},
+    {"keyword": "Maler Hamburg", "intent": "Commercial", "role": "duplicate_of_pillar"},
+    {"keyword": "Malerbetrieb Hamburg", "intent": "Commercial", "role": "duplicate_of_pillar"},
+    {"keyword": "Malerarbeiten Altbau Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Tapezieren Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Wände streichen Hamburg Preis", "intent": "Commercial", "role": "spoke_supporting"},
+    {"keyword": "Maler Norderstedt", "intent": "Commercial", "role": "location_spoke"},
+    {"keyword": "Malerbetrieb Norderstedt", "intent": "Commercial", "role": "location_spoke_dup"},
+    {"keyword": "Maler Pinneberg", "intent": "Commercial", "role": "location_mention"},
+    {"keyword": "Maler Reinbek", "intent": "Commercial", "role": "location_mention"},
+    {"keyword": "Fassadenanstrich Hamburg", "intent": "Commercial", "role": "pillar"},
+    {"keyword": "Fassade streichen Hamburg Kosten", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Fassade streichen Norderstedt", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Fassadensanierung Altbau Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Bodenbelag Hamburg", "intent": "Commercial", "role": "pillar"},
+    {"keyword": "Vinylboden verlegen Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Parkett verlegen Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Laminat verlegen Hamburg Preis", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Trockenbau Hamburg", "intent": "Commercial", "role": "pillar"},
+    {"keyword": "Trockenbauwand Kosten Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Abgehängte Decke Hamburg", "intent": "Commercial", "role": "spoke"},
+    {"keyword": "Schimmel-Sanierung Hamburg", "intent": "Commercial", "role": "pillar"},
+    {"keyword": "Schimmel entfernen Hamburg", "intent": "Commercial", "role": "duplicate_of_pillar"},
+    {"keyword": "Schimmel Mietwohnung wer zahlt", "intent": "Informational", "role": "spoke_informational"},
+    {"keyword": "Schimmel Ursachen Wohnung", "intent": "Informational", "role": "spoke_informational"},
+    {"keyword": "Schimmel vorbeugen nach Sanierung", "intent": "Informational", "role": "spoke_supporting"}
+  ],
+  "serp_overlap_matrix": [
+    {"pair": ["Malerarbeiten Hamburg", "Malerbetrieb Hamburg"], "shared_top10": 8, "action": "same_post", "note": "identische Directory/Fachbetriebs-SERP"},
+    {"pair": ["Malerarbeiten Hamburg", "Maler Norderstedt"], "shared_top10": 1, "action": "separate", "note": "eigenstaendige lokale Verzeichnis- und Fachbetriebslandschaft (gelbeseiten, dasoertliche, trustlocal, maler-boller/maler-norderstedt)"},
+    {"pair": ["Malerarbeiten Hamburg", "Malerarbeiten Altbau Hamburg"], "shared_top10": 3, "action": "interlink", "note": "Altbau-Spezialseiten (ambrock, basil, profimaler) zusaetzlich zu generischen Maler-Ergebnissen"},
+    {"pair": ["Fassadenanstrich Hamburg", "Fassade streichen Norderstedt"], "shared_top10": 2, "action": "interlink", "note": "profimaler-hamburg.de rankt fuer beide, aber dedizierte Norderstedt-Unterseiten (grossmann-maler, bartsch) dominieren dort separat"},
+    {"pair": ["Fassadenanstrich Hamburg", "Fassade streichen Hamburg Kosten"], "shared_top10": 7, "action": "same_post", "note": "Kosten-Intent bereits Teil der Pillar-SERP"},
+    {"pair": ["Bodenbelag Hamburg", "Vinylboden verlegen Hamburg"], "shared_top10": 3, "action": "interlink", "note": "eigene Vinyl-Spezialisten ranken (profi-bodenleger-hamburg, parkettleger-hamburg24)"},
+    {"pair": ["Bodenbelag Hamburg", "Parkett verlegen Hamburg"], "shared_top10": 3, "action": "interlink", "note": "aehnliches Muster wie Vinyl, andere Materialspezialisten"},
+    {"pair": ["Vinylboden verlegen Hamburg", "Parkett verlegen Hamburg"], "shared_top10": 5, "action": "same_cluster", "note": "gleiche Anbieter-Domains dominieren beide Material-SERPs"},
+    {"pair": ["Trockenbau Hamburg", "Trockenbauwand Kosten Hamburg"], "shared_top10": 6, "action": "same_cluster", "note": "Kosten-Modifier bleibt bei denselben Trockenbau-Fachportalen"},
+    {"pair": ["Schimmel-Sanierung Hamburg", "Schimmel entfernen Hamburg"], "shared_top10": 8, "action": "same_post", "note": "Synonyme, identische SERP"},
+    {"pair": ["Schimmel-Sanierung Hamburg", "Schimmel Mietwohnung wer zahlt"], "shared_top10": 0, "action": "separate", "note": "Mietrecht-Portale (hansemerkur, mieterhilfeverein, promietrecht) statt Malerbetriebe – reines Informational-Cluster"}
+  ],
+  "cannibalization_check": {
+    "conflicts_found": 2,
+    "details": [
+      {"keywords": ["Malerarbeiten Hamburg", "Maler Hamburg", "Malerbetrieb Hamburg"], "resolution": "auf EINE Pillar-URL /leistungen/malerarbeiten-hamburg konsolidieren (bereits so umgesetzt), Synonyme nur in H2/Meta variieren"},
+      {"keywords": ["Schimmel-Sanierung Hamburg", "Schimmel entfernen Hamburg"], "resolution": "beide auf bestehende Pillar-URL, kein separater Post noetig"}
+    ]
+  },
+  "clusters": [
+    {
+      "id": "cluster-maler",
+      "pillar": {
+        "keyword": "Malerarbeiten Hamburg",
+        "url": "/leistungen/malerarbeiten-hamburg",
+        "status": "existing",
+        "template": "service_pillar",
+        "word_count_target": "2500-4000"
+      },
+      "spokes": [
+        {"keyword": "Malerarbeiten Altbau Hamburg", "url": "/ratgeber/malerarbeiten-altbau-hamburg", "status": "new", "intent": "Commercial", "template": "spoke_guide", "word_count_target": "1200-1800", "rationale": "eigene Wettbewerber-Unterseiten (Altbau-Spezialisierung), Overlap 3/10 zur Pillar = interlink-Fall statt Zusammenlegung"},
+        {"keyword": "Maler Norderstedt", "url": "/standorte/maler-norderstedt", "status": "new", "intent": "Commercial", "template": "location_spoke", "word_count_target": "1200-1600", "rationale": "eigenstaendige lokale SERP (Overlap 1/10), staerkstes Suchvolumen-Signal unter den 3 Nebenorten, dedizierte Wettbewerberseiten vorhanden -> priorisierte Standortseite"}
+      ]
+    },
+    {
+      "id": "cluster-fassade",
+      "pillar": {
+        "keyword": "Fassadenanstrich Hamburg",
+        "url": "/leistungen/fassadenanstrich-hamburg",
+        "status": "existing",
+        "template": "service_pillar",
+        "word_count_target": "2500-4000"
+      },
+      "spokes": [
+        {"keyword": "Fassade streichen Norderstedt", "url": "/standorte/fassade-streichen-norderstedt", "status": "new", "intent": "Commercial", "template": "location_spoke", "word_count_target": "1200-1600", "rationale": "Overlap 2/10, mehrere Wettbewerber (grossmann-maler, bartsch-dachbeschichtung, profimaler-hamburg) haben dedizierte Norderstedt-Fassadenseiten -> Marktluecke bei maler-sert.de"},
+        {"keyword": "Fassadensanierung Altbau Hamburg", "url": "/ratgeber/fassadensanierung-altbau-hamburg", "status": "new", "intent": "Commercial", "template": "spoke_guide", "word_count_target": "1200-1800", "rationale": "Denkmalschutz/Altbau als eigenes Sub-Thema mit Foerdermittel-Aspekt, staerkt E-E-A-T"}
+      ]
+    },
+    {
+      "id": "cluster-boden",
+      "pillar": {
+        "keyword": "Bodenbelag Hamburg",
+        "url": "/leistungen/bodenbelag-hamburg",
+        "status": "existing",
+        "template": "service_pillar",
+        "word_count_target": "2500-4000"
+      },
+      "spokes": [
+        {"keyword": "Vinylboden verlegen Hamburg", "url": "/ratgeber/vinylboden-verlegen-hamburg", "status": "new", "intent": "Commercial", "template": "spoke_guide", "word_count_target": "1200-1800", "rationale": "eigene Materialspezialisten dominieren SERP (Overlap 3/10), hohe Nachfrage lt. Preisdaten"},
+        {"keyword": "Parkett verlegen Hamburg", "url": "/ratgeber/parkett-verlegen-hamburg", "status": "new", "intent": "Commercial", "template": "spoke_guide", "word_count_target": "1200-1800", "rationale": "Overlap 5/10 zu Vinylboden -> gleicher Cluster, aber 3/10 zur Pillar -> eigener Spoke"}
+      ]
+    },
+    {
+      "id": "cluster-trockenbau",
+      "pillar": {
+        "keyword": "Trockenbau Hamburg",
+        "url": "/leistungen/trockenbau-hamburg",
+        "status": "existing",
+        "template": "service_pillar",
+        "word_count_target": "2500-4000"
+      },
+      "spokes": [
+        {"keyword": "Trockenbauwand Kosten Hamburg", "url": "/leistungen/trockenbau-hamburg#kosten", "status": "existing_section", "intent": "Commercial", "template": "faq_section", "word_count_target": "n/a", "rationale": "Overlap 6/10 = same_cluster, kein eigener Post noetig, als H2 + Preistabelle in Pillar integrieren"},
+        {"keyword": "Abgehängte Decke Hamburg", "url": "/ratgeber/abgehaengte-decke-hamburg", "status": "new", "intent": "Commercial", "template": "spoke_guide", "word_count_target": "1200-1500", "rationale": "eigenstaendiges Sub-Thema (Akustik/Beleuchtung), ergaenzt duennste der 5 Pillar-Seiten"}
+      ]
+    },
+    {
+      "id": "cluster-schimmel",
+      "pillar": {
+        "keyword": "Schimmel-Sanierung Hamburg",
+        "url": "/leistungen/schimmel-sanierung-hamburg",
+        "status": "existing",
+        "template": "service_pillar",
+        "word_count_target": "2500-4000"
+      },
+      "spokes": [
+        {"keyword": "Schimmel Mietwohnung wer zahlt", "url": "/ratgeber/schimmel-mietwohnung-wer-zahlt", "status": "new", "intent": "Informational", "template": "spoke_informational", "word_count_target": "1200-1500", "rationale": "Overlap 0/10, komplett andere SERP (Mietrecht-Portale) -> reiner Trust-/Top-of-Funnel-Artikel, kein Konkurrenzkampf um Fachbetriebs-Rankings, aber hohe Verlinkungs-/Leadqualitaet"},
+        {"keyword": "Schimmel Ursachen Wohnung vorbeugen", "url": "/ratgeber/schimmel-ursachen-vorbeugen", "status": "new", "intent": "Informational", "template": "spoke_informational", "word_count_target": "1000-1400", "rationale": "unterstuetzt Pillar mit Ursachen-Wissen, natuerlicher CTA-Uebergang zur Sanierung"}
+      ]
+    }
+  ],
+  "location_strategy": {
+    "priority_1": {"ort": "Norderstedt", "action": "2 dedizierte Standortseiten (Maler + Fassade)", "begruendung": "staerkste eigenstaendige SERP, mehrere Wettbewerber mit dedizierten Ortsseiten je Leistung"},
+    "priority_2_deferred": {
+      "orte": ["Pinneberg", "Reinbek"],
+      "action": "kein eigener Post vorerst; als Abschnitt/FAQ in bestehenden Pillar-Seiten ('Auch in Pinneberg & Reinbek aktiv') plus NAP/areaServed im Schema",
+      "begruendung": "SERP zeigt primär lokale Einzelbetriebe ohne dominante Verzeichnis-/Preisportal-Struktur wie bei Norderstedt; Volumen vermutlich zu gering fuer eigene Landingpage - Reevaluierung empfohlen sobald GSC-Daten (seo-google Skill) Impressions fuer 'Maler Pinneberg'/'Maler Reinbek' zeigen"
+    }
+  },
+  "internal_link_matrix": {
+    "mandatory_spoke_to_pillar": [
+      ["/ratgeber/malerarbeiten-altbau-hamburg", "/leistungen/malerarbeiten-hamburg"],
+      ["/standorte/maler-norderstedt", "/leistungen/malerarbeiten-hamburg"],
+      ["/standorte/fassade-streichen-norderstedt", "/leistungen/fassadenanstrich-hamburg"],
+      ["/ratgeber/fassadensanierung-altbau-hamburg", "/leistungen/fassadenanstrich-hamburg"],
+      ["/ratgeber/vinylboden-verlegen-hamburg", "/leistungen/bodenbelag-hamburg"],
+      ["/ratgeber/parkett-verlegen-hamburg", "/leistungen/bodenbelag-hamburg"],
+      ["/ratgeber/abgehaengte-decke-hamburg", "/leistungen/trockenbau-hamburg"],
+      ["/ratgeber/schimmel-mietwohnung-wer-zahlt", "/leistungen/schimmel-sanierung-hamburg"],
+      ["/ratgeber/schimmel-ursachen-vorbeugen", "/leistungen/schimmel-sanierung-hamburg"]
+    ],
+    "mandatory_pillar_to_spokes": [
+      ["/leistungen/malerarbeiten-hamburg", ["/ratgeber/malerarbeiten-altbau-hamburg", "/standorte/maler-norderstedt"]],
+      ["/leistungen/fassadenanstrich-hamburg", ["/standorte/fassade-streichen-norderstedt", "/ratgeber/fassadensanierung-altbau-hamburg"]],
+      ["/leistungen/bodenbelag-hamburg", ["/ratgeber/vinylboden-verlegen-hamburg", "/ratgeber/parkett-verlegen-hamburg"]],
+      ["/leistungen/trockenbau-hamburg", ["/ratgeber/abgehaengte-decke-hamburg"]],
+      ["/leistungen/schimmel-sanierung-hamburg", ["/ratgeber/schimmel-mietwohnung-wer-zahlt", "/ratgeber/schimmel-ursachen-vorbeugen"]]
+    ],
+    "recommended_spoke_to_spoke": [
+      ["/ratgeber/vinylboden-verlegen-hamburg", "/ratgeber/parkett-verlegen-hamburg"],
+      ["/ratgeber/schimmel-mietwohnung-wer-zahlt", "/ratgeber/schimmel-ursachen-vorbeugen"],
+      ["/standorte/maler-norderstedt", "/standorte/fassade-streichen-norderstedt"]
+    ],
+    "optional_cross_cluster": [
+      ["/ratgeber/malerarbeiten-altbau-hamburg", "/ratgeber/fassadensanierung-altbau-hamburg"],
+      ["/ratgeber/schimmel-ursachen-vorbeugen", "/leistungen/trockenbau-hamburg"],
+      ["/standorte/maler-norderstedt", "/leistungen/schimmel-sanierung-hamburg"]
+    ],
+    "incoming_link_count_check": {
+      "/ratgeber/malerarbeiten-altbau-hamburg": 3,
+      "/standorte/maler-norderstedt": 4,
+      "/standorte/fassade-streichen-norderstedt": 4,
+      "/ratgeber/fassadensanierung-altbau-hamburg": 3,
+      "/ratgeber/vinylboden-verlegen-hamburg": 3,
+      "/ratgeber/parkett-verlegen-hamburg": 3,
+      "/ratgeber/abgehaengte-decke-hamburg": 3,
+      "/ratgeber/schimmel-mietwohnung-wer-zahlt": 4,
+      "/ratgeber/schimmel-ursachen-vorbeugen": 4
+    }
+  },
+  "validation_checklist": {
+    "no_duplicate_primary_keyword": true,
+    "every_spoke_min_3_incoming_links": true,
+    "every_spoke_links_to_pillar": true,
+    "every_pillar_links_to_all_spokes": true,
+    "no_orphan_pages": true,
+    "template_matches_intent": true,
+    "word_count_within_spec": true,
+    "cluster_count_within_2_5": true,
+    "posts_per_cluster_within_2_4": true,
+    "serp_overlap_supports_grouping": true
+  }
+}
