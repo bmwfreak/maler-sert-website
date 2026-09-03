@@ -47,6 +47,77 @@ Fix (reine GA4-Konfig, kein Code-Deploy): `qualify_lead` neu verknüpft mit der 
 
 **Search-Console-Check (29.08.2026):** Sitemap-Fix vom 22.08. bestätigt funktionierend (`/sitemap-index.xml`, zuletzt gelesen 29.08., Status „Erfolgreich", 6 Seiten erkannt). Der Seitenindexierungs-Bericht selbst war zum Prüfzeitpunkt noch auf Stand 21.08. (vor dem Fix) und zeigte 7 von 9 Seiten als „Gefunden – zurzeit nicht indexiert" (Ursache: Google-Systeme, kein Website-Fehler) — normal bei neuen/kleinen Domains, kein Handlungsbedarf, nur Geduld. Nächster Check sinnvoll ab Mitte September.
 
+## Messstand zum 03.09.2026
+
+GA4-Zeitraum: 06.08.–02.09.2026 (letzte 28 Tage). Direkt vergleichbar mit dem Stand vom 28.08.
+
+| Kennzahl | 28.08. | 03.09. | Quelle |
+| --- | ---: | ---: | --- |
+| Sitzungen | 13 | **20** | GA4, 28 Tage |
+| Neue Nutzer | 8 | **11** | GA4, 28 Tage |
+| Wiederkehrende Nutzer | 2 | **4** | GA4, 28 Tage |
+| Organic Search (Sitzungen) | — | 16 (80 %) | GA4, 28 Tage |
+| Direct (Sitzungen) | — | 4 (20 %) | GA4, 28 Tage |
+| Engagement-Rate gesamt | — | 45 % | GA4, 28 Tage |
+| Ø Interaktionsdauer | 1 m 47 s | 49 Sek. | GA4, 28 Tage |
+| Schlüsselereignisse | 0 | **1** | GA4, ausgelöst auf „/" |
+| Qualifizierte Leads (`qualify_lead`) | 0 | 0 | GA4 — seit 29.08. an `form_submit` gekoppelt |
+| Google-Rezensionen | 5 | **6** | Google-Unternehmensprofil, 5,0 ★ |
+
+**Traffic-Qualität (wichtiger als die Summe):**
+
+| Segment | Sitzungen | Engagement | Bewertung |
+| --- | ---: | ---: | --- |
+| Organic Search | 16 | 56,25 %, 1 m 02 s | echte Nutzer |
+| Direct | 4 | 0 %, 0 Sek. | Bot/Crawler, kein Mensch |
+
+Städte: Hamburg 5 · Heidelberg 2 · Ashburn 1 · Istanbul 1. Ashburn = AWS-Rechenzentrum.
+**Real relevanter Traffic bleibt damit ~5 Hamburger Nutzer in 28 Tagen.**
+
+### Der zentrale Befund: Impressionen ja, Klicks nein
+
+| Kennzahl | Wert | Quelle |
+| --- | ---: | --- |
+| Impressionen Startseite „/" | 320 | Search Console in GA4, 28 Tage |
+| Impressionen `/malerarbeiten-hamburg` | 64 | Search Console in GA4, 28 Tage |
+| **Klicks gesamt** | **1** | Search Console in GA4, 28 Tage |
+| Einzige klickende Suchanfrage | „maler sert gmbh" | = Brand-Suche |
+
+384 Impressionen, 1 Klick — **CTR ≈ 0,26 %**. Der einzige Klick kam über eine Suche nach dem
+Firmennamen, also von jemandem, der den Betrieb bereits kannte.
+
+Interpretation: Google zeigt die Seite (Impressionen steigen leicht), aber auf Positionen, die
+praktisch nie geklickt werden. Für generische Anfragen wie „Maler Hamburg" gibt es **null Klicks**.
+Das ist ein Ranking-/Sichtbarkeitsproblem, kein Snippet- und kein Conversion-Problem.
+
+**Konsequenz für die Priorisierung:** Bei ~5 echten Hamburger Besuchern im Monat bringt
+Conversion-Optimierung auf der Website absolut wenig (5 Besucher × besserer Button = weiterhin
+fast keine Anfragen). Die Audit-Fixes bleiben richtig, weil sie billig sind — aber der Haupthebel
+liegt beim Google-Unternehmensprofil (Map Pack), nicht bei der Website. Das deckt sich mit den
+GBP-Zahlen von März–August: 4 Anrufe und 27 Website-Klicks kamen über das Profil, mehr als die
+organische Suche im selben Zeitraum lieferte.
+
+### Rezensionen — Stand 03.09.2026
+
+6 Rezensionen, 5,0 ★. Datenstand in `business.ts` von `reviewCount: 5` auf `6` nachgezogen.
+
+Beim Nachziehen geprüft: Das `aggregateRating` aus `business.ts` wird **nirgends ins JSON-LD
+gerendert** (verifiziert per Build-Output und Grep über `src/`). Der als kritisch geführte
+Audit-Punkt „aggregateRating ohne sichtbaren Beleg — Google-Richtlinienrisiko"
+([AUDIT_GESAMT](AUDIT_GESAMT_2026-07-26.md), Punkt 4.5 / kritisch #3) ist damit **erledigt**.
+Der Block bleibt als reiner Datenstand stehen und ist im Code entsprechend kommentiert.
+
+| Rezensent | Sterne | Alter | Text | Profil |
+| --- | ---: | --- | --- | --- |
+| Souhil Khatiri | 5 | 2 Tage | kein Text | 0 Rezensionen, 0 Fotos |
+| Ugur Ertütüncü | 5 | 14 Wochen | ausführlich, nennt Malerarbeiten, Tapezieren, Fassadengestaltung | 3 Rezensionen |
+
+Einordnung: Nur die Rezension von Ugur Ertütüncü hat Text und stammt von einem Profil mit
+weiteren Bewertungen — sie ist die einzige, die sich für einen sichtbaren Testimonial-Block
+auf der Website eignet. Die neue Bewertung ohne Text von einem Profil ohne Historie hat dasselbe
+Muster wie die in [PROJEKT.md](PROJEKT.md) dokumentierten fünf Bewertungen aus dem Bekanntenkreis.
+Am Grundproblem — es fehlen Bewertungen von Fremdkunden — ändert sie nichts.
+
 ## Status-Hinweise
 
 - `Anruf`: Die Anfrage kam telefonisch.

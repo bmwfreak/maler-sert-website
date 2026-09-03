@@ -71,9 +71,15 @@ export const business = {
     'Schimmel-Sanierung',
   ],
 
+  /**
+   * NICHT im Schema ausgeliefert — bewusst. Google wertet ein aggregateRating ohne
+   * sichtbare Bewertungen auf der Seite als "self-serving" und entfernt das Rich-Result.
+   * Bleibt hier nur als Datenstand. Erst wieder ins JSON-LD, wenn echte Rezensionen
+   * sichtbar auf der Seite stehen. Stand 03.09.2026: 6 Rezensionen, davon 1 mit Text.
+   */
   aggregateRating: {
     ratingValue: '5.0',
-    reviewCount: '5',
+    reviewCount: '6',
     bestRating: '5',
     worstRating: '1',
   },
