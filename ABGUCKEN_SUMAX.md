@@ -180,3 +180,53 @@ Sortiert nach Aufwand-Wirkung, nicht nach Reihenfolge im Text:
 
 Punkt 1 und 2 kann ich umsetzen, sobald der Cloudflare-Zugang wieder verbunden ist beziehungsweise
 das Wording freigegeben ist. Punkt 3 hängt an Fotos vom Betrieb.
+
+---
+
+## Korrektur (04.09.2026, nach Prüfung im Cloudflare-Dashboard)
+
+**Abschnitt 1 oben war falsch.** Die Behauptung „wir blocken GPTBot, ClaudeBot und PerplexityBot"
+stützte sich auf `curl`-Aufrufe mit gefälschtem User-Agent. Cloudflare verifiziert Crawler aber
+über IP-Signaturen, nicht über den User-Agent-String — ein vorgeblicher GPTBot von einer
+Privatadresse wird deshalb immer abgewiesen, unabhängig von jeder Einstellung. Der Test konnte
+die Frage gar nicht beantworten.
+
+Die tatsächlichen Zahlen aus AI Crawl Control (letzte 24 Stunden):
+
+| Crawler | Kategorie | erlaubt | erfolglos |
+|---|---|---:|---:|
+| Claude-SearchBot | AI Search | **12** | 0 |
+| OAI-SearchBot | AI Search | **7** | 1 |
+| ChatGPT-User | AI Assistant | **3** | 1 |
+| BingBot | Search Engine | 12 | 0 |
+| Googlebot | Search Engine | 7 | 0 |
+| GPTBot | AI Crawler | 0 | 3 |
+| ClaudeBot | AI Crawler | 0 | 2 |
+| PerplexityBot | AI Search | 0 | 2 |
+
+**Die Bots, die ChatGPT und Claude für Antworten nutzen, greifen bereits erfolgreich zu.**
+Blockiert sind nur die reinen Trainings-Crawler. Die drei bzw. zwei „erfolglosen" Zugriffe bei
+GPTBot, ClaudeBot und PerplexityBot sind exakt die Testaufrufe aus dieser Session.
+
+Wir stehen also **nicht** gegenteilig zu SUMAX. Der Unterschied zwischen beiden Seiten ist in
+diesem Punkt deutlich kleiner als oben behauptet.
+
+### Was tatsächlich geändert wurde
+
+In den KI-Bot-Richtlinien standen alle drei Kategorien auf „Genehmigen (nicht blockieren)", auch
+Training. Das war nicht die gewollte Haltung — die robots.txt sagt seit jeher
+`Content-Signal: ai-train=no`. Neu gesetzt und gespeichert:
+
+| Kategorie | Einstellung | Bedeutung |
+|---|---|---|
+| Suche | Genehmigen | Sichtbarkeit in Suchindizes |
+| Agent | Genehmigen | ChatGPT und Claude dürfen die Seite in Antworten heranziehen |
+| Training | **Blockieren** | keine Nutzung der Texte für Modelltraining |
+
+Damit ist die Dashboard-Einstellung erstmals deckungsgleich mit dem, was die robots.txt aussagt.
+
+### Methodische Lehre
+
+Crawler-Zugriff lässt sich nicht mit gefälschten User-Agents prüfen. Verlässlich sind nur die
+Zugriffszahlen in AI Crawl Control (Cloudflare-Dashboard → maler-sert.de → AI Crawl Control →
+Sicherheit). Dort steht pro Bot, wie viele Anfragen durchkamen und wie viele abgewiesen wurden.
