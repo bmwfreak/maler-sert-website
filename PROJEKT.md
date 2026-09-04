@@ -168,9 +168,28 @@ Reihenfolge der Wirkung für einen Maler in Hamburg:
 - [x] Öffnungszeiten vereinheitlicht: **Mo–Sa 08–18** in GBP + Website ✓ 2026-06-29
 
 **Kurzfristig**
+- [x] Tapezier-Inhalt auf der Startseite + Schimmelbeseitigung-Wording ✓ 2026-09-04 (s. unten)
+- [x] Privatkundenpreise auf Endpreise inkl. MwSt. umgestellt (PAngV) ✓ 2026-09-04
 - [ ] Echte Vorher/Nachher-Projektfotos beschaffen → Website + GBP
-- [ ] Lokale Verzeichniseinträge (Bing Places, Das Örtliche, 11880, Apple Maps)
-- [ ] Conversion-Check Seite: „Rückruf anfordern"-Button erwägen
+- [ ] Lokale Verzeichniseinträge (Bing Places, Das Örtliche, 11880, Apple Maps) ← **jetzt der wichtigste Punkt**, s. unten
+- [ ] Berufshaftpflicht im Impressum eintragen (Platzhalter „[wird ergänzt]", vermutlich DDG-Pflicht)
+- [ ] Meisterbrief-Frage klären: Steht in der GBP-Beschreibung, fehlt auf der Website — vor dem Eintragen belegen
+
+### Stand 2026-09-04 — was die Search Console geändert hat
+
+Die vollständige Auswertung steht in [LEADS.md](LEADS.md). Kurz:
+
+- **975 Impressionen, 59 Klicks, CTR 6,1 %, Position 17,8** über 3 Monate. Impressionen +577 %,
+  Klicks +181 %. Die frühere Einschätzung „Ranking-Problem, CTR 0,26 %" kam aus dem GA4-Ausschnitt
+  und war falsch — GA4 zählt nur Nutzer mit Consent und unterschätzt den Traffic systematisch.
+- **58 der 59 Klicks landen auf der Startseite.** Vier der fünf Service-Seiten haben in drei Monaten
+  null Klicks. Google beantwortet praktisch jede Suche mit der Startseite.
+- Deshalb wurden die Inhalte auf der **Startseite** ergänzt statt neue Seiten gebaut: eine neue Seite
+  wäre die sechste ohne Klicks. Umgesetzt: Tapezier-Sektion (120 Impressionen ohne Ziel),
+  „Schimmelbeseitigung" als Suchbegriff, Nachbarschaft Wandsbek/Bramfeld benannt.
+- **Der Engpass ist jetzt die Domain-Autorität**, nicht der Seiteninhalt. Damit Google die
+  Unterseiten indexiert, braucht es externe Erwähnungen. Die kostenlosen Verzeichniseinträge oben
+  sind genau das und rücken damit von „kurzfristig, nice to have" auf Platz 1.
 
 **Optional / später**
 - [ ] Bezahlte Anzeigen (Google Ads / Local Services Ads) — Budget-Entscheidung Mehmet
