@@ -1,6 +1,9 @@
 .DS_Store
 node_modules/
 .env
+.env.*
+*.env
+!.env.example
 .claude/
 .wrangler/
 landingpage/.wrangler/
