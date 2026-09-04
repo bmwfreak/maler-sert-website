@@ -105,12 +105,16 @@ const leistungen = [
 
 const faqItems: FaqItem[] = [
   {
-    q: 'Wie funktioniert die Beauftragung bei Maler Sert?',
-    a: 'Einfach anrufen (0173 8615002) oder per WhatsApp schreiben. Wir melden uns innerhalb eines Werktags zurück, vereinbaren einen kostenlosen Vor-Ort-Termin und machen anschließend ein schriftliches Festpreisangebot — ohne Stundensatz und ohne versteckte Kosten.',
+    q: 'Was kostet Streichen bei Ihnen ungefähr?',
+    a: 'Wände zweimal streichen kostet ab 9,64 € pro m² inklusive Mehrwertsteuer, Decken ab 10,83 € pro m². Den verbindlichen Preis bekommen Sie schriftlich nach der kostenlosen Besichtigung — die Richtpreise setzen einen tragfähigen, vorbereiteten Untergrund voraus.',
+  },
+  {
+    q: 'Übernehmen Sie auch Tapezierarbeiten?',
+    a: 'Ja. Wir tapezieren Vlies, Raufaser, Designtapeten mit Rapport und Fototapete — in Wohnungen, Treppenhäusern und Gewerbeflächen. Alttapete entfernen, spachteln und grundieren gehört dazu. Auf Wunsch streichen wir direkt im Anschluss.',
   },
   {
     q: 'In welchen Stadtteilen Hamburg arbeitet Maler Sert?',
-    a: 'Wir arbeiten im gesamten Hamburger Stadtgebiet sowie in Norderstedt, Pinneberg und Reinbek. Weitere Orte im näheren Umland auf Anfrage.',
+    a: 'Der Betrieb sitzt in Marienthal im Bezirk Wandsbek. In Wandsbek, Bramfeld, Barmbek, Horn und Billstedt sind wir häufig am selben Tag vor Ort, ansonsten im gesamten Hamburger Stadtgebiet sowie in Norderstedt, Pinneberg und Reinbek. Weitere Orte im näheren Umland auf Anfrage.',
   },
   {
     q: 'Machen Sie auch Aufträge für Hausverwaltungen und Gewerbe?',
@@ -125,11 +129,10 @@ const faqItems: FaqItem[] = [
 const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('Hallo Herr Sert, ich möchte eine Anfrage stellen.')}`;
 ---
 <BaseLayout
-  title="Maler Sert GmbH — Malerarbeiten, Böden & Handwerk in Hamburg"
-  description="Maler Sert GmbH Hamburg: Malerarbeiten, Böden & Sanierung seit 2002. Kostenlose Besichtigung, schriftlicher Festpreis. ☎ 0173 8615002"
+  title="Malerarbeiten &amp; Tapezieren Hamburg — Maler Sert GmbH seit 2002"
+  description="Malerbetrieb in Hamburg seit 2002: Streichen, Tapezieren, Böden, Trockenbau und Schimmelbeseitigung. Kostenlose Besichtigung, schriftlicher Festpreis. ☎ 0173 8615002"
   path="/"
-  ogTitle="Maler Sert GmbH — Präzise Malerarbeiten in Hamburg"
-  ogDescription="Saubere Oberflächen, präzises Handwerk: Maler Sert GmbH in Hamburg seit 2002."
+  ogDescription="Malern, Tapezieren, Böden, Trockenbau und Schimmelbeseitigung in Hamburg. Kostenlose Besichtigung, schriftlicher Festpreis. Mehmet Sert, 0173 8615002."
 >
   <LocalBusinessSchema slot="schema" />
 
@@ -149,6 +152,43 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
         <div class="leistungen">
           {leistungen.map((l) => <LeistungCard {...l} />)}
         </div>
+      </div>
+    </section>
+
+    <section class="alt" id="tapezieren">
+      <div class="container">
+        <p class="section-kicker">Tapezieren</p>
+        <h2>Tapezierarbeiten in Hamburg.</h2>
+        <p class="section-intro">
+          Wir tapezieren Wohnungen, Treppenhäuser und Gewerbeflächen — von der einzelnen Wand bis
+          zur kompletten Etage. Alttapete kommt runter, der Untergrund wird geprüft und vorbereitet,
+          bevor die neue Bahn an die Wand geht.
+        </p>
+        <div class="leistung-list">
+          <div class="leistung-item">
+            <h3>Was wir tapezieren</h3>
+            <ul>
+              <li>Vliestapete, auch überstreichbar</li>
+              <li>Raufaser mit anschließendem Anstrich</li>
+              <li>Designtapeten und Mustertapeten mit Rapport</li>
+              <li>Fototapete und großformatige Wandbilder</li>
+            </ul>
+          </div>
+          <div class="leistung-item">
+            <h3>Was dazugehört</h3>
+            <ul>
+              <li>Alttapete entfernen und Kleisterreste abwaschen</li>
+              <li>Löcher und Risse spachteln, Untergrund grundieren</li>
+              <li>Möbel abdecken, Böden schützen, besenrein übergeben</li>
+              <li>Auf Wunsch direkt weiter mit <a href="/malerarbeiten-hamburg">Anstrich und Malerarbeiten</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="preis-hint">
+          Der Preis hängt von Tapetenart, Wandzustand und Fläche ab — deshalb gibt es dafür keinen
+          Quadratmeterpreis von der Stange, sondern ein schriftliches Festpreisangebot nach dem
+          kostenlosen Vor-Ort-Termin.
+        </p>
       </div>
     </section>
 
@@ -209,15 +249,17 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
         <div class="preis-grid">
           <div class="preis-card reveal">
             <div class="label">Wand zweimal streichen, weiß</div>
-            <div class="preis">ab 8,10 € <small>/ m²</small></div>
+            <div class="preis">ab 9,64 € <small>/ m² inkl. MwSt.</small></div>
+            <div class="preis-netto">8,10 € netto — für Gewerbe und Hausverwaltungen</div>
           </div>
           <div class="preis-card reveal">
             <div class="label">Decke zweimal streichen</div>
-            <div class="preis">ab 9,10 € <small>/ m²</small></div>
+            <div class="preis">ab 10,83 € <small>/ m² inkl. MwSt.</small></div>
+            <div class="preis-netto">9,10 € netto — für Gewerbe und Hausverwaltungen</div>
           </div>
         </div>
         <p class="preis-hint">
-          Richtpreise netto, zzgl. gesetzlicher MwSt. Die Richtpreise setzen einen tragfähigen,
+          Endpreise inklusive 19 % Umsatzsteuer. Die Richtpreise setzen einen tragfähigen,
           vorbereiteten Untergrund voraus. Material, Abdeckarbeiten und Ausbesserungen werden im
           schriftlichen Angebot konkret benannt.
         </p>
@@ -276,9 +318,14 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
         <p class="section-kicker">Einsatzgebiet</p>
         <h2>Hamburg und Umland.</h2>
         <p class="section-intro">
-          Tätig im gesamten Hamburger Stadtgebiet und Umland. Für weitere Anfahrten einfach kurz anfragen.
+          Der Betrieb sitzt in Marienthal im Bezirk Wandsbek. In Wandsbek, Bramfeld, Barmbek,
+          Horn und Billstedt sind wir oft am selben Tag vor Ort, im übrigen Stadtgebiet und im
+          Umland nach Absprache. Für weitere Anfahrten einfach kurz anfragen.
         </p>
         <div class="einzugsgebiet-list">
+          <span class="pill">Wandsbek</span>
+          <span class="pill">Bramfeld</span>
+          <span class="pill">Barmbek</span>
           <span class="pill">Hamburg (alle Stadtteile)</span>
           <span class="pill">Norderstedt</span>
           <span class="pill">Pinneberg</span>

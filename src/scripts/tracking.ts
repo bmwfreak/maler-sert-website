@@ -111,10 +111,10 @@ function showBanner(): void {
   banner.setAttribute('aria-label', 'Cookie-Einwilligung');
   banner.innerHTML =
     '<p>Wir verwenden Google Analytics, um anonym zu verstehen, wie unsere Website genutzt wird. ' +
-    'Das hilft uns, sie zu verbessern. Sie entscheiden frei — Ihre Anfrage funktioniert auch ohne. ' +
+    'Das hilft uns, sie zu verbessern. Ohne Ihre Zustimmung setzen wir keine Cookies. Ihre Anfrage funktioniert auch ohne. ' +
     'Mehr dazu in der <a href="/datenschutz">Datenschutzerklärung</a>.</p>' +
     '<div class="ms-consent-row">' +
-    '<button type="button" class="ms-decline">Nur notwendige</button>' +
+    '<button type="button" class="ms-decline">Ablehnen</button>' +
     '<button type="button" class="ms-accept">Akzeptieren</button>' +
     '</div>';
   document.body.appendChild(banner);
