@@ -124,3 +124,121 @@ Am Grundproblem — es fehlen Bewertungen von Fremdkunden — ändert sie nichts
 - `Angebot`: Ein schriftliches Angebot wurde erstellt oder zugesagt.
 - `Auftrag`: Der Auftrag wurde verbindlich erteilt.
 - `Wert`: Angebots- oder Auftragswert nachtragen, sobald bekannt.
+
+## Search-Console-Auswertung 04.09.2026 — korrigiert den Messstand vom 03.09.
+
+Quelle: Search Console direkt, Zeitraum 3 Monate (02.06.–02.09.2026). **Diese Zahlen ersetzen die
+GA4-Interpretation vom 03.09.** Der dortige Befund „384 Impressionen, 1 Klick, CTR 0,26 %" stammte
+aus dem GA4-Ausschnitt der Search-Console-Daten über 28 Tage und war irreführend.
+
+| Kennzahl | Wert |
+| --- | ---: |
+| Klicks | 59 |
+| Impressionen | 975 |
+| CTR | **6,1 %** |
+| Durchschnittliche Position | **17,8** |
+| Anzahl Suchanfragen | 57 |
+
+**Position 17,8 heißt Seite 2.** Nicht „zu tief zum Geklicktwerden", wie am 03.09. vermutet, sondern
+der Bereich, aus dem der Sprung auf Seite 1 die klassisch erreichbarste SEO-Bewegung ist.
+
+Warum GA4 so viel weniger zeigt: GA4 zählt nur Nutzer, die im Consent-Banner auf „Akzeptieren"
+geklickt haben, die Search Console zählt alle Klicks. **GA4 unterschätzt den Traffic systematisch** —
+bei künftigen Auswertungen ist die Search Console die verlässlichere Quelle für Sichtbarkeit.
+
+### Top-10-Suchanfragen
+
+| Suchanfrage | Klicks | Impressionen | CTR |
+| --- | ---: | ---: | ---: |
+| maler sert gmbh | 17 | 35 | 48,6 % |
+| mehmet sert | 2 | 14 | 14,3 % |
+| maler bramfeld | 1 | 28 | 3,6 % |
+| maler | 1 | 10 | 10,0 % |
+| maler wandsbek | 1 | 8 | 12,5 % |
+| **tapezierarbeiten hamburg** | **0** | **85** | **0 %** |
+| **maler schimmelbeseitigung hamburg** | **0** | **68** | **0 %** |
+| **tapezieren hamburg** | **0** | **35** | **0 %** |
+| professioneller malerbetrieb und bodenverlegung in hamburg heimfeld | 0 | 25 | 0 % |
+| sert | 0 | 21 | 0 % |
+
+Rund 19 der 59 Klicks (32 %) kommen über Marken-Suchen (`maler sert gmbh`, `mehmet sert`, `sert`) —
+also von Leuten, die den Betrieb schon kannten. Aus generischer Suche bleiben ~40 Klicks in
+3 Monaten, gut 13 pro Monat.
+
+### Befund 1: Tapezieren ist die größte Content-Lücke
+
+`tapezierarbeiten hamburg` (85) + `tapezieren hamburg` (35) = **120 Impressionen, null Klicks.**
+Das ist nach der Marke das stärkste Keyword-Cluster im gesamten Konto.
+
+Im Code geprüft: **Es gibt keine Tapezier-Seite.** „Tapezieren" existiert nur als Nebenerwähnung —
+ein Listenpunkt auf der Malerarbeiten-Seite, zwei FAQ-Antworten, ein Wort in `knowsAbout`. Google
+blendet für diese Suchen also die Malerarbeiten-Seite ein, deren H1 „Malerarbeiten" heißt. Wer
+gezielt nach Tapezieren sucht, sieht ein Ergebnis, das seine Frage nicht genau trifft, und klickt
+das der Konkurrenz.
+
+Die Leistung wird erbracht — sie hat nur keine Seite, die sie verkauft.
+
+### Befund 2: Schimmelbeseitigung — Wording-Mismatch
+
+`maler schimmelbeseitigung hamburg`: **68 Impressionen, 0 Klicks** — obwohl es eine eigene
+Schimmel-Seite gibt. Ursache im Code gefunden: Die Seite spricht durchgehend von
+„Schimmel-Sanierung" und „Schimmelentfernung", das Wort **„Beseitigung" kommt in Title,
+Description und H1 nicht vor**. Der Suchende sieht seinen eigenen Begriff nicht im Snippet.
+
+Billigster Fix im ganzen Bericht: ein Wort in Title und Description.
+
+### Befund 3: Stadtteil-Suchen tragen — aber nur die eigenen
+
+`maler bramfeld` (28 Impressionen, 1 Klick) und `maler wandsbek` (8 / 1) zeigen Signal. Beides ist
+die unmittelbare Nachbarschaft — der Betrieb sitzt in 22047 Hamburg, Bezirk Wandsbek.
+
+Das relativiert die Audit-Empfehlung „keine Stadtteilseiten"
+([AUDIT_GESAMT](AUDIT_GESAMT_2026-07-26.md), Abschnitt 7) **nicht vollständig, aber teilweise**: Für
+Norderstedt, Pinneberg und Reinbek bleibt der Einwand gültig — dort gibt es keine Referenzen und
+eine Seite wäre Thin Content. Für Wandsbek und Bramfeld ist die Ortsnähe dagegen echt und
+belegbar. Falls Stadtteil-Inhalte, dann diese zuerst.
+
+### Neue Priorisierung
+
+Abgeleitet aus Impressionen ohne Klicks, nicht aus Audit-Kategorien:
+
+1. **Tapezier-Seite anlegen** — 120 vorhandene Impressionen, kein Ziel dafür. Größter Hebel, direkt messbar.
+2. **„Schimmelbeseitigung" in Title und Description der Schimmel-Seite** — 68 Impressionen, Aufwand ein Wort.
+3. **Snippets der Seiten mit Impressionen ohne Klicks schärfen** — von Position ~18 auf Seite 1 ist Title/Description die günstigste Stellschraube.
+4. Wandsbek/Bramfeld-Bezug auf bestehenden Seiten stärken, bevor über neue Ortsseiten nachgedacht wird.
+
+Die Audit-Quickfixes (WhatsApp-Kontrast, Hero-H1, Brutto-Preise) bleiben richtig und billig, wirken
+aber auf Conversion, nicht auf Sichtbarkeit — und Sichtbarkeit ist laut diesen Zahlen der Engpass.
+
+### Nachtrag: Trend und Seitenverteilung (Statistik-Ansicht, 3 Monate)
+
+| Kennzahl | Wert | Veränderung zur Vorperiode |
+| --- | ---: | ---: |
+| Klicks | 59 | **+181 %** |
+| Impressionen | 975 | **+577 %** |
+
+Die Sichtbarkeit wächst also deutlich — die Basis war nur sehr niedrig. Das relativiert den Ton der
+bisherigen Auswertungen: Es ist keine stagnierende, sondern eine junge, schnell wachsende Domain.
+
+**Klicks nach Seite — hier liegt das eigentliche Strukturproblem:**
+
+| Seite | Klicks |
+| --- | ---: |
+| `/` (Startseite) | **58** (+176 %) |
+| `/malerarbeiten-hamburg` | 1 (vorher 0) |
+| alle übrigen Service-Seiten | **0** |
+
+**58 von 59 Klicks landen auf der Startseite.** Vier der fünf Service-Seiten haben in drei Monaten
+keinen einzigen Klick bekommen. Google beantwortet praktisch jede Suche mit der Startseite, auch
+die spezifischen — für `tapezierarbeiten hamburg` (85 Impressionen) wird also aller
+Wahrscheinlichkeit nach die Startseite eingeblendet, nicht einmal die Malerarbeiten-Seite.
+
+Das verschiebt Befund 1 noch einmal: Es fehlt nicht nur eine Tapezier-Seite, sondern die
+bestehenden Service-Seiten sind insgesamt zu schwach, um eigenständig zu ranken. Eine neue Seite
+anzulegen, ohne diese Schwäche zu verstehen, würde die sechste Seite ohne Klicks produzieren.
+
+**Vor dem Bau einer Tapezier-Seite daher prüfen:** Werden die Service-Seiten überhaupt indexiert
+(URL-Prüfung in der Search Console), und wenn ja, für welche Suchanfragen werden sie eingeblendet
+(Leistungsbericht, Filter auf die jeweilige Seite)? Der Verdacht aus dem Indexierungs-Check vom
+29.08. — „7 von 9 Seiten gefunden, zurzeit nicht indexiert" — passt zu diesem Bild und wäre die
+einfachste Erklärung.
