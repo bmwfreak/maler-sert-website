@@ -164,3 +164,80 @@ Qualitäts-Skeptiker fällt mit 45/100 am schlechtesten ab (Bewertungen unsichtb
 Sitemap, robots.txt, Alt-Texte allgemein, WebP-Pipeline: alle sauber, keine neuen Probleme.
 
 Volle Agent-Antworten nicht hier gespeichert (nur diese Zusammenfassung) — bei Bedarf einzelne Punkte nochmal vertiefen lassen.
+
+---
+
+## Nachtrag: Live-Verifikation der Infrastruktur-Punkte (04.09.2026)
+
+Geprüft per DNS-Abfrage und HTTP-Requests gegen die Live-Domain, nicht aus dem Code abgeleitet.
+Zwei als „hoch" geführte Punkte sind damit entschärft, einer ist schärfer als dokumentiert.
+
+### Entschärft: www-Redirect und pages.dev (bisher „hoch" #15)
+
+| Host | HTTP | Canonical |
+|---|---|---|
+| `maler-sert.de` | 200 | `https://maler-sert.de` |
+| `www.maler-sert.de` | 200 (kein 301) | `https://maler-sert.de` ✓ |
+| `maler-sert.pages.dev` | 200 | `https://maler-sert.de` ✓ |
+
+Der fehlende Redirect stimmt, aber beide Alternativ-Hosts liefern ein **korrektes Canonical auf
+die Hauptdomain**. Duplicate Content ist damit abgefangen — Google konsolidiert auf den Canonical.
+Ein 301 wäre trotzdem sauberer (Link-Equity wird direkt weitergegeben, statt von Googles
+Canonical-Interpretation abzuhängen), ist aber **kein kritischer Befund mehr**. Aufwand: eine
+Redirect Rule im Cloudflare-Dashboard.
+
+Randnotiz: `pages.dev` liefert die robots.txt aus dem Repo, die Live-Domain eine von **Cloudflare
+gemanagte** Version mit vorangestelltem Content-Signals-Block. Die AI-Bot-Regeln stehen also nicht
+im Repo, sondern kommen aus Cloudflare.
+
+### Schärfer als dokumentiert: KI-Crawler werden aktiv geblockt (bisher 4.7)
+
+Der Audit sprach von robots.txt-Direktiven. Tatsächlich liefert Cloudflare **HTTP 403**, blockt
+also auf Transportebene:
+
+| Crawler | HTTP | In robots.txt gelistet |
+|---|---:|---|
+| Googlebot | 200 ✓ | — |
+| Google-Extended | 200 | ja (Disallow, aber nicht durchgesetzt) |
+| GPTBot | **403** | ja |
+| ClaudeBot | **403** | ja |
+| PerplexityBot | **403** | **nein** |
+
+Zwei Punkte, die der ursprüngliche Audit nicht hatte:
+
+1. **PerplexityBot wird 403 geblockt, obwohl er in der robots.txt gar nicht steht.** Cloudflare hat
+   also eine breitere Bot-Regel als nur die Managed-robots.txt-Liste. Wer die Einstellung ändern
+   will, muss im Dashboard nach der Bot-Management-Regel suchen, nicht nach der robots.txt.
+2. **Googlebot kommt normal durch (200).** Das reguläre SEO-Ranking ist vom Block **nicht**
+   betroffen — `Google-Extended` steuert nur AI-Training und Gemini-Grounding, nicht die Suche.
+
+Bewertung bleibt: Entscheidung des Betreibers, kein Bug. Konsequenz ist, dass Maler Sert in
+ChatGPT-, Claude- und Perplexity-Antworten nicht auftauchen kann. Bei der aktuellen Traffic-Lage
+nicht der Haupthebel, aber eine bewusste Entscheidung wert.
+
+### Bestätigt: kein Mailversand von der eigenen Domain möglich
+
+| Record | Status |
+|---|---|
+| MX | **nicht vorhanden** |
+| SPF (TXT) | **leer** |
+| DMARC (`_dmarc`) | **NXDOMAIN** |
+
+Bestätigt den Blocker aus [AKQUISE_ARCHITEKTEN.md](AKQUISE_ARCHITEKTEN.md) Abschnitt 4 unverändert.
+Vor jeder B2B-Mailwelle: Postfach auf `maler-sert.de` einrichten, SPF/DKIM/DMARC setzen (alles im
+Cloudflare-DNS), dann Testlauf über mail-tester.com.
+
+### Kein technischer Grund für das Ranking-Problem
+
+Alle sechs Seiten geprüft: **HTTP 200, kein `noindex`, eigenständige und keyword-tragende Titles.**
+
+Damit ist ausgeschlossen, dass die schwache Sichtbarkeit (384 Impressionen, 1 Klick — siehe
+[LEADS.md](LEADS.md), Messstand 03.09.) eine technische Ursache auf der Seite hat. Es bleibt die
+Erklärung, die zu einer jungen Domain ohne Backlink-Profil in einem hart umkämpften lokalen Markt
+passt: Die Seiten sind indexierbar und werden eingeblendet, ranken aber zu tief zum Geklicktwerden.
+
+**Offen und hier nicht beantwortbar:** die tatsächlichen Positionen. Dafür braucht es die Search
+Console direkt (Leistungsbericht → Durchschnittliche Position pro Suchanfrage), nicht den
+GA4-Ausschnitt und nicht Cloudflare. Das entscheidet, ob die generischen Keywords erreichbar sind
+(Position ~11–20, mit On-Page-Arbeit machbar) oder nicht (Position 50+, dann ist die
+Norderstedt-Nische der bessere Weg).
