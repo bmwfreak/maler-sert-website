@@ -242,3 +242,37 @@ anzulegen, ohne diese Schwäche zu verstehen, würde die sechste Seite ohne Klic
 (Leistungsbericht, Filter auf die jeweilige Seite)? Der Verdacht aus dem Indexierungs-Check vom
 29.08. — „7 von 9 Seiten gefunden, zurzeit nicht indexiert" — passt zu diesem Bild und wäre die
 einfachste Erklärung.
+
+## Messstand zum 21.09.2026
+
+### Search Console
+
+| Zeitraum | Klicks | Impressionen | CTR | Ø Position |
+| --- | ---: | ---: | ---: | ---: |
+| 3 Monate bis 02.09. (Stand 04.09.) | 59 | 975 | 6,1 % | 17,8 |
+| 28 Tage, 22.08.–18.09. | 18 | 322 | 5,6 % | **11,8** |
+| davon 22.08.–04.09. (vor Snippet-Umbau) | 9 | 150 | 6,0 % | — |
+| davon 05.09.–18.09. (nach Snippet-Umbau) | 9 | 172 | 5,2 % | **8,9** |
+
+- **Position deutlich besser** (17,8 → 11,8, zuletzt 8,9). Neu im Suchbericht: `maler hamburg` Pos. 5,0, `maler in der nähe` Pos. 3,5, `maler bramfeld` Pos. 4,4 — alle noch mit wenigen Impressionen.
+- `tapezierarbeiten hamburg` jetzt Pos. 15,7 (31 Impr.), `tapezieren hamburg` weiter Pos. 70,6.
+- Seiten mit Impressionen: weiterhin nur `/` und `/malerarbeiten-hamburg`. Die übrigen vier Service-Seiten tauchen noch nicht auf.
+- **Snippet-Test (Häkchen) noch nicht auswertbar**: zwei Wochen, 9 vs. 9 Klicks — Rauschen. Außerdem entfernt Google das ✓ in der Anzeige: live steht `Malerarbeiten Hamburg » Festpreis Besichtigung kostenlos`. Für die Startseite zeigt Google statt unserer Description den Hero-Text (H1 + Lead). Die Häkchen-Hypothese ist damit weitgehend hinfällig; die Längenkorrektur bleibt sinnvoll. Nachtest Mitte Oktober.
+
+### GA4
+
+| Kennzahl | 22.08. | 21.09. |
+| --- | ---: | ---: |
+| Sitzungen (Jahr bis heute) | 45 | 76 |
+| Nutzer (Jahr bis heute) | 27 | 44 |
+| Letzte 7 Tage | — | 4 Sitzungen, alle google/organic, 0 Schlüsselereignisse |
+
+### Google-Unternehmensprofil
+
+- 102 Nutzer haben das Profil im letzten Monat in der Suche gesehen, 33 Kundeninteraktionen (Zeitraum laut Panel).
+- Öffentlich weiterhin **6 Rezensionen, 5,0 ★**. Hinweis „Neue 5-Sterne-Rezension — jetzt bedanken" steht offen → **Antwort fehlt**.
+- Offene Profil-Vorschläge: Fotos, Beiträge, Social-Profile.
+
+### Verzeichnisse — noch nicht korrigiert
+
+In den Google-Ergebnissen zu „Maler Sert GmbH" stehen weiter mit falschen Daten: branchen-info.net (15 A, 040 687045), meinestadt.de (15A), branchenbuchdeutschland.de (040 687045 + Fax), Creditsafe (Gründung 2000). Siehe [VERZEICHNISSE.md](VERZEICHNISSE.md).
