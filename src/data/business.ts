@@ -63,6 +63,7 @@ export const business = {
 
   knowsAbout: [
     'Malerarbeiten',
+    'Altbausanierung',
     'Tapezieren',
     'Fassadenanstriche',
     'Bodenverlegung',

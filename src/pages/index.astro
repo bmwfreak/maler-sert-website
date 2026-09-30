@@ -109,6 +109,10 @@ const faqItems: FaqItem[] = [
     a: 'Wände zweimal streichen kostet ab 9,64 € pro m² inklusive Mehrwertsteuer, Decken ab 10,83 € pro m². Den verbindlichen Preis bekommen Sie schriftlich nach der kostenlosen Besichtigung — die Richtpreise setzen einen tragfähigen, vorbereiteten Untergrund voraus.',
   },
   {
+    q: 'Haben Sie Erfahrung mit Altbauwohnungen?',
+    a: 'Ja, das ist einer unserer Schwerpunkte. Wir arbeiten seit 2002 in Hamburger Altbauten — Leimfarbe abwaschen, Risse armieren, Stuckprofile nacharbeiten, Holzfenster lackieren, Dielen abschleifen. Im Altbau entscheidet der Untergrund über Preis und Haltbarkeit, deshalb schauen wir ihn vor dem Angebot immer persönlich an.',
+  },
+  {
     q: 'Übernehmen Sie auch Tapezierarbeiten?',
     a: 'Ja. Wir tapezieren Vlies, Raufaser, Designtapeten mit Rapport und Fototapete — in Wohnungen, Treppenhäusern und Gewerbeflächen. Alttapete entfernen, spachteln und grundieren gehört dazu. Auf Wunsch streichen wir direkt im Anschluss.',
   },
@@ -130,7 +134,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
 ---
 <BaseLayout
   title="Maler Hamburg » Malerarbeiten &amp; Tapezieren | Maler Sert"
-  description="Malerbetrieb in Hamburg seit 2002 ✓ Streichen, Tapezieren, Böden, Trockenbau, Schimmelbeseitigung ✓ Festpreis nach kostenloser Besichtigung ☎ 0173 8615002"
+  description="Malerbetrieb in Hamburg seit 2002: Altbausanierung, Streichen, Tapezieren, Böden, Trockenbau, Schimmelbeseitigung. Festpreis nach Besichtigung. ☎ 0173 8615002"
   path="/"
   ogDescription="Malern, Tapezieren, Böden, Trockenbau und Schimmelbeseitigung in Hamburg. Kostenlose Besichtigung, schriftlicher Festpreis. Mehmet Sert, 0173 8615002."
 >
@@ -146,8 +150,8 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
         <p class="section-kicker">Leistungen</p>
         <h2>Von der Fläche bis zur fertigen Übergabe.</h2>
         <p class="section-intro">
-          Malerarbeiten sind der Kern. Ergänzend übernehmen wir Böden, Trockenbau, Sanierungen und
-          Montagearbeiten mit einem klaren Ansprechpartner.
+          Malerarbeiten sind der Kern, Altbau unser Schwerpunkt. Ergänzend übernehmen wir Böden,
+          Trockenbau, Sanierungen und Montagearbeiten mit einem klaren Ansprechpartner.
         </p>
         <div class="leistungen">
           {leistungen.map((l) => <LeistungCard {...l} />)}
@@ -188,6 +192,45 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
           Der Preis hängt von Tapetenart, Wandzustand und Fläche ab — deshalb gibt es dafür keinen
           Quadratmeterpreis von der Stange, sondern ein schriftliches Festpreisangebot nach dem
           kostenlosen Vor-Ort-Termin.
+        </p>
+      </div>
+    </section>
+
+    <section id="altbau">
+      <div class="container">
+        <p class="section-kicker">Altbau</p>
+        <h2>Altbausanierung in Hamburg.</h2>
+        <p class="section-intro">
+          Hamburger Altbauten haben ihre eigenen Regeln: alte Leimfarbe, Kalkputz, Stuckprofile,
+          Risse im Putz und Wände, die nie ganz gerade waren. Wir arbeiten seit 2002 in Wohnungen
+          aus der Gründerzeit und der Nachkriegszeit und wissen, wo man spachteln kann und wo der
+          Untergrund erst gefestigt werden muss.
+        </p>
+        <div class="leistung-list">
+          <div class="leistung-item">
+            <h3>Typische Altbau-Arbeiten</h3>
+            <ul>
+              <li>Alte Leim- und Kalkfarbe abwaschen statt überstreichen</li>
+              <li>Risse im Putz öffnen, armieren und schließen</li>
+              <li>Stuckleisten und Profile vorsichtig freilegen und nacharbeiten</li>
+              <li>Holzfenster und alte Türen abschleifen und neu lackieren</li>
+              <li>Dielen abschleifen und versiegeln — siehe <a href="/bodenbelag-hamburg">Bodenbelag</a></li>
+            </ul>
+          </div>
+          <div class="leistung-item">
+            <h3>Was im Altbau oft übersehen wird</h3>
+            <ul>
+              <li>Feuchte Außenwände: erst Ursache prüfen, dann <a href="/schimmel-sanierung-hamburg">sanieren</a></li>
+              <li>Nicht tragfähiger Altanstrich — neue Farbe blättert sonst nach einem Jahr ab</li>
+              <li>Unebene Wände: Vliestapete oder Spachtelung statt Glattanstrich</li>
+              <li>Bewohnte Wohnung: staubarm arbeiten, abends besenrein übergeben</li>
+            </ul>
+          </div>
+        </div>
+        <p class="preis-hint">
+          Im Altbau entscheidet der Untergrund über den Preis — deshalb schaut Mehmet Sert sich
+          jede Wohnung persönlich an, bevor es ein Angebot gibt. Was wirklich nötig ist, steht
+          danach schriftlich drin.
         </p>
       </div>
     </section>
@@ -409,6 +452,13 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
             <a class="direct-item" href={`mailto:${business.email}`}>
               <span class="direct-label">E-Mail</span>
               <span class="direct-value">{business.email}</span>
+            </a>
+            <a class="direct-item" href={business.hasMap} target="_blank" rel="noopener">
+              <span class="direct-label">Betrieb</span>
+              <span class="direct-value">
+                {business.address.streetAddress}, {business.address.postalCode} {business.address.addressLocality}
+              </span>
+              <span class="direct-note">Hamburg-Marienthal, Bezirk Wandsbek — auf Google Maps ansehen</span>
             </a>
           </div>
         </div>
