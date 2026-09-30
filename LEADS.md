@@ -5,6 +5,7 @@ Dieses Register wird bei jeder echten Anfrage gepflegt. Quelle so genau wie beka
 | Datum | Leistung | Quelle | Anruf | Angebot | Auftrag | Wert |
 | --- | --- | --- | :---: | :---: | :---: | --- |
 | Aug. 2026 | Schimmel-Sanierung | vermutlich Google | Ja | Ja | Ja | später ergänzen |
+| 30.09.2026 | (vom Kunden genannt) | **ChatGPT** | Ja | — | **Ja** | später ergänzen |
 
 ## Messstand zum 22.08.2026
 
@@ -276,3 +277,44 @@ einfachste Erklärung.
 ### Verzeichnisse — noch nicht korrigiert
 
 In den Google-Ergebnissen zu „Maler Sert GmbH" stehen weiter mit falschen Daten: branchen-info.net (15 A, 040 687045), meinestadt.de (15A), branchenbuchdeutschland.de (040 687045 + Fax), Creditsafe (Gründung 2000). Siehe [VERZEICHNISSE.md](VERZEICHNISSE.md).
+
+## 30.09.2026 — erster nachweisbarer Lead über ChatGPT
+
+Mehmet Sert hat telefonisch gemeldet: Ein Kunde hat heute angerufen und auf Nachfrage gesagt,
+er habe den Betrieb **über ChatGPT gefunden**. Daraus ist ein Auftrag entstanden. Mehmet Sert
+hat es selbst nachzustellen versucht und den Betrieb dabei nicht gefunden — das ist normal,
+da ChatGPT-Antworten nicht reproduzierbar sind und stark von der Formulierung abhängen.
+
+**Einordnung:** Das ist die erste Anfrage, deren Quelle ein Kunde ausdrücklich benannt hat.
+Es passt zum Befund vom 04.09., dass Claude-SearchBot, OAI-SearchBot und ChatGPT-User die
+Seite bereits erfolgreich abrufen. Ein einzelner Fall ist kein Trend, aber er bestätigt,
+dass KI-Suche für diesen Betrieb ein realer Kanal ist — und dass die Entscheidung, Agent- und
+Suchzugriff erlaubt zu lassen und nur das Training zu sperren, richtig war.
+
+**Wichtig fürs Tracking:** Solche Leads sind in GA4 unsichtbar. Der Kunde ruft direkt an,
+ohne die Website zu öffnen. Die Quelle erfährt man nur, wenn man am Telefon danach fragt.
+Deshalb: bei jeder Anfrage kurz fragen „Wie haben Sie uns gefunden?" und hier eintragen.
+
+### Zwei Folgeaufgaben aus demselben Gespräch
+
+**1. Adresse im Google-Unternehmensprofil einblenden — nur Mehmet.**
+Der Kunde sagte, er habe die Adresse nicht gefunden und nicht gewusst, ob der Betrieb
+überhaupt in Hamburg sitzt. Das Profil läuft bisher im reinen Einzugsgebiet-Modus, die
+Adresse ist ausgeblendet (dokumentiert in [PROJEKT.md](PROJEKT.md), GBP-Status 29.06.).
+Mehmet Sert ist mit der Einblendung einverstanden.
+
+Weg: Google-Unternehmensprofil → Profil bearbeiten → Standort → Adresse → „Kunden besuchen
+mein Unternehmen" aktivieren und `In der Niederung 15, 22047 Hamburg` eintragen.
+Google verlangt danach in der Regel eine erneute Bestätigung (Postkarte oder Video), das kann
+einige Tage dauern. Der Eintrag verschwindet in dieser Zeit nicht.
+
+Auf der Website war dieselbe Lücke: Die Adresse stand nur im Footer, Impressum und im
+JSON-LD — im sichtbaren Text der Startseite nirgends. Ist erledigt, sie steht jetzt im
+Kontaktblock mit Stadtteil und Kartenlink.
+
+**2. Altbau als Kernkompetenz — erledigt.**
+Laut Betrieb ist Altbau ein Schwerpunkt. Auf der Website kam das Wort genau einmal vor, als
+Nebensatz in einer Farbmaterial-Liste. Jetzt eigener Abschnitt auf der Startseite, FAQ-Eintrag
+(damit auch im FAQPage-Schema), Erwähnung in Leistungs-Intro, Meta-Description und
+`knowsAbout`. Für Altbau-Suchanfragen gab es bisher keine Zielseite — Nachfrage dazu ab
+Mitte Oktober in der Search Console prüfen.
