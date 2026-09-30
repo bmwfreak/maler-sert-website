@@ -318,3 +318,18 @@ Nebensatz in einer Farbmaterial-Liste. Jetzt eigener Abschnitt auf der Startseit
 (damit auch im FAQPage-Schema), Erwähnung in Leistungs-Intro, Meta-Description und
 `knowsAbout`. Für Altbau-Suchanfragen gab es bisher keine Zielseite — Nachfrage dazu ab
 Mitte Oktober in der Search Console prüfen.
+
+### Nachtrag 30.09.2026, abends
+
+**Adresse im Unternehmensprofil ist live**, noch am selben Tag: Google zeigt
+„In d. Niederung 15, 22047 Wandsbek" — Hausnummer korrekt ohne „A". Google nennt als Ort den
+Bezirk (Wandsbek) statt „Hamburg"; das ist Googles Darstellung, kein Datenfehler.
+
+**Indexierung beantragt** für alle vier bisher nicht indexierten Service-Seiten
+(Schimmel, Fassade, Boden, Trockenbau). Befund bei der URL-Prüfung: Alle vier waren von Google
+**noch nie gecrawlt** („Letztes Crawling: nicht zutreffend"), Bodenbelag war Google sogar
+gänzlich unbekannt. Beantragen setzt sie in die bevorzugte Crawl-Warteschlange; Ergebnis im
+Indexierungsbericht nach ein bis zwei Wochen prüfen.
+
+**Technik (Lighthouse mobil, live):** Performance 98 → 99, Barrierefreiheit 95 → 100,
+Best Practices und SEO 100. Seitengewicht 526 → 342 KiB, LCP 2,3 → 2,0 s.
