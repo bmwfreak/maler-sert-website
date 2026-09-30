@@ -7,6 +7,7 @@ import Hero from '../components/Hero.astro';
 import TrustBand from '../components/TrustBand.astro';
 import LeistungCard from '../components/LeistungCard.astro';
 import Faq from '../components/Faq.astro';
+import { webpSrcset } from '../lib/img';
 
 const leistungen = [
   {
@@ -246,7 +247,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
         <div class="proof-grid">
           <article class="proof-card proof-card--wide reveal">
             <picture>
-              <source srcset="/img/malerarbeiten-weisse-farbrolle.webp" type="image/webp" />
+              <source srcset={webpSrcset('/img/malerarbeiten-weisse-farbrolle.webp')} sizes="(min-width: 980px) 48vw, 100vw" type="image/webp" />
               <img src="/img/malerarbeiten-weisse-farbrolle.jpg" alt="Weiße Farbrolle für gleichmäßige Malerarbeiten an einer Wand" width="1200" height="1800" loading="lazy" decoding="async" />
             </picture>
             <div class="proof-copy">
@@ -257,7 +258,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
           </article>
           <article class="proof-card reveal">
             <picture>
-              <source srcset="/img/boden.webp" type="image/webp" />
+              <source srcset={webpSrcset('/img/boden.webp')} sizes="(min-width: 980px) 48vw, 100vw" type="image/webp" />
               <img src="/img/boden.jpg" alt="Sauber verlegter Bodenbelag mit ruhigem Oberflächenbild" width="1200" height="800" loading="lazy" decoding="async" />
             </picture>
             <div class="proof-copy">
@@ -268,7 +269,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
           </article>
           <article class="proof-card reveal">
             <picture>
-              <source srcset="/img/hausverwaltung-gewerbe.webp" type="image/webp" />
+              <source srcset={webpSrcset('/img/hausverwaltung-gewerbe.webp')} sizes="(min-width: 980px) 48vw, 100vw" type="image/webp" />
               <img src="/img/hausverwaltung-gewerbe.jpg" alt="Gepflegtes Mehrfamilienhaus für Hausverwaltungen und Gewerbe" width="1200" height="800" loading="lazy" decoding="async" />
             </picture>
             <div class="proof-copy">
@@ -342,7 +343,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
       <div class="container">
         <div class="about-grid reveal">
           <picture>
-            <source srcset="/img/mehmet-sert-portrait.webp" type="image/webp" />
+            <source srcset={webpSrcset('/img/mehmet-sert-portrait.webp')} sizes="(min-width: 860px) 384px, 310px" type="image/webp" />
             <img class="about-portrait" src="/img/mehmet-sert-portrait.png" alt="Mehmet Sert, Inhaber und Geschäftsführer der Maler Sert GmbH" width="290" height="516" loading="lazy" decoding="async" />
           </picture>
           <div class="about-text">

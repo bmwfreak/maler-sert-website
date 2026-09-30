@@ -1,10 +1,11 @@
 ---
 import { business } from '../data/business';
+import { webpSrcset } from '../lib/img';
 const profileUrl = `https://www.google.com/search?kgmid=${business.kgmid}`;
 ---
 <header class="hero" id="top">
   <picture class="hero-media">
-    <source srcset="/img/hero-fahrzeug-maler-sert.webp" type="image/webp" />
+    <source srcset={webpSrcset('/img/hero-fahrzeug-maler-sert.webp')} sizes="(min-width: 860px) 46vw, 100vw" type="image/webp" />
     <img
       src="/img/hero-fahrzeug-maler-sert.jpg"
       alt="Mehmet Sert vor dem Firmenfahrzeug der Maler Sert GmbH"

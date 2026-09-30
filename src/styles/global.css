@@ -555,7 +555,7 @@
     gap: 72px;
     align-items: start;
   }
-  .kontakt-form-col .section-kicker { color: var(--warm); }
+  .kontakt-form-col .section-kicker { color: var(--accent-sand); }
   .kontakt-form-col h2 { color: #f2ede6; margin-bottom: 10px; }
   .kontakt-sub { color: rgba(242,237,230,0.6); font-size: var(--text-base); margin: 0 0 24px; }
   /* form fields on dark */
@@ -583,7 +583,7 @@
     border-color: var(--warm);
     box-shadow: 0 0 0 3px rgba(155,87,47,0.28);
   }
-  .kontakt-dark .form-hinweis { color: rgba(242,237,230,0.38); }
+  .kontakt-dark .form-hinweis { color: rgba(242,237,230,0.62); }
   .kontakt-dark .form-success {
     background: rgba(46,125,80,0.15);
     border-color: rgba(100,200,130,0.22);
@@ -591,7 +591,7 @@
   }
   /* Right direct column */
   .kontakt-direct-col { padding-top: 52px; }
-  .kontakt-direct-col .section-kicker { color: var(--warm); margin-bottom: 20px; }
+  .kontakt-direct-col .section-kicker { color: var(--accent-sand); margin-bottom: 20px; }
   .direct-item {
     display: block;
     text-decoration: none;
@@ -607,7 +607,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: rgba(242,237,230,0.42);
+    color: rgba(242,237,230,0.62);
     margin-bottom: 5px;
   }
   .direct-value {
@@ -621,7 +621,7 @@
   .direct-note {
     display: block;
     font-size: var(--text-xs);
-    color: rgba(242,237,230,0.42);
+    color: rgba(242,237,230,0.62);
     margin-top: 5px;
   }
   @media (max-width: 860px) {
@@ -1696,7 +1696,7 @@ footer a:hover {
   font-weight: 700;
   text-transform: uppercase;
 }
-.trust-item h3 {
+.trust-item .trust-title {
   font-family: "Newsreader", Georgia, serif;
   margin: 0 0 6px;
   font-size: var(--text-card-title);
@@ -1718,7 +1718,7 @@ footer a:hover {
   .trust-item { padding: 12px 10px; }
   .trust-item:nth-child(n) { border-left: 0; border-top: 1px solid var(--line); }
   .trust-item:first-child { border-top: 0; }
-  .trust-item h3 { font-size: var(--text-card-title); }
+  .trust-item .trust-title { font-size: var(--text-card-title); }
 }
 
 /* --- Service-Seiten: zusaetzliche Bausteine --- */

@@ -1,5 +1,6 @@
 ---
 import { business } from '../data/business';
+import { webpSrcset } from '../lib/img';
 
 interface Props {
   eyebrow: string;
@@ -30,7 +31,7 @@ const mediaClass = rollerCrop ? 'page-hero-media page-hero-media--roller' : 'pag
 ---
 <header class="page-hero">
   <picture class={mediaClass}>
-    <source srcset={imgWebp} type="image/webp" />
+    <source srcset={webpSrcset(imgWebp)} sizes="(min-width: 860px) 47vw, 100vw" type="image/webp" />
     <img src={img} alt={imgAlt} width="1672" height="941" fetchpriority="high" decoding="async" />
   </picture>
   <div class="page-hero-overlay" aria-hidden="true"></div>
