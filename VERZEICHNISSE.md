@@ -171,13 +171,20 @@ Verzeichnisse übernehmen Änderungen typischerweise in ein bis vier Wochen.
 
 ## 5. Abhaken
 
-- [ ] branchen-info.net (Adresse **und** Telefon)
-- [ ] Cylex (Telefon)
+- [ ] branchen-info.net — Adresse und Website bereits korrigiert (Stand 01.10.), Telefon offen; Korrektur-Mail vorbereitet 01.10.
+- [ ] Cylex — Formular am 01.10. vorbereitet (Telefon, Fax raus, Website), Absenden scheitert ohne Captcha durch Nutzer
 - [ ] Firmania (nach Cylex prüfen)
 - [ ] Stadtbranchenbuch (Telefon)
-- [ ] Öffnungszeitenbuch (Telefon)
-- [ ] maler-finden.org (Telefon + Fax)
+- [x] Öffnungszeitenbuch — Telefon, Website, E-Mail, Öffnungszeiten, Suchbegriffe korrigiert, abgeschickt 01.10.2026 (Freischaltung 24–48 h)
+- [ ] maler-finden.org — Formular am 01.10. vorbereitet, Absenden durch Nutzer (Captcha)
 - [ ] Yelp beanspruchen
 - [ ] Bing Places anlegen
 - [ ] Apple Business Connect
 - [ ] Handwerkskammer Hamburg
+
+## Hinweis: Alte Zugänge werden nicht gebraucht
+
+Die meisten Einträge hat niemand aus dem Betrieb selbst angelegt — die Portale haben die Daten
+aus alten Telefonbüchern und dem Handelsregister übernommen. Korrigieren geht deshalb über
+öffentliche „Fehler melden"-Formulare (Cylex, Öffnungszeitenbuch, maler-finden), per E-Mail
+(branchen-info.net) oder durch Neu-Übernahme mit frischem Konto (Yelp, Stadtbranchenbuch).
