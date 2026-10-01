@@ -200,4 +200,5 @@ gestrichen (750-Zeichen-Limit). Bing übernimmt die Änderung per Synchronisatio
 
 - [x] **Das Örtliche** — kostenloser Grundeintrag („Das Örtliche für Hamburg", Branche Malerbetriebe), per Mail bestätigt. Veröffentlichung nach Prüfung (bis 3 Werktage). Vorschau zeigte „geöffnet bis 19:00" trotz eingetragener 18:00 — nach Veröffentlichung prüfen.
 - [x] **Gelbe Seiten** — kostenloser Grundeintrag (NICHT das 3-Monats-Testabo, das danach 358,80 €/Jahr kostet), Branche Malerbetriebe. Bestätigungsmail steht aus. Vorschau ließ sich nicht laden — nach Veröffentlichung prüfen.
-- Ansprechpartner für Rückfragen bei beiden: Emre Küllüoglu, eku1453@gmail.com (nicht öffentlich). Keine Werbe-Einwilligung erteilt.
+- [x] **11880** — kostenloser Eintrag, Branche Maler, Mo–Sa 8–18, erfolgreich registriert 01.10.2026. Erscheint auch auf werkenntdenBESTEN.de. 11880 kann zur Verifizierung anrufen/mailen und eine Gewerbeanmeldung verlangen.
+- Ansprechpartner für Rückfragen bei allen dreien: Emre Küllüoglu, eku1453@gmail.com (nicht öffentlich). Keine Werbe-Einwilligung erteilt.
