@@ -178,7 +178,8 @@ Verzeichnisse übernehmen Änderungen typischerweise in ein bis vier Wochen.
 - [x] Öffnungszeitenbuch — Telefon, Website, E-Mail, Öffnungszeiten, Suchbegriffe korrigiert, abgeschickt 01.10.2026 (Freischaltung 24–48 h)
 - [x] maler-finden.org — Korrekturanfrage abgeschickt 01.10.2026
 - [ ] Yelp beanspruchen
-- [ ] Bing Places anlegen
+- [x] Bing Places — per Google-Konto angelegt und aus dem Google-Profil importiert, Überprüfung abgeschlossen 01.10.2026, online in 7–12 Tagen. Bleibt mit Google synchronisiert: Änderungen nur im Google-Profil pflegen.
+- [x] Bing Webmaster Tools — maler-sert.de aus der Search Console importiert, Sitemaps fehlerfrei, alle 6 Seiten per URL Submission eingereicht (01.10.2026)
 - [ ] Apple Business Connect
 - [ ] Handwerkskammer Hamburg
 
@@ -188,3 +189,9 @@ Die meisten Einträge hat niemand aus dem Betrieb selbst angelegt — die Portal
 aus alten Telefonbüchern und dem Handelsregister übernommen. Korrigieren geht deshalb über
 öffentliche „Fehler melden"-Formulare (Cylex, Öffnungszeitenbuch, maler-finden), per E-Mail
 (branchen-info.net) oder durch Neu-Übernahme mit frischem Konto (Yelp, Stadtbranchenbuch).
+
+## Google-Profil, Änderung 01.10.2026
+
+Beschreibung: „Maler-Meisterbetrieb" → „Malerbetrieb" (Meisterbrief nicht belegt), Zeile
+„Altbausanierung: Leimfarbe, Risse, Stuck, Holzfenster, Dielen" ergänzt, „ohne versteckte Kosten"
+gestrichen (750-Zeichen-Limit). Bing übernimmt die Änderung per Synchronisation.
