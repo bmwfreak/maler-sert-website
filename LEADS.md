@@ -333,3 +333,11 @@ Indexierungsbericht nach ein bis zwei Wochen prüfen.
 
 **Technik (Lighthouse mobil, live):** Performance 98 → 99, Barrierefreiheit 95 → 100,
 Best Practices und SEO 100. Seitengewicht 526 → 342 KiB, LCP 2,3 → 2,0 s.
+
+### Nachtrag 01.10.2026 — technische SEO-Aufräumarbeiten
+
+- **Soft-404 behoben:** Jede unbekannte URL lieferte Status 200 mit der Startseite (Cloudflare-Pages-Fallback ohne `404.html`). Jetzt echte 404-Seite.
+- **www und pages.dev** leiten per 301 auf maler-sert.de um (Pages-Function `functions/_middleware.js`).
+- **Alte `/sitemap.xml`** aus der Search Console entfernt (lieferte seit 28.05. nur Fehler). Aktiv bleibt `/sitemap-index.xml` mit 6 Seiten.
+- **Bing Webmaster Tools** eingerichtet, alle 6 Seiten eingereicht. **Bing Places** angelegt.
+- **llms.txt** online, Copy-Audit-Fundstellen bereinigt.
