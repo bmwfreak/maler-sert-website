@@ -92,7 +92,7 @@ anonym** — es braucht überall entweder ein Konto oder eine E-Mail vom Betrieb
 | [Firmania](https://firmania.de/hamburg/maler-sert-gmbh-1259206) | spiegelt Cylex | zieht nach Cylex-Fix meist automatisch nach | — |
 | [Öffnungszeitenbuch](https://www.oeffnungszeitenbuch.de/filiale/Hamburg-Maler%2520Sert%2520GmbH-2268203S.html) | Telefon | Fehler melden | nein, aber Formular |
 | [maler-finden.org](https://www.maler-finden.org/hamburg/maler-sert-gmbh-1530757.html) | Telefon + Fax-Eintrag | Änderung vorschlagen | nein, aber Formular |
-| [Yelp](https://www.yelp.com/biz/maler-sert-hamburg) | Eintrag unclaimed, kein Telefon | Profil beanspruchen | **ja** |
+| [Yelp](https://www.yelp.de/biz/maler-sert-hamburg) | 02.10.: Änderung eingereicht (Tel. 0173…, Website, Mo–Sa 8–18), Moderation offen. Übernahme scheitert: Yelp ruft nur die tote 040 687045 an | nach Freigabe erneut übernehmen (Anruf an 0173), sonst Yelp-Support mit Gewerbeanmeldung | **ja** |
 
 `branchen-info.net` ist der wichtigste Fix: Dort steht die falsche Hausnummer, die laut
 Local-SEO-Analyse als Quelle des „15 A"-Fehlers in andere Verzeichnisse gewandert ist.
