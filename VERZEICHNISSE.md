@@ -195,3 +195,9 @@ aus alten Telefonbüchern und dem Handelsregister übernommen. Korrigieren geht 
 Beschreibung: „Maler-Meisterbetrieb" → „Malerbetrieb" (Meisterbrief nicht belegt), Zeile
 „Altbausanierung: Leimfarbe, Risse, Stuck, Holzfenster, Dielen" ergänzt, „ohne versteckte Kosten"
 gestrichen (750-Zeichen-Limit). Bing übernimmt die Änderung per Synchronisation.
+
+## Neueinträge 01.10.2026
+
+- [x] **Das Örtliche** — kostenloser Grundeintrag („Das Örtliche für Hamburg", Branche Malerbetriebe), per Mail bestätigt. Veröffentlichung nach Prüfung (bis 3 Werktage). Vorschau zeigte „geöffnet bis 19:00" trotz eingetragener 18:00 — nach Veröffentlichung prüfen.
+- [x] **Gelbe Seiten** — kostenloser Grundeintrag (NICHT das 3-Monats-Testabo, das danach 358,80 €/Jahr kostet), Branche Malerbetriebe. Bestätigungsmail steht aus. Vorschau ließ sich nicht laden — nach Veröffentlichung prüfen.
+- Ansprechpartner für Rückfragen bei beiden: Emre Küllüoglu, eku1453@gmail.com (nicht öffentlich). Keine Werbe-Einwilligung erteilt.
