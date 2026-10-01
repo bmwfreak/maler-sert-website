@@ -171,12 +171,12 @@ Verzeichnisse übernehmen Änderungen typischerweise in ein bis vier Wochen.
 
 ## 5. Abhaken
 
-- [ ] branchen-info.net — Adresse und Website bereits korrigiert (Stand 01.10.), Telefon offen; Korrektur-Mail vorbereitet 01.10.
-- [ ] Cylex — Formular am 01.10. vorbereitet (Telefon, Fax raus, Website), Absenden scheitert ohne Captcha durch Nutzer
+- [x] branchen-info.net — Korrektur-Mail (Telefon) gesendet 01.10.2026
+- [x] Cylex — Telefon, Fax raus, Website; abgeschickt 01.10.2026 (Bearbeitung 2–3 Wochen)
 - [ ] Firmania (nach Cylex prüfen)
 - [ ] Stadtbranchenbuch (Telefon)
 - [x] Öffnungszeitenbuch — Telefon, Website, E-Mail, Öffnungszeiten, Suchbegriffe korrigiert, abgeschickt 01.10.2026 (Freischaltung 24–48 h)
-- [ ] maler-finden.org — Formular am 01.10. vorbereitet, Absenden durch Nutzer (Captcha)
+- [x] maler-finden.org — Korrekturanfrage abgeschickt 01.10.2026
 - [ ] Yelp beanspruchen
 - [ ] Bing Places anlegen
 - [ ] Apple Business Connect
