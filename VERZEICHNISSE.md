@@ -87,7 +87,7 @@ anonym** — es braucht überall entweder ein Konto oder eine E-Mail vom Betrieb
 | Verzeichnis | Was ist falsch | Weg | Konto nötig |
 |---|---|---|---|
 | [branchen-info.net](https://hamburg.branchen-info.net/fp_4196323.php) | Adresse **„15 A"** + Telefon 040 687045 + keine Website | E-Mail (Vorlage unten) oder Login | E-Mail reicht |
-| [Stadtbranchenbuch](https://hamburg.stadtbranchenbuch.com/1366810.html) | Telefon 040 687045 (Adresse korrekt) | Eintrag bearbeiten | ja |
+| [Stadtbranchenbuch](https://hamburg.stadtbranchenbuch.com/1366810.html) | 02.10.: Korrektur abgeschickt (Tel. 0173…, Fax raus, E-Mail, Website, Mo–Sa 8–18, Beschreibung), keine Erfolgsseite, Formular sprang auf Schritt 1 zurück. Ohne Werbe-Einwilligung | Mitte Oktober prüfen, ob live | ja |
 | [Cylex](https://web2.cylex.de/firma-home/maler-sert-gmbh-2702025.html) | Telefon 040 687045 | Fehlerhafte Daten melden | nein, aber Formular |
 | [Firmania](https://firmania.de/hamburg/maler-sert-gmbh-1259206) | spiegelt Cylex | zieht nach Cylex-Fix meist automatisch nach | — |
 | [Öffnungszeitenbuch](https://www.oeffnungszeitenbuch.de/filiale/Hamburg-Maler%2520Sert%2520GmbH-2268203S.html) | Telefon | Fehler melden | nein, aber Formular |
@@ -174,7 +174,7 @@ Verzeichnisse übernehmen Änderungen typischerweise in ein bis vier Wochen.
 - [x] branchen-info.net — Korrektur-Mail (Telefon) gesendet 01.10.2026
 - [x] Cylex — Telefon, Fax raus, Website; abgeschickt 01.10.2026 (Bearbeitung 2–3 Wochen)
 - [ ] Firmania (nach Cylex prüfen)
-- [ ] Stadtbranchenbuch (Telefon)
+- [x] Stadtbranchenbuch (Telefon) — eingereicht 02.10., Live-Check offen
 - [x] Öffnungszeitenbuch — Telefon, Website, E-Mail, Öffnungszeiten, Suchbegriffe korrigiert, abgeschickt 01.10.2026 (Freischaltung 24–48 h)
 - [x] maler-finden.org — Korrekturanfrage abgeschickt 01.10.2026
 - [ ] Yelp beanspruchen
