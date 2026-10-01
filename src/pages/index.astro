@@ -377,7 +377,7 @@ const waDirect = `https://wa.me/${business.phone.wa}?text=${encodeURIComponent('
           <span class="pill">weitere Orte auf Anfrage</span>
         </div>
         <p class="map-link">
-          <a href="https://www.openstreetmap.org/?mlat=53.5511&mlon=10.0193#map=11/53.55/10.02" target="_blank" rel="noopener">Standort auf OpenStreetMap ansehen →</a>
+          <a href={business.hasMap} target="_blank" rel="noopener">Standort auf Google Maps ansehen →</a>
         </p>
       </div>
     </section>

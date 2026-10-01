@@ -3,7 +3,7 @@ import { business, services } from '../data/business';
 ---
 <footer>
   <div class="container">
-    <p><strong>{business.name}</strong> · Hamburg · {business.address.postalCode}</p>
+    <p><strong>{business.name}</strong> · {business.address.streetAddress} · {business.address.postalCode} {business.address.addressLocality}</p>
     <p>
       Telefon: <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
       · E-Mail: <a href={`mailto:${business.email}`}>{business.email}</a>

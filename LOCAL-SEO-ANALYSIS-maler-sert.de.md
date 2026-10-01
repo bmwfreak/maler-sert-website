@@ -1,204 +1,168 @@
 # Local SEO Analyse — maler-sert.de
 
-Stand: 22.08.2026. Alle Befunde live geprüft (Startseite + 5 Leistungsseiten per `curl`, Schema per JSON-Parser, Verzeichnisse per Websuche). Keine Zahl geschätzt.
+Stand: **01.10.2026** · Vorversion: 22.08.2026 (51/100, in der Git-Historie)
 
-## Local SEO Score: 51/100
+Geprüft: eigene Website (Seiten, Footer, JSON-LD), Google-Unternehmensprofil, Search Console,
+sowie jeder bekannte Verzeichniseintrag einzeln (Abruf der Seite bzw. Suche im Verzeichnis selbst).
 
-| Dimension | Gewicht | Score | Bewertung |
-|---|---|---|---|
-| GBP-Signale | 25% | 13/25 | Teilweise — Profil verknüpft, aber keine Karte, keine Bewertungen, kein Foto-Nachweis |
-| Bewertungen & Reputation | 20% | 5/20 | Schwach — nichts sichtbar, Schema-Rating bewusst entfernt |
-| Local On-Page SEO | 20% | 15/20 | Stark — 5 dedizierte Leistungsseiten (wichtigster Faktor), aber H1 ohne Ort |
-| NAP-Konsistenz & Citations | 15% | 8/15 | Konflikt — Seite↔Schema sauber, Seite↔Verzeichnisse widersprüchlich |
-| Local Schema Markup | 10% | 8,5/10 | Sehr gut — korrekter Subtyp, alle Kernfelder |
-| Local Links & Autorität | 10% | 1/10 | Fehlt fast vollständig |
+## Local SEO Score: 54/100 (vorher 51)
 
-## Geschäftstyp: Hybrid (mit SAB-Tendenz)
+| Dimension | Gewicht | 22.08. | 01.10. | Kernaussage |
+|---|---:|---:|---:|---|
+| Google-Unternehmensprofil | 25 | 13 | **16** | Adresse jetzt öffentlich, Einzugsgebiet bleibt; Fotos und Beiträge fehlen |
+| Bewertungen | 20 | 5 | **6** | 6 × 5,0 ★, nur eine mit Text, unter der 10er-Schwelle, eine unbeantwortet |
+| Lokale Onpage-Faktoren | 20 | 15 | **17** | Ort in Titel und H1, Adresse sichtbar, Altbau und Tapezieren ergänzt |
+| NAP & Verzeichnisse | 15 | 8 | **5** | **Richtige Telefonnummer steht in keinem einzigen Verzeichnis** |
+| Strukturierte Daten | 10 | 8,5 | **8,5** | Vollständig; `hasCredential` (Meisterbrief) fehlt weiter |
+| Lokale Links & Autorität | 10 | 1 | **1** | Keine Erwähnungen außerhalb von Verzeichnissen |
 
-Sichtbare Adresse im Footer + Impressum (`In der Niederung 15, 22047 Hamburg`), gleichzeitig starke Service-Area-Sprache („Tätig im gesamten Hamburger Stadtgebiet und Umland", `areaServed` mit 4 Städten). Im Google-Unternehmensprofil ist laut `PROJEKT.md` bewusst der **Service-Area-Modus** ohne sichtbare Adresse gewählt — das ist konsistent mit einem Handwerksbetrieb ohne Ladengeschäft.
+Die Verzeichnis-Note ist gesunken, obwohl sich dort nichts verschlechtert hat: Die Prüfung war im
+August eine Stichprobe aus der Websuche, diesmal wurde jeder Eintrag einzeln abgerufen. Das Bild
+ist dadurch genauer — und schlechter.
 
-**Konsequenz:** Karten-Embed-Prüfung und strenge Adress-Sichtbarkeit greifen hier nur eingeschränkt. Die NAP-Konsistenz bleibt trotzdem voll relevant, weil die Adresse in Verzeichnissen ohnehin gelistet ist.
-
-## Branche: Home Services (Malerbetrieb)
-
-Erkannt an: Einsatzgebiet-Sektion, „kostenloser Vor-Ort-Termin", Festpreis-Kommunikation, Gewerke-Struktur. Kein Notdienst/24-7-Signal (bewusst, passt zum Betrieb).
-
-**Branchenspezifisch korrekt umgesetzt:** Schema-Subtyp `["Painter", "HomeAndConstructionBusiness"]` statt generischem `LocalBusiness` — das ist die richtige Wahl für dieses Gewerk und besser als bei den meisten Wettbewerbern.
+**Geschäftstyp:** Hybrid (seit 30.09. sichtbare Adresse plus Einzugsgebiet) · **Branche:** Home Services, Malerbetrieb
 
 ---
 
-## 1. GBP-Signale (13/25)
+## 1. Der wichtigste Befund: die Telefonnummer
 
-| Signal | Status | Beleg |
+Die aktuelle Nummer **0173 8615002** steht laut Google-Suche nach der exakten Nummer **ausschließlich
+auf maler-sert.de** — und im Google-Unternehmensprofil. Kein einziges Verzeichnis führt sie.
+
+Die tote Festnetznummer **040 687045** steht dagegen bei:
+
+| Verzeichnis | Adresse | Telefon | Website-Link | Weg zur Korrektur |
+|---|---|---|---|---|
+| Yelp | 15 ✓ | **040 687045** | – | Profil beanspruchen (Konto) |
+| Cylex | 15 ✓ | **040 687045** | – | „Fehlerhafte Daten melden" |
+| Firmania | spiegelt Cylex | | | zieht nach Cylex-Korrektur nach |
+| branchen-info.net | 15 ✓ (**teilweise korrigiert**) | **040 687045** | ✓ neu | E-Mail an info@branchen-info.net, Betreff mit ID 4196323 |
+| Öffnungszeitenbuch | 15 ✓ | **040 687045** | – | „Fehler melden" |
+| Stadtbranchenbuch | 15 ✓ | **040 687045** + Fax | – | „Eintrag bearbeiten" (Login) |
+| maler-finden.org | 15 ✓ | **040 687045** + Fax | – | „Änderung vorschlagen" |
+| Infobel | ? | **040 68…** | ? | Eintrag beanspruchen |
+| Jobaushilfe.de | 15 ✓ | **040 687045** | – | Kontakt zum Betreiber |
+| meinestadt.de | **15A** | – | ✓ | — |
+| branchenbuchdeutschland.de | 15 ✓ | **040 687045** + Fax | – | — |
+| Creditsafe | — | — | — | nennt Gründung „2000" statt 2002 |
+| Northdata / Creditreform | 15 ✓ | – | – | Handelsregister-Spiegel, zieht automatisch nach |
+
+**branchen-info.net ist seit August teilweise korrigiert:** Adresse jetzt ohne „A", Website hinterlegt.
+Die Telefonnummer ist aber noch die alte. Das heißt, dort hat schon jemand angesetzt — der zweite
+Schritt fehlt nur noch. Googles Suchergebnis-Ausschnitt zeigt noch den alten Stand, weil Google die
+Seite seither nicht neu abgerufen hat.
+
+**Warum das zählt:** Wer bei Yelp, Cylex oder Infobel auf „Anrufen" tippt, landet bei einem toten
+Anschluss. Für ChatGPT und andere KI-Systeme widersprechen sich die Quellen: Die eigene Seite sagt
+0173…, acht Verzeichnisse sagen 040…. Laut Whitespark 2026 sind drei der fünf wichtigsten Faktoren
+für KI-Sichtbarkeit verzeichnisbezogen.
+
+---
+
+## 2. Wo der Betrieb gar nicht steht
+
+Direkt in der Suche des jeweiligen Verzeichnisses geprüft, nicht nur über Google:
+
+| Verzeichnis | Ergebnis | Relevanz |
 |---|---|---|
-| GBP verknüpft (`sameAs`) | ✓ | 2 kgmid-URLs im Schema + sichtbarer Profil-Link im Hero |
-| Öffnungszeiten sichtbar | ✓ | „Mo–Sa 8–18 Uhr · außerhalb nach Absprache", deckungsgleich mit `openingHoursSpecification` |
-| Karten-Embed | ✗ | 0 `<iframe>` auf der Seite |
-| Bewertungs-Widget | ✗ | Keine Bewertung sichtbar |
-| Kategorie-Signale | ✓ | Seiteninhalt (Maler/Boden/Trockenbau) deckt sich mit den in `PROJEKT.md` dokumentierten GBP-Kategorien |
-| Fotos/Posts | nicht prüfbar | Nur im GBP-Backend einsehbar, nicht von außen |
+| **Das Örtliche** | kein Eintrag (auch nicht unter „Sert") | hoch — Telefonbuch-Daten speisen viele andere Verzeichnisse |
+| **Gelbe Seiten** | 0 Treffer | hoch |
+| **11880** | kein Eintrag | mittel |
+| Facebook, Instagram | kein Firmenprofil gefunden | mittel |
+| golocal, MyHammer | kein Eintrag gefunden | niedrig |
+| Handwerkskammer Hamburg | nicht gefunden | **hoch** — stärkstes Autoritätssignal, zugleich Impressumspflicht |
+| Bing Places | nicht prüfbar (Bing verlangt Bot-Prüfung) | **hoch** — Grundlage für ChatGPT und Copilot |
+| Apple Business Connect | nicht von außen prüfbar | mittel |
 
-**Befund zur GBP-Link-Strategie:** Der Profil-Link zeigt auf `maler-sert.de/` — also auf die stärkste Seite. Sterling Sky rät bei der Diversity-Update-Logik davon ab, weil das die organische Sichtbarkeit derselben Seite unterdrücken kann. **Aber:** Das ist eine strittige, nicht von Google bestätigte Beobachtung. Bei 69 Klicks/Monat und einer Domain mit 8 Seiten ist das Risiko theoretisch — **keine Handlungsempfehlung**, nur zur Kenntnis.
+Bei Das Örtliche, Gelbe Seiten und 11880 ist der Eintrag kostenlos. Weil diese drei Datenquellen an
+viele kleinere Verzeichnisse weitergeben, korrigiert ein richtiger Eintrag dort mittelfristig
+auch Folgefehler.
 
-**Karten-Link zeigt auf falschen Punkt (verifiziert):** Der OSM-Link in der Einsatzgebiet-Sektion nutzt `mlat=53.5511&mlon=10.0193`, das Schema aber `53.5967448, 10.0873051`. Rechnerisch **6,78 km Abstand**. Der Link landet ungefähr in der Hamburger Innenstadt statt an der Betriebsadresse in Wandsbek.
+---
 
-## 2. Bewertungen & Reputation (5/20)
-
-| Kriterium | Ist | Benchmark |
-|---|---|---|
-| Sichtbare Bewertungen auf der Seite | keine | — |
-| `aggregateRating` im Schema | entfernt (22.08.) | — |
-| Google-Bewertungen gesamt | 5 | Schwelle 10 (Sterling Sky) |
-| Sterne | 5,0 | ≥4,5 für 31% der Nutzer Mindestanforderung |
-| Bewertungs-Velocity | unbekannt | 18-Tage-Regel |
-
-**Wichtiger Kontext, der die Bewertung dieser Dimension verändert:** Die 5 bestehenden Bewertungen stammen laut Deiner eigenen Angabe **von Verwandten**. Damit ist der niedrige Score hier kein reines Umsetzungsproblem, sondern die korrekte Abbildung der Realität — es gibt schlicht noch keinen echten Bewertungsbestand.
-
-Das `aggregateRating` wurde deshalb bewusst aus dem Schema entfernt. **Das war richtig und sollte so bleiben:** Bewertungen von Angehörigen verstoßen gegen Googles Bewertungsrichtlinien, und ein Schema-Rating ohne sichtbaren Beleg ist zusätzlich ein „self-serving rating"-Risiko. Punktabzug in dieser Dimension ist hier der Preis für Richtlinienkonformität — der richtige Trade-off.
-
-**Kein Review-Gating erkennbar** — die Seite schickt niemanden durch eine Zufriedenheitsabfrage vor dem Bewertungslink. Sauber (Gating wäre FTC-relevant, bis 53.088 $/Verstoß).
-
-## 3. Local On-Page SEO (15/20)
-
-**Stärkster Bereich — hier ist das Fundament richtig gebaut.**
-
-| Kriterium | Status | Detail |
-|---|---|---|
-| Dedizierte Leistungsseiten | ✓ ✓ | **5 Stück** — laut Whitespark 2026 der **wichtigste Faktor für lokale organische Sichtbarkeit UND zweitwichtigster für KI-Sichtbarkeit** |
-| Ort + Leistung im Title | ✓ | alle 5: „Malerarbeiten Hamburg — …", „Schimmel-Sanierung Hamburg — …" etc. |
-| Ort im H1 | ✗ | „Sauber gestrichen. Zum Festpreis." / „Schimmel weg. Ursache behoben." — kein Ort, keine Leistung |
-| NAP im HTML sichtbar | ✓ | Footer: Name, PLZ, Telefon, E-Mail; volle Adresse im Impressum |
-| `tel:`-Klick-Links | ✓ | 6 auf der Startseite, inkl. mobiler Kontaktleiste |
-| Kontaktformular above the fold | teilweise | Hero-CTA springt zum Formular, Formular selbst weiter unten |
-| Interne Verlinkung | ✓ | seit Commit `9066398`: alle 5 Seiten aus der Nav erreichbar, Klicktiefe 1 |
-| Doorway-Pages | ✓ keine | Keine Stadtteil-Klone — Swap-Test nicht anwendbar, weil es nur eine Stadt gibt |
-
-**Zum H1-Befund:** Die H1s sind bewusst als Nutzenversprechen formuliert („Schimmel weg. Ursache behoben.") statt als Keyword-Phrase. Das ist **werblich stärker**, kostet aber ein Local-Signal. Der Ort steht jeweils in der Eyebrow-Zeile direkt darüber („Schimmel-Sanierung · Hamburg · zertifiziert") — Google wertet das mit, aber schwächer als eine H1.
-
-Empfehlung mit Augenmaß: **nicht alle 5 H1s umschreiben**. Falls überhaupt, dann nur auf der Schimmel-Seite testen (siehe Aktion 4), weil dort nachweislich Impressionen ohne Klicks anfallen.
-
-## 4. NAP-Konsistenz & Citations (8/15)
-
-### Intern: sauber
+## 3. Eigene Daten — jetzt konsistent
 
 | Quelle | Name | Adresse | Telefon |
 |---|---|---|---|
-| Sichtbares HTML | Maler Sert GmbH | In der Niederung 15, 22047 Hamburg | 0173 8615002 |
-| JSON-LD Schema | Maler Sert GmbH | In der Niederung 15, 22047 Hamburg | +49-173-8615002 |
+| Website Kontaktblock | Maler Sert GmbH | In der Niederung 15, 22047 Hamburg | 0173 8615002 |
+| Website Footer | Maler Sert GmbH | **In der Niederung 15 · 22047 Hamburg** (bis heute ohne Straße) | 0173 8615002 |
+| JSON-LD | Maler Sert GmbH | In der Niederung 15, 22047 Hamburg | +49-173-8615002 |
+| Google-Unternehmensprofil | Maler Sert GmbH | In d. Niederung 15, 22047 Wandsbek | 0173 8615002 |
 
-Deckungsgleich — seit Commit `8a779d5` ziehen Impressum und Datenschutz die Daten aus `business.ts`, es gibt keine hartkodierten Dubletten mehr.
+Heute behoben:
+- **Footer** zeigte auf allen Leistungsseiten nur „Hamburg · 22047" ohne Straße. Jetzt vollständig, aus `business.ts`.
+- **Kartenlink** „Standort ansehen" war fest auf die Hamburger Innenstadt eingetragen und lag **6,78 km**
+  neben dem Betrieb (seit August bekannt, nie behoben). Zeigt jetzt auf das Google-Unternehmensprofil.
 
-### Extern: mehrere reale Widersprüche (verifiziert per Websuche) — geklärt am 22.08.2026
-
-| Feld | Website (korrekt, Quelle: Betreiber) | Verzeichnisse (veraltet) |
-|---|---|---|
-| Telefon | 0173 8615002 (mobil) | 040 687045 (alte Festnetznummer) |
-| Adresse | In der Niederung 15 | In der Niederung 15 A / 15a |
-| E-Mail | malersert@yahoo.de | teils info@maler-sert.de |
-| Gründung | 2002 | teils 2000 |
-
-**Bestätigt vom Betreiber:** Die Website ist die korrekte Quelle. Die Verzeichniseinträge stammen aus einer älteren Fassung der Firma (Northdata/Creditreform/Cylex/Firmania/Stadtbranchenbuch/meinestadt.de/branchen-info.net/malerbetriebe.online/maler-finden.org) und sind nicht mehr aktuell.
-
-**Kein Code-Fix möglich.** Diese Einträge liegen bei den jeweiligen Drittanbieter-Plattformen und lassen sich nur direkt im eigenen Unternehmensprofil bei jedem Anbieter korrigieren (Login erforderlich, teils kostenpflichtige Premium-Einträge). Konkrete Schritte siehe Aktionsliste unten.
-
-### Gefundene Citations
-
-Vorhanden: **Yelp**, Cylex, Firmania, meinestadt.de, Stadtbranchenbuch, Unternehmensverzeichnis, branchen-info.net, maler-finden.org, malerbetriebe.online, Creditreform, Northdata.
-
-Yelp ist dabei besonders relevant: **ChatGPT greift nicht auf Google Business Profile zu**, sondern zieht lokale Empfehlungen unter anderem aus dem Bing-Index, Yelp und BBB. Der Yelp-Eintrag existiert bereits — er sollte auf korrekte NAP-Daten geprüft werden.
-
-Fehlend / empfohlen: **Bing Places** (speist ChatGPT, Copilot, Alexa), **Apple Business Connect** (Nutzung 2026 auf 27% verdoppelt), Handwerkskammer-Verzeichnis Hamburg.
-
-## 5. Local Schema Markup (8,5/10)
-
-**Zweitstärkster Bereich.** Live geprüft, valides JSON-LD.
-
-| Property | Status |
-|---|---|
-| Korrekter Subtyp | ✓ `["Painter","HomeAndConstructionBusiness"]` statt generisch |
-| `name`, `legalName`, `description` | ✓ |
-| `address` (PostalAddress, vollständig) | ✓ |
-| `geo` | ✓ 7 Nachkommastellen (Minimum: 5) |
-| `openingHoursSpecification` | ✓ deckungsgleich mit sichtbarem Text |
-| `telephone`, `email`, `url`, `image`, `logo` | ✓ |
-| `priceRange` | ✓ `€€` |
-| `areaServed` | ✓ 4 Städte als `City` |
-| `hasOfferCatalog` | ✓ alle 5 Leistungen verlinkt |
-| `vatID`, `foundingDate`, `founder` | ✓ |
-| `hasCredential` (Meisterbrief) | ✗ fehlt |
-
-Abzug nur für: fehlendes `hasCredential` und die geo-Abweichung zum OSM-Link (siehe Dimension 1).
-
-## 6. Local Links & Autorität (1/10)
-
-**Schwächster Bereich.** Auf der gesamten Startseite: **kein einziger** externer Autoritäts-Link außer Google und WhatsApp.
-
-Fehlend: Handwerkskammer Hamburg (deutsches Pendant zu Chamber of Commerce/BBB), Innungsmitgliedschaft, lokale Presse, Sponsoring/Vereinsengagement, „Beste Maler Hamburg"-Listen.
-
-„Best of"-Listenplatzierungen sind laut Whitespark 2026 der **wichtigste Einzelfaktor für KI-Sichtbarkeit**. Markenerwähnungen korrelieren dabei 3× stärker mit KI-Sichtbarkeit als klassische Backlinks (Ahrefs: 0,664 vs. 0,218).
-
-**Direkt anschlussfähig:** Der Meisterbrief- und Handwerkskammer-Befund aus dem Juli-Audit ist genau dieser Hebel — er ist gleichzeitig Impressumspflicht (§5 DDG), Vertrauenssignal und Autoritäts-Citation.
+Google schreibt „Wandsbek" statt „Hamburg" — das ist Googles Darstellung des Bezirks, kein Widerspruch.
 
 ---
 
-## Top 10 priorisierte Maßnahmen
+## 4. Google-Unternehmensprofil
+
+| Punkt | Stand |
+|---|---|
+| Bestätigt | ✓ |
+| Adresse sichtbar | ✓ seit 30.09.2026 |
+| Einzugsgebiet | ✓ Hamburg, Reinbek, Norderstedt, Pinneberg |
+| Kategorien | Maler (primär), Bodenleger, Trockenbauunternehmen |
+| Öffnungszeiten | ✓ Mo–Sa 8–18, deckungsgleich mit Website |
+| Reichweite | 102 Profilaufrufe im letzten Monat, 33 Kundeninteraktionen |
+| Echte Fotos | ✗ |
+| Beiträge | ✗ |
+| Bewertungen | 6 × 5,0 ★ — eine neue noch **unbeantwortet** |
+
+## 5. Bewertungen
+
+6 Rezensionen, 5,0 ★, nur eine mit Text (Ugur Ertütüncü). Unter der 10er-Schwelle, ab der Google
+Bewertungen erkennbar stärker gewichtet. Keine Bewertungen auf anderen Plattformen; der Yelp-Eintrag
+ist unbeansprucht. Laut [PROJEKT.md](PROJEKT.md) stammt ein Teil der Bewertungen aus dem
+Bekanntenkreis — echte Kundenbewertungen mit Text sind der fehlende Baustein.
+
+## 6. Onpage
+
+Seit August deutlich besser: Ort in jedem Titel, H1 mit Leistung und Ort, Adresse sichtbar,
+Altbau und Tapezieren als eigene Abschnitte, FAQ mit FAQPage-Schema, Preise inkl. MwSt.,
+Stadtteilbezug Wandsbek/Bramfeld/Barmbek. Lighthouse mobil: 99 / 100 / 100 / 100.
+
+Offen: Vier der fünf Leistungsseiten sind noch nicht indexiert. Indexierung am 30.09. beantragt.
+
+---
+
+## Top 10 Maßnahmen
 
 ### Kritisch
-
-1. **Veraltete Verzeichniseinträge korrigieren — pro Anbieter live geprüft (22.08.2026):**
-
-   | Verzeichnis | Adresse | Telefon | Korrektur-Weg |
-   |---|---|---|---|
-   | [Cylex](https://web2.cylex.de/firma-home/maler-sert-gmbh-2702025.html) | korrekt | falsch (040 687045) | „Fehlerhafte Daten melden" — öffentlich, kein Login |
-   | [Firmania](https://firmania.de/hamburg/maler-sert-gmbh-1259206) | korrekt | falsch | spiegelt Cylex-Daten, Cylex-Fix zieht vermutlich mit |
-   | [Stadtbranchenbuch](https://hamburg.stadtbranchenbuch.com/1366810.html) | korrekt | falsch | „Eintrag bearbeiten" — öffentlich |
-   | [Öffnungszeitenbuch](https://www.oeffnungszeitenbuch.de/filiale/Hamburg-Maler%2520Sert%2520GmbH-2268203S.html) | korrekt | falsch | „Fehler melden" / „Eintrag bearbeiten" — öffentlich |
-   | [branchen-info.net](https://hamburg.branchen-info.net/fp_4196323.php) | **„15 A" — Quelle des Hausnummer-Fehlers** | falsch | „Eintrag bearbeiten" — öffentlich, direkt an Inhaber adressiert |
-   | [maler-finden.org](https://www.maler-finden.org/hamburg/maler-sert-gmbh-1530757.html) | korrekt | falsch (+ Fax) | „Änderung vorschlagen" — öffentlich |
-   | meinestadt.de | — | — | 404, Eintrag existiert nicht mehr, nichts zu tun |
-   | [malerbetriebe.online](https://malerbetriebe.online/maler-sert-gmbh/00027396) | konnte nicht geladen werden | — | manuell nachprüfen |
-   | [Yelp](https://www.yelp.com/biz/maler-sert-hamburg) | korrekt | keine Nummer hinterlegt | „Unclaimed" — Korrektur nur über eigenen Yelp-Account möglich; **Priorität wegen ChatGPT/Perplexity-Zitaten** |
-
-   Northdata/Creditreform: reine Handelsregister-Spiegel (HRB 76146), ziehen sich meist automatisch nach — nur beobachten, kein Handlungsbedarf.
-2. **Handwerkskammer-Zugehörigkeit + Berufshaftpflicht ins Impressum.** Doppelt begründet: Pflichtangabe nach §5 DDG (der Platzhalter „[wird ergänzt]" steht dort seit Monaten) und stärkstes verfügbares Autoritätssignal. Rechtlich kurz absichern lassen.
+1. **Telefonnummer in den Verzeichnissen korrigieren.** Reihenfolge: branchen-info.net (E-Mail fertig
+   in [VERZEICHNISSE.md](VERZEICHNISSE.md), nur die Nummer fehlt noch) → Cylex (Firmania folgt) →
+   Yelp beanspruchen → Öffnungszeitenbuch, maler-finden, Stadtbranchenbuch, Infobel.
+2. **Bei Das Örtliche, Gelbe Seiten und 11880 eintragen** — alle kostenlos, alle mit Website-Link.
+3. **Bing Places anlegen** (Daten lassen sich aus Google übernehmen) und die Seite in den
+   Bing Webmaster Tools anmelden. Grundlage für die ChatGPT-Sichtbarkeit.
 
 ### Hoch
-
-3. **Echte Kundenbewertungen sammeln.** Der Bewertungslink existiert (`writereview?ludocid=…`), wird laut `PROJEKT.md` aber noch nicht systematisch nach Auftragsabschluss verschickt. Ziel: über die 10er-Schwelle, danach 18-Tage-Kadenz halten. Der bestätigte Schimmel-Auftrag im Oktober ist die nächste konkrete Gelegenheit.
-4. **Schimmel-Seite: Snippet prüfen statt umschreiben.** „maler schimmelbeseitigung hamburg" bringt 64 Impressionen, 0 Klicks — dort rankt laut Search Console die Startseite, nicht die Schimmel-Seite. Nach dem Sitemap-Fix vom 22.08. erst abwarten, ob die Schimmel-Seite selbst in den Index kommt, dann neu bewerten.
-5. **Bing Places anlegen.** Direkter Hebel auf ChatGPT/Copilot-Sichtbarkeit — und der GA4-Kanal „AI Assistant" hat bereits einen Besucher mit 6:35 min Verweildauer geliefert, mit Abstand der längsten auf der Seite.
+4. **Neue Bewertung beantworten** und den Bewertungslink nach jedem Auftrag verschicken — auch an den
+   Kunden vom 30.09., der über ChatGPT kam.
+5. **Echte Fotos ins Profil** — Vorher/Nachher, Firmenwagen, Mehmet Sert.
+6. **Handwerkskammer-Eintrag und Berufshaftpflicht im Impressum** — Pflichtangabe nach § 5 DDG und
+   stärkstes lokales Autoritätssignal.
 
 ### Mittel
-
-6. **OSM-Karten-Link auf die korrekten Koordinaten setzen** (aktuell 6,78 km daneben). Ein-Zeilen-Fix, sobald die Adressfrage aus Punkt 1 geklärt ist.
-7. **Apple Business Connect beanspruchen.**
-8. **`hasCredential` ins LocalBusiness-Schema**, sobald die Meisterbrief-Daten aus Punkt 2 vorliegen.
-9. **Yelp-Eintrag auf korrekte NAP-Daten prüfen** — relevanteste Citation für KI-Systeme.
+7. **Apple Business Connect** beanspruchen.
+8. **Facebook-Unternehmensseite** mit identischen Daten — dient vor allem als weitere konsistente Quelle.
+9. **`hasCredential`** ins Schema, sobald der Meisterbrief belegt ist.
 
 ### Niedrig
-
-10. **H1 der Schimmel-Seite testweise um den Ort ergänzen** — nur diese eine, nur falls sie nach der Indexierung weiterhin keine Klicks bekommt. Nicht alle 5 H1s umschreiben, der werbliche Ton ist bewusst gewählt und funktioniert.
-
----
-
-## Was diese Analyse NICHT beurteilen konnte
-
-- **Geo-Grid-Rankings** (Position im Local Pack je nach Standort des Suchenden) — braucht Local Falcon, BrightLocal o. ä.
-- **Reale Local-Pack-Position** in Echtzeit
-- **GBP-Insights** (Aufrufe, Suchbegriffe, Fotoaufrufe im Profil) — nur im eingeloggten GBP-Backend
-- **GBP-Fotos, -Posts, -Kategorien** — von außen nicht auslesbar; die Angaben oben stammen aus Deiner eigenen Dokumentation in `PROJEKT.md`, nicht aus einer Live-Prüfung
-- **Domain Authority / vollständiges Backlink-Profil** — braucht Ahrefs/Majestic
-- **Bewertungs-Velocity und Antwortquote** — nur bei direktem GBP-Zugriff prüfbar
-- **Vollständiger Citation-Abgleich** über alle Verzeichnisse — die gefundenen Widersprüche sind Stichproben aus der Websuche, kein erschöpfender Audit; dafür braucht es BrightLocal Citation Tracker o. ä.
-
-Cylex ließ sich nicht direkt abrufen (HTTP 403) — die dortigen Angaben stammen aus den Suchergebnis-Snippets, nicht aus der Seite selbst.
+10. **Monatlich ein Profil-Beitrag** im Google-Unternehmensprofil.
 
 ---
 
-## Einordnung
+## Was diese Analyse nicht leisten konnte
 
-Die technische Grundlage ist **überdurchschnittlich gut**: korrekter Schema-Subtyp, 5 dedizierte Leistungsseiten (der laut Whitespark wichtigste lokale Faktor überhaupt), saubere interne NAP-Konsistenz, valides JSON-LD, Klicktiefe 1 zu allen Leistungen.
-
-Die Lücken liegen fast vollständig **außerhalb des Codes**: Bewertungen, Verzeichnis-Konsistenz, Kammer-Mitgliedschaft, Bing/Apple-Präsenz. Weitere Website-Optimierung hat hier deutlich weniger Hebel als die vier Punkte unter „Kritisch" und „Hoch".
-
-Für die KI-Sichtbarkeit separat: `/seo geo https://maler-sert.de/` — beachte dabei, dass Cloudflare aktuell GPTBot, ClaudeBot und Google-Extended blockt (Fund aus dem Juli-Audit, weiterhin eine offene Entscheidung).
+- **Geo-Grid-Rankings** (Position im Local Pack je nach Standort) — braucht Local Falcon oder BrightLocal
+- **Bing-Index und Bing Places** — Bing verlangte eine Bot-Prüfung, die hier nicht gelöst wird
+- **Apple Business Connect** — von außen nicht einsehbar
+- **Vollständige Verzeichnisliste** — geprüft wurden alle bekannten Einträge und die großen deutschen
+  Verzeichnisse; kleinere Portale ohne Google-Indexierung können fehlen
+- **Domain-Autorität, Backlinks** — braucht Ahrefs oder Majestic
+- **Cylex, Firmania, Yelp** lieferten bei direktem Abruf HTTP 403; ihre Daten stammen aus Googles
+  Suchergebnis-Ausschnitten
