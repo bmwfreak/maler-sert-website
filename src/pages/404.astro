@@ -1,0 +1,23 @@
+---
+// Echte 404: Ohne dist/404.html liefert Cloudflare Pages für jede unbekannte URL
+// die Startseite mit Status 200 aus (Soft-404, beliebig viele Duplikate).
+import { business } from '../data/business';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Seite nicht gefunden — Maler Sert GmbH"
+  description="Diese Seite gibt es nicht."
+  path="/404"
+  noindex={true}
+  chrome="legal"
+  bodyClass="legal-page"
+>
+  <main id="hauptinhalt" class="container" style="padding-block: 4rem;">
+    <h1>Seite nicht gefunden.</h1>
+    <p>Die aufgerufene Adresse gibt es nicht (mehr).</p>
+    <p>
+      <a href="/">Zur Startseite</a> · Oder direkt anrufen:
+      <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
+    </p>
+  </main>
+</BaseLayout>
