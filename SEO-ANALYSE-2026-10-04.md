@@ -67,3 +67,16 @@ sichtbar) entsteht durch **Bewertungen und Fotos** — das kann nur Mehmet liefe
 ## Nicht geprüft
 Backlinks/Domain-Autorität (kein Ahrefs-Zugang), Geo-Grid neu (nächste Messung Mitte Oktober),
 Apple Business Connect, Infobel.
+
+## Umsetzung 04.10. (live geprüft)
+
+1. ✓ Alle 6 Google-Bewertungen beantwortet (kurzes Danke, „Ihr Team von Maler Sert"). Ältere zwei nur über business.google.com/reviews erreichbar, nicht über das Such-Overlay.
+2. ✓ Impressum: Platzhalter „[wird ergänzt]" entfernt (Block ausgeblendet bis Mehmet Versicherer liefert), Handwerkskammer Hamburg + HwO ergänzt. **Mehmet bestätigen lassen: Eintrag in der Handwerksrolle.**
+3. ✓ H1 aller Leistungsseiten jetzt „<Leistung> in Hamburg — <Slogan>".
+4. ✓ Neue Seite `/tapezieren-hamburg` (Inhalt nur aus belegten Fakten, keine neuen Preise), in Nav/Footer/Schema/llms.txt, verlinkt von Startseite und Malerarbeiten.
+5. ✓ Google-Beitrag „Tapezierarbeiten" mit Button zur neuen Seite. Erster Versuch wurde abgelehnt — Telefonnummer im Beitragstext ist nicht erlaubt.
+   ✓ WhatsApp-Chat im Profil (wa.me/491738615002), Prüfung durch Google läuft.
+6. ✓ Sitemap mit `lastmod`. ✗ `http://www` → 2 Weiterleitungen bleibt: Pages-Edge leitet vor der Function auf https um, API-Token hat keine Zonenrechte für eine Redirect-Regel. Nutzen minimal.
+
+Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empfehlung) — Mitte Oktober prüfen, ob durch neue H1/Seite verursacht oder Saisoneffekt.
+Offen: Indexierung `/tapezieren-hamburg` in der Search Console beantragen (Chrome hing).
