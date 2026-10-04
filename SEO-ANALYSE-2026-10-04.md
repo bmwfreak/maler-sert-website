@@ -79,4 +79,5 @@ Apple Business Connect, Infobel.
 6. ✓ Sitemap mit `lastmod`. ✗ `http://www` → 2 Weiterleitungen bleibt: Pages-Edge leitet vor der Function auf https um, API-Token hat keine Zonenrechte für eine Redirect-Regel. Nutzen minimal.
 
 Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empfehlung, Daten bis Ende September, also vor den heutigen Änderungen) — Mitte Oktober prüfen; vermutlich wandern Suchanfragen von der Startseite zu den jetzt indexierten Leistungsseiten.
-Offen: Indexierung `/tapezieren-hamburg` in der Search Console beantragen (Chrome hing).
+✓ Indexierung `/tapezieren-hamburg` in der Search Console beantragt, Sitemap neu eingereicht.
+✓ IndexNow (Bing, Yandex u. a.): Schlüssel `public/e4502720aa0ff93f49420bddb119a26c.txt`, alle 7 URLs gemeldet (HTTP 202). Bei neuen/geänderten Seiten erneut per POST an api.indexnow.org melden.
