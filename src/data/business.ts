@@ -104,6 +104,12 @@ export const services: ServiceMeta[] = [
     description: 'Innenanstriche, Tapezieren, Decken und Wände streichen in Hamburg',
   },
   {
+    slug: 'tapezieren-hamburg',
+    name: 'Tapezieren',
+    schemaName: 'Tapezierarbeiten Hamburg',
+    description: 'Vliestapete, Raufaser, Designtapeten und Fototapete in Hamburg, Alttapete entfernen inklusive',
+  },
+  {
     slug: 'fassadenanstrich-hamburg',
     name: 'Fassadenanstrich',
     schemaName: 'Fassadenanstrich Hamburg',

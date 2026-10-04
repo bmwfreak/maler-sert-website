@@ -10,6 +10,8 @@ export default defineConfig({
     sitemap({
       // noindex-Rechtsseiten nicht in die Sitemap aufnehmen
       filter: (page) => !page.includes('/impressum') && !page.includes('/datenschutz'),
+      // ponytail: Build-Datum als lastmod für alle Seiten; pro Seite erst, wenn Google es braucht
+      lastmod: new Date(),
       // Startseite mit Trailing Slash (= canonical); Unterseiten extensionslos
       // Hinweis: @astrojs/sitemap erzwingt die Homepage-URL ohne Trailing-Slash im
       // finalen XML (Stream-Replace in write-sitemap.js, greift bei build.format:'file'
