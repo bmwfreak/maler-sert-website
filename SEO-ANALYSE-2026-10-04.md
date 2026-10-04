@@ -78,5 +78,5 @@ Apple Business Connect, Infobel.
    ✓ WhatsApp-Chat im Profil (wa.me/491738615002), Prüfung durch Google läuft.
 6. ✓ Sitemap mit `lastmod`. ✗ `http://www` → 2 Weiterleitungen bleibt: Pages-Edge leitet vor der Function auf https um, API-Token hat keine Zonenrechte für eine Redirect-Regel. Nutzen minimal.
 
-Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empfehlung) — Mitte Oktober prüfen, ob durch neue H1/Seite verursacht oder Saisoneffekt.
+Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empfehlung, Daten bis Ende September, also vor den heutigen Änderungen) — Mitte Oktober prüfen; vermutlich wandern Suchanfragen von der Startseite zu den jetzt indexierten Leistungsseiten.
 Offen: Indexierung `/tapezieren-hamburg` in der Search Console beantragen (Chrome hing).
