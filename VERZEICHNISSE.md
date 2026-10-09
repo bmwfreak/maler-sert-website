@@ -204,6 +204,6 @@ gestrichen (750-Zeichen-Limit). Bing übernimmt die Änderung per Synchronisatio
 - Ansprechpartner für Rückfragen bei allen dreien: Emre Küllüoglu, eku1453@gmail.com (nicht öffentlich). Keine Werbe-Einwilligung erteilt.
 
 ## Nachprüfung 09.10.2026
-- **Gelbe Seiten:** Eintrag live mit unserer Beschreibung, aber Hauptnummer **040 68 70 45** + Fax 040 69466511 (alter Datensatz, Telefonbuch-Quelle). 0173 nur im Beschreibungstext. → Über „Eintrag bearbeiten" (Login Nutzer) Telefon auf 0173 8615002 setzen, Fax löschen. Ggf. Mehmet: alten Telekom-Telefonbuch-Eintrag der 040-Nummer löschen lassen.
+- **Gelbe Seiten:** Korrektur eingereicht 09.10. (Telefon → 0173 8615002, Fax gelöscht, Beschreibung gesetzt; Bestätigungsmail an eku1453@gmail.com, dann bis 3 Werktage). Vorher: Eintrag live mit unserer Beschreibung, aber Hauptnummer **040 68 70 45** + Fax 040 69466511 (alter Datensatz, Telefonbuch-Quelle). 0173 nur im Beschreibungstext. → Über „Eintrag bearbeiten" (Login Nutzer) Telefon auf 0173 8615002 setzen, Fax löschen. Ggf. Mehmet: alten Telekom-Telefonbuch-Eintrag der 040-Nummer löschen lassen.
 - **Das Örtliche:** Maler Sert GmbH mit 0173 8 61 50 02 ✓
 - Anlass: Gelbe-Seiten-KI-Check 09.10. (1 von 30 KI-Nennungen, Wahrnehmung 44/100)
