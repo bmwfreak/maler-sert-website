@@ -81,3 +81,10 @@ Apple Business Connect, Infobel.
 Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empfehlung, Daten bis Ende September, also vor den heutigen Änderungen) — Mitte Oktober prüfen; vermutlich wandern Suchanfragen von der Startseite zu den jetzt indexierten Leistungsseiten.
 ✓ Indexierung `/tapezieren-hamburg` in der Search Console beantragt, Sitemap neu eingereicht.
 ✓ IndexNow (Bing, Yandex u. a.): Schlüssel `public/e4502720aa0ff93f49420bddb119a26c.txt`, alle 7 URLs gemeldet (HTTP 202). Bei neuen/geänderten Seiten erneut per POST an api.indexnow.org melden.
+
+## 09.10.2026 — Altbau-Seite
+- ✓ Neue Seite `/altbausanierung-hamburg` (Leimfarbe, Risse, Stuck, Holzfenster, Dielen; nur Aussagen, die schon auf der Website standen; keine neuen Preise). In Menü, Footer, Schema, llms.txt, verlinkt von Startseite und Tapezieren-Seite.
+- ✓ Google: Indexierung beantragt. Bing: IndexNow gemeldet (HTTP 200).
+- Anlass: Gelbe-Seiten-KI-Check 09.10. — 3 von 30 Testfragen drehen sich um Altbau, Sert wurde dort nie genannt.
+- Gelbe-Seiten-Telefonkorrektur bestätigt, live nach bis zu 3 Werktagen.
+- Nächste Messung: Mitte Oktober (Ranking, Verzeichnisse, KI-Check wiederholen).
