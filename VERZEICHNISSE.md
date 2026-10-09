@@ -202,3 +202,8 @@ gestrichen (750-Zeichen-Limit). Bing übernimmt die Änderung per Synchronisatio
 - [x] **Gelbe Seiten** — kostenloser Grundeintrag (NICHT das 3-Monats-Testabo, das danach 358,80 €/Jahr kostet), Branche Malerbetriebe. Bestätigungsmail steht aus. Vorschau ließ sich nicht laden — nach Veröffentlichung prüfen.
 - [x] **11880** — kostenloser Eintrag, Branche Maler, Mo–Sa 8–18, erfolgreich registriert 01.10.2026. Erscheint auch auf werkenntdenBESTEN.de. 11880 kann zur Verifizierung anrufen/mailen und eine Gewerbeanmeldung verlangen.
 - Ansprechpartner für Rückfragen bei allen dreien: Emre Küllüoglu, eku1453@gmail.com (nicht öffentlich). Keine Werbe-Einwilligung erteilt.
+
+## Nachprüfung 09.10.2026
+- **Gelbe Seiten:** Eintrag live mit unserer Beschreibung, aber Hauptnummer **040 68 70 45** + Fax 040 69466511 (alter Datensatz, Telefonbuch-Quelle). 0173 nur im Beschreibungstext. → Über „Eintrag bearbeiten" (Login Nutzer) Telefon auf 0173 8615002 setzen, Fax löschen. Ggf. Mehmet: alten Telekom-Telefonbuch-Eintrag der 040-Nummer löschen lassen.
+- **Das Örtliche:** Maler Sert GmbH mit 0173 8 61 50 02 ✓
+- Anlass: Gelbe-Seiten-KI-Check 09.10. (1 von 30 KI-Nennungen, Wahrnehmung 44/100)
