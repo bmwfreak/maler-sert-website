@@ -1,0 +1,135 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const bereiche = [
+  {
+    h: 'Wände und Decken',
+    items: [
+      'Alte Leim- und Kalkfarbe abwaschen statt überstreichen',
+      'Risse im Putz öffnen, armieren und schließen',
+      'Nicht tragfähigen Altanstrich entfernen und den Untergrund festigen',
+      'Unebene Wände spachteln oder mit Vliestapete beruhigen',
+    ],
+  },
+  {
+    h: 'Stuck, Holz und Details',
+    items: [
+      'Stuckleisten und Profile vorsichtig freilegen und nacharbeiten',
+      'Holzfenster und alte Türen abschleifen und neu lackieren',
+      'Dielen abschleifen und versiegeln, siehe <a href="/bodenbelag-hamburg">Bodenbelag</a>',
+      'Heizkörper, Rohre und Sockelleisten lackieren',
+    ],
+  },
+  {
+    h: 'Wenn mehr dahintersteckt',
+    items: [
+      'Feuchte Außenwände: erst Ursache prüfen, dann <a href="/schimmel-sanierung-hamburg">Schimmel sanieren</a>',
+      'Wand- und Deckenaufbau erneuern mit <a href="/trockenbau-hamburg">Trockenbau</a>',
+      'Neue <a href="/tapezieren-hamburg">Tapeten</a> auf vorbereitetem Untergrund',
+      'Fassade und Treppenhaus: <a href="/fassadenanstrich-hamburg">Fassadenanstrich</a>',
+    ],
+  },
+];
+
+const faqItems: FaqItem[] = [
+  {
+    q: 'Was kostet eine Altbausanierung beim Maler?',
+    a: 'Im Altbau entscheidet der Untergrund über den Preis, deshalb gibt es keinen Pauschalpreis. Mehmet Sert schaut sich die Wohnung kostenlos an, danach gibt es ein schriftliches Festpreisangebot. Für einen einfachen Anstrich gelten unsere Malerpreise ab 9,64 € pro m² inklusive Mehrwertsteuer.',
+  },
+  {
+    q: 'Kann ich alte Leimfarbe einfach überstreichen?',
+    a: 'Meist nicht. Leimfarbe saugt und löst sich unter neuer Farbe oft wieder ab. Wir waschen sie ab oder festigen den Untergrund, bevor neu gestrichen wird. Was bei Ihren Wänden nötig ist, sehen wir beim Vor-Ort-Termin.',
+  },
+  {
+    q: 'Wie gehen Sie mit Rissen im Putz um?',
+    a: 'Wir öffnen den Riss, armieren ihn und schließen ihn mit passender Spachtelmasse. Bei größeren oder wiederkehrenden Rissen prüfen wir zuerst die Ursache, damit die Reparatur hält.',
+  },
+  {
+    q: 'Können wir während der Arbeiten in der Wohnung bleiben?',
+    a: 'In der Regel ja. Wir arbeiten staubarm, decken Böden und Möbel sorgfältig ab und übergeben abends besenrein. Was bei Ihnen praktisch ist, besprechen wir vorab.',
+  },
+  {
+    q: 'Streichen Sie auch Holzfenster und Stuck im Altbau?',
+    a: 'Ja. Wir schleifen Holzfenster und alte Türen ab und lackieren sie neu, und wir arbeiten Stuckleisten und Profile vorsichtig nach, ohne Details zuzuschmieren.',
+  },
+];
+---
+<ServiceLayout
+  title="Altbausanierung Hamburg » Maler für Altbau ✓ Festpreis"
+  description="Altbausanierung in Hamburg ✓ Leimfarbe abwaschen, Risse schließen, Stuck und Holzfenster, Dielen schleifen ✓ Festpreis nach Besichtigung. ☎ 0173 8615002"
+  path="/altbausanierung-hamburg"
+  ogImage="https://maler-sert.de/img/malerarbeiten-weisse-farbrolle.webp"
+  ogImageAlt="Malerarbeiten bei der Altbausanierung in Hamburg"
+  eyebrow="Altbau · Hamburg · seit 2002"
+  heroTitle="Altbau&shy;sanierung in Hamburg — <strong>Untergrund zuerst.</strong>"
+  lead="Leimfarbe, Kalkputz, Risse, Stuck und Holzfenster: Mehmet Sert prüft den Untergrund persönlich und macht danach ein schriftliches Festpreisangebot."
+  img="/img/malerarbeiten-weisse-farbrolle.jpg"
+  imgWebp="/img/malerarbeiten-weisse-farbrolle.webp"
+  imgAlt="Malerwerkzeug für die Sanierung von Altbauwohnungen"
+  rollerCrop={true}
+  waText="Hallo Herr Sert, ich brauche einen Maler für meine Altbauwohnung in Hamburg."
+  breadcrumbName="Altbausanierung Hamburg"
+  serviceName="Altbausanierung Hamburg"
+  serviceDescription="Altbausanierung in Hamburg: Leimfarbe abwaschen, Risse im Putz schließen, Stuck und Holzfenster nacharbeiten, Dielen abschleifen. Festpreis nach Vor-Ort-Termin. Maler Sert GmbH seit 2002."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen zur Altbausanierung in Hamburg."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Altbau</p>
+      <h2>Hamburger Altbauten haben ihre eigenen Regeln.</h2>
+      <p class="section-intro">
+        Alte Leimfarbe, Kalkputz, Stuckprofile, Risse im Putz und Wände, die nie ganz gerade waren:
+        Wir arbeiten seit 2002 in Wohnungen aus der Gründerzeit und der Nachkriegszeit und wissen,
+        wo man spachteln kann und wo der Untergrund erst gefestigt werden muss.
+      </p>
+      <div class="leistung-list">
+        {bereiche.map((b) => (
+          <div class="leistung-item">
+            <h3 set:html={b.h}></h3>
+            <ul>{b.items.map((li) => <li set:html={li}></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Der Untergrund bestimmt den Preis.</h2>
+      <p class="section-intro">
+        Neue Farbe blättert auf nicht tragfähigem Altanstrich schon nach einem Jahr wieder ab.
+        Deshalb schaut Mehmet Sert sich jede Wohnung persönlich an, bevor es ein Angebot gibt. Was
+        wirklich nötig ist, steht danach schriftlich drin. Kommt ein einfacher Anstrich dazu,
+        gelten unsere <a href="/malerarbeiten-hamburg">Malerpreise</a> ab 9,64 € pro m² inklusive
+        Mehrwertsteuer.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="section-kicker">Ablauf</p>
+      <h2>In drei Schritten zur sanierten Wohnung.</h2>
+      <ol class="ablauf">
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Anrufen oder schreiben</h3>
+          <p>Kurz beschreiben, was in der Wohnung ansteht. Meldung innerhalb eines Werktags.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Kostenloser Vor-Ort-Termin</h3>
+          <p>Mehmet Sert prüft Wände, Putz und Holz und sagt ehrlich, was nötig ist.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Schriftliches Festpreisangebot</h3>
+          <p>Sie sagen zu, wir arbeiten staubarm und übergeben abends besenrein.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</ServiceLayout>

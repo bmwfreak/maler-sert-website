@@ -104,6 +104,12 @@ export const services: ServiceMeta[] = [
     description: 'Innenanstriche, Tapezieren, Decken und Wände streichen in Hamburg',
   },
   {
+    slug: 'altbausanierung-hamburg',
+    name: 'Altbausanierung',
+    schemaName: 'Altbausanierung Hamburg',
+    description: 'Leimfarbe abwaschen, Risse schließen, Stuck und Holzfenster, Dielen schleifen im Hamburger Altbau',
+  },
+  {
     slug: 'tapezieren-hamburg',
     name: 'Tapezieren',
     schemaName: 'Tapezierarbeiten Hamburg',
