@@ -99,3 +99,13 @@ Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empf
 - Neue Seite /tapezieren-hamburg: 20 Einblendungen (7.–13.10.), Ø Position 48,9 → noch weit hinten.
 - Stärkste neue Begriffe: außenanstrich 46, spachtelarbeiten hamburg 13, fassadenanstrich hamburg 8, tapezierer hamburg 7.
 - ALBERK (Search Console erst seit 30.09.): 1. Woche 83 Einblendungen / 4 Klicks, 2. Woche 165 / 5 (≈ ×2). Ø Position 18,3, 22 Suchanfragen.
+
+## 15.10.2026 — Keyword-Schärfung (nach Search-Console-Auswertung)
+Auslöser: Begriffe mit vielen Einblendungen, aber Position >20 (Tapezieren ~145, Schimmel ~60, Außenanstrich ~58, Stadtteile ~75, Spachteln ~14).
+- Schimmel: Titel „Schimmelbeseitigung & Schimmelsanierung Hamburg", Synonyme (Schimmelpilz, -bekämpfung) im Intro, neue FAQ zu den Begriffen.
+- Fassade: H1 „Fassadenanstrich & Außenanstrich in Hamburg", Lead mit „Außenanstrich", neue FAQ „Außenanstrich am Haus – Kosten/Angebot".
+- Trockenbau: Titel/H1 „Trockenbau & Spachtelarbeiten", neue FAQ Spachtel-/Putzarbeiten.
+- Tapezieren: Titel „Tapezierer & Tapezierarbeiten", neue FAQ „Tapezierer in Hamburg".
+- Startseite Einsatzgebiet: Stadtteile Farmsen-Berne, Rahlstedt, Jenfeld, Tonndorf, Ohlsdorf ergänzt (nur Hamburg; Umland wie Barsbüttel/Glinde/Ahrensburg erst nach Bestätigung durch Mehmet).
+- Ahrefs-Gratis-Generator: Suchvolumen nur Stufen (<100 / >100). „maler hamburg", „dielen schleifen hamburg", „schimmelbeseitigung hamburg" >100 und schwer; „tapezieren hamburg", „außenanstrich" <100 und leicht.
+- Messen: 29.10. und 12.11. Einblendungen/Position je Seite vergleichen.
