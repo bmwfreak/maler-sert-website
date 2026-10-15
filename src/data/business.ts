@@ -53,7 +53,7 @@ export const business = {
   /** Anzeigeform der Öffnungszeiten — an einer Stelle pflegen, damit Seite und Schema nie auseinanderlaufen. */
   openingHoursDisplay: 'Mo–Sa 8–18 Uhr · außerhalb nach Absprache',
 
-  areaServed: ['Hamburg', 'Norderstedt', 'Pinneberg', 'Reinbek'],
+  areaServed: ['Hamburg', 'Norderstedt', 'Pinneberg', 'Reinbek', 'Barsbüttel', 'Glinde', 'Oststeinbek', 'Ahrensburg'],
 
   sameAs: [
     'https://www.google.com/search?kgmid=/g/11zbs0xcxh',
