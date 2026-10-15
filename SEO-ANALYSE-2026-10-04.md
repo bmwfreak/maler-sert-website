@@ -88,3 +88,14 @@ Nebenbefund Search Console: Startseite zuletzt −71 % Impressionen (Google-Empf
 - Anlass: Gelbe-Seiten-KI-Check 09.10. — 3 von 30 Testfragen drehen sich um Altbau, Sert wurde dort nie genannt.
 - Gelbe-Seiten-Telefonkorrektur bestätigt, live nach bis zu 3 Werktagen.
 - Nächste Messung: Mitte Oktober (Ranking, Verzeichnisse, KI-Check wiederholen).
+
+## Search Console 15.10.2026 (28 Tage vs. 28 Tage davor, Daten bis 13.10.)
+| | 19.08.–15.09. | 16.09.–13.10. |
+|---|---:|---:|
+| Einblendungen | 300 | **499 (+66 %)** |
+| Klicks | 14 | 15 |
+| Suchanfragen mit Einblendung | 22 | **57 (2,6×)** |
+| Ø Position | 12,2 | 18 (mehr Long-Tail auf Seite 2) |
+- Neue Seite /tapezieren-hamburg: 20 Einblendungen (7.–13.10.), Ø Position 48,9 → noch weit hinten.
+- Stärkste neue Begriffe: außenanstrich 46, spachtelarbeiten hamburg 13, fassadenanstrich hamburg 8, tapezierer hamburg 7.
+- ALBERK (Search Console erst seit 30.09.): 1. Woche 83 Einblendungen / 4 Klicks, 2. Woche 165 / 5 (≈ ×2). Ø Position 18,3, 22 Suchanfragen.
