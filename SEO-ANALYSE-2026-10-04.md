@@ -109,3 +109,7 @@ Auslöser: Begriffe mit vielen Einblendungen, aber Position >20 (Tapezieren ~145
 - Startseite Einsatzgebiet: Stadtteile Farmsen-Berne, Rahlstedt, Jenfeld, Tonndorf, Ohlsdorf ergänzt (nur Hamburg; Umland wie Barsbüttel/Glinde/Ahrensburg erst nach Bestätigung durch Mehmet).
 - Ahrefs-Gratis-Generator: Suchvolumen nur Stufen (<100 / >100). „maler hamburg", „dielen schleifen hamburg", „schimmelbeseitigung hamburg" >100 und schwer; „tapezieren hamburg", „außenanstrich" <100 und leicht.
 - Messen: 29.10. und 12.11. Einblendungen/Position je Seite vergleichen.
+
+## 15.10.2026 — Umland bestätigt (Mehmet)
+- Barsbüttel, Glinde, Oststeinbek, Ahrensburg: Startseite (Text, Pills, FAQ), JSON-LD areaServed, llms.txt, Google-Profil-Einzugsgebiet (Prüfung läuft, bis 10 Min).
+- Noch offen: Gelbe Seiten, 11880, Das Örtliche, Bing Places nennen weiter nur Hamburg/Norderstedt/Pinneberg/Reinbek — bei nächster Gelegenheit nachziehen.
