@@ -118,3 +118,10 @@ Auslöser: Begriffe mit vielen Einblendungen, aber Position >20 (Tapezieren ~145
 - Maler Sert, ALBERK (und Systemic Automation): mit Google synchronisiert (letzter Sync vor 6 Tagen), Überprüfung abgeschlossen, Status „Ausstehende Veröffentlichung", ETA laut Bing 7–12 Tage → ca. 22.–27.10.
 - ALBERK: Adresse im Bing-Eintrag leer (Google-Profil ist als „kein Geschäftsstandort" geführt). Nach Veröffentlichung prüfen, ob die Adresse erscheint; sonst im Google-Profil Standort-Einstellung angleichen und neu synchronisieren.
 - Kein Handlungsbedarf bis zur Veröffentlichung; Werbeguthaben/Microsoft-Advertising-Angebote ignorieren.
+
+## 22.10.2026 — Search Console 3 Monate (21.07.–20.10.)
+- 1.184 Einblendungen, 47 Klicks, Ø Position ~17. Einblendungen/Woche: Sept 62–101, 05.10. 191, 12.10. 171. Klicks/Woche 0–8 (kein Trend). Position sinkt, weil mehr (schwächere) Begriffe ausgespielt werden.
+- Gut: Marke (Pos. 1,3 / 2,7), Stadtteile Tonndorf 3, Jenfeld 3,4, Rahlstedt 2,7, Barsbüttel 9,9.
+- Potenzial: tapezierarbeiten hamburg (78 Einbl., Pos. 21; Tapezier-Seite Pos. 41), außenanstrich (55, Pos. 51), schimmelbeseitigung (43, Pos. 22), /malerarbeiten-hamburg (225 Einbl., Pos. 14,5, 2 Klicks).
+- ✓ Umgesetzt: Titel /malerarbeiten-hamburg "Maler Hamburg » Malerarbeiten ✓ Festpreis & Besichtigung gratis"; interne Links mit Anker "Fassaden- und Außenanstrich" (Startseite + Malerarbeiten-Seite).
+- Messung: 29.10., 12.11.
