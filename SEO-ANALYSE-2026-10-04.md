@@ -125,3 +125,9 @@ Auslöser: Begriffe mit vielen Einblendungen, aber Position >20 (Tapezieren ~145
 - Potenzial: tapezierarbeiten hamburg (78 Einbl., Pos. 21; Tapezier-Seite Pos. 41), außenanstrich (55, Pos. 51), schimmelbeseitigung (43, Pos. 22), /malerarbeiten-hamburg (225 Einbl., Pos. 14,5, 2 Klicks).
 - ✓ Umgesetzt: Titel /malerarbeiten-hamburg "Maler Hamburg » Malerarbeiten ✓ Festpreis & Besichtigung gratis"; interne Links mit Anker "Fassaden- und Außenanstrich" (Startseite + Malerarbeiten-Seite).
 - Messung: 29.10., 12.11.
+
+## 23.10.2026 — Keywordrecherche Hamburg (Ahrefs, siehe KEYWORDS-2026-10-23.md)
+- Lücken gegenüber der Recherche: keine eigene Seite für Hausverwaltung/Gewerbe, Begriff "Wohnung streichen lassen" fehlte.
+- ✓ Neue Seite /malerarbeiten-hausverwaltung-hamburg (Treppenhaus, Mieterwechsel, Büro/Praxis, Schaden; nur belegte Aussagen, Nettopreise 8,10/9,10 €, 6 FAQ). In Services, llms.txt, Sitemap, Startseiten-Karte und Malerarbeiten-Seite verlinkt.
+- ✓ /malerarbeiten-hamburg: Kosten-FAQ "Was kostet es, eine Wohnung streichen zu lassen?" (ohne Hochrechnung ganzer Wohnungen).
+- Offen: Standort klären (Website Marienthal, Nutzer nannte Bramfeld). Backlinks/Bewertungen.

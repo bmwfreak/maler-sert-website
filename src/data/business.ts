@@ -110,6 +110,12 @@ export const services: ServiceMeta[] = [
     description: 'Leimfarbe abwaschen, Risse schließen, Stuck und Holzfenster, Dielen schleifen im Hamburger Altbau',
   },
   {
+    slug: 'malerarbeiten-hausverwaltung-hamburg',
+    name: 'Hausverwaltung & Gewerbe',
+    schemaName: 'Malerarbeiten für Hausverwaltungen und Gewerbe Hamburg',
+    description: 'Treppenhaus, Mieterwechsel, Büro und Praxis, Schadenbehebung mit Dokumentation in Hamburg',
+  },
+  {
     slug: 'tapezieren-hamburg',
     name: 'Tapezieren',
     schemaName: 'Tapezierarbeiten Hamburg',

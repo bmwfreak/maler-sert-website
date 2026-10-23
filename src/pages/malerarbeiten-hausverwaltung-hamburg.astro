@@ -1,0 +1,150 @@
+---
+import type { FaqItem } from '../data/business';
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+
+const bereiche = [
+  {
+    h: 'Für Hausverwaltungen und WEG',
+    items: [
+      'Treppenhaus und Gemeinschaftsflächen streichen',
+      'Mieterwechsel-Renovierungen und Leerwohnungen',
+      'WEG-Aufträge mit Dokumentation für die Verwaltung',
+      '<a href="/fassadenanstrich-hamburg">Fassadenanstrich</a> für Mehrfamilienhäuser',
+    ],
+  },
+  {
+    h: 'Für Büros, Praxen und Gewerbe',
+    items: [
+      'Büros und Praxen streichen und renovieren',
+      'Gastronomie und Ladenflächen',
+      'Arbeiten auf Wunsch außerhalb der Geschäftszeiten',
+      'Terminabsprache mit dem Betrieb vor Ort',
+    ],
+  },
+  {
+    h: 'Nach einem Schaden',
+    items: [
+      'Schadenbehebung nach Wasser, Brand und Vandalismus',
+      'Trocknung und <a href="/schimmel-sanierung-hamburg">Schimmel-Sanierung</a> bei Feuchteschäden',
+      'Saubere Dokumentation für Versicherung oder Verwaltung',
+      'Anschließend Anstrich und <a href="/tapezieren-hamburg">Tapezierarbeiten</a> aus einer Hand',
+    ],
+  },
+];
+
+const faqItems: FaqItem[] = [
+  {
+    q: 'Machen Sie Malerarbeiten für Hausverwaltungen in Hamburg?',
+    a: 'Ja. Wir betreuen Hausverwaltungen, WEGs und Gewerbekunden mit klarer Dokumentation und verlässlichen Terminen. Typische Aufgaben sind Treppenhäuser, Mieterwechsel-Renovierungen, Büros und Praxen.',
+  },
+  {
+    q: 'Was kostet ein Anstrich für Hausverwaltungen und Gewerbe?',
+    a: 'Für Standardstreicharbeiten gelten Nettopreise: Wand zweimal streichen (weiß) 8,10 € pro m², Decke zweimal streichen 9,10 € pro m². Für Treppenhäuser, Fassaden und Sonderarbeiten gibt es nach einem kostenlosen Vor-Ort-Termin ein schriftliches Festpreisangebot.',
+  },
+  {
+    q: 'Können Sie auch außerhalb der Geschäftszeiten arbeiten?',
+    a: 'Auf Wunsch ja. Wir stimmen Termine mit der Verwaltung oder dem Betrieb ab, damit der laufende Betrieb möglichst wenig gestört wird.',
+  },
+  {
+    q: 'Übernehmen Sie die Renovierung zwischen Auszug und Einzug?',
+    a: 'Ja, Mieterwechsel-Renovierungen gehören zu unseren typischen Aufträgen. Streichen, Tapezieren und bei Bedarf Bodenarbeiten können wir in einem Termin planen. Den Ablauf klären wir bei der Besichtigung.',
+  },
+  {
+    q: 'Bekommen wir eine Dokumentation der Arbeiten?',
+    a: 'Ja. Für Hausverwaltungen, WEGs und Versicherungen liefern wir eine saubere Dokumentation der ausgeführten Arbeiten.',
+  },
+  {
+    q: 'Wie läuft eine Anfrage ab?',
+    a: 'Sie rufen an oder schreiben uns. Mehmet Sert besichtigt das Objekt kostenlos vor Ort, danach erhalten Sie ein schriftliches Festpreisangebot.',
+  },
+];
+---
+<ServiceLayout
+  title="Maler für Hausverwaltungen & Gewerbe Hamburg ✓ Festpreis"
+  description="Malerarbeiten für Hausverwaltungen, WEG und Gewerbe in Hamburg ✓ Treppenhaus, Mieterwechsel, Büro, Praxis ✓ Dokumentation, Festpreis. ☎ 0173 8615002"
+  path="/malerarbeiten-hausverwaltung-hamburg"
+  ogImage="https://maler-sert.de/img/hausverwaltung-gewerbe.webp"
+  ogImageAlt="Treppenhaus-Renovierung für Hausverwaltung in Hamburg"
+  eyebrow="Hausverwaltung & Gewerbe · Hamburg · seit 2002"
+  heroTitle="Maler für Hausverwaltungen &amp; Gewerbe in Hamburg — <strong>verlässlich dokumentiert.</strong>"
+  lead="Treppenhaus, Mieterwechsel, Büro und Praxis: Mehmet Sert besichtigt das Objekt persönlich und macht ein schriftliches Festpreisangebot."
+  img="/img/hausverwaltung-gewerbe.jpg"
+  imgWebp="/img/hausverwaltung-gewerbe.webp"
+  imgAlt="Gepflegtes Mehrfamilienhaus für Hausverwaltungen und Gewerbe in Hamburg"
+  waText="Hallo Herr Sert, ich brauche Malerarbeiten für ein Objekt in Hamburg."
+  breadcrumbName="Malerarbeiten für Hausverwaltungen"
+  serviceName="Malerarbeiten für Hausverwaltungen und Gewerbe Hamburg"
+  serviceDescription="Malerarbeiten für Hausverwaltungen, WEG und Gewerbe in Hamburg: Treppenhaus, Mieterwechsel-Renovierung, Büro und Praxis, Schadenbehebung. Dokumentation und Festpreis nach Vor-Ort-Termin. Maler Sert GmbH seit 2002."
+  faqItems={faqItems}
+  faqTitle="Häufige Fragen von Hausverwaltungen und Gewerbe."
+>
+  <section>
+    <div class="container">
+      <p class="section-kicker">Was wir machen</p>
+      <h2>Objekte renovieren, ohne dass der Betrieb steht.</h2>
+      <p class="section-intro">
+        Hausverwaltungen und Gewerbekunden brauchen feste Termine, klare Preise und eine saubere
+        Übergabe. Wir arbeiten nach Absprache, auf Wunsch auch außerhalb der Geschäftszeiten, und
+        dokumentieren die Arbeiten. Für Privatkunden finden Sie unser Angebot unter
+        <a href="/malerarbeiten-hamburg">Malerarbeiten Hamburg</a>.
+      </p>
+      <div class="leistung-list">
+        {bereiche.map((b) => (
+          <div class="leistung-item">
+            <h3 set:html={b.h}></h3>
+            <ul>{b.items.map((li) => <li set:html={li}></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <p class="section-kicker">Preise</p>
+      <h2>Nettopreise für Gewerbe und Hausverwaltungen.</h2>
+      <p class="section-intro">
+        Für Standardstreicharbeiten gelten feste Quadratmeterpreise, für alles andere gibt es ein
+        Festpreisangebot nach Besichtigung.
+      </p>
+      <div class="preis-grid">
+        <div class="preis-card">
+          <div class="label">Wand zweimal streichen, weiß</div>
+          <div class="preis">8,10 € <small>/ m² netto</small></div>
+        </div>
+        <div class="preis-card">
+          <div class="label">Decke zweimal streichen</div>
+          <div class="preis">9,10 € <small>/ m² netto</small></div>
+        </div>
+      </div>
+      <p class="preis-hint">
+        Nettopreise zuzüglich Umsatzsteuer. Für Treppenhäuser, Fassaden und Sonderarbeiten erhalten Sie
+        nach dem kostenlosen Vor-Ort-Termin ein schriftliches Festpreisangebot.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="section-kicker">Ablauf</p>
+      <h2>In drei Schritten zum Auftrag.</h2>
+      <ol class="ablauf">
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Anrufen oder schreiben</h3>
+          <p>Objekt und Aufgabe kurz beschreiben. Meldung innerhalb eines Werktags.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Kostenloser Vor-Ort-Termin</h3>
+          <p>Mehmet Sert besichtigt das Objekt persönlich und nimmt Maß.</p>
+        </li>
+        <li class="ablauf-step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Schriftliches Festpreisangebot</h3>
+          <p>Nach Ihrer Zusage setzen wir den Termin und übergeben mit Dokumentation.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</ServiceLayout>
