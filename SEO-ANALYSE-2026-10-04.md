@@ -131,3 +131,6 @@ Auslöser: Begriffe mit vielen Einblendungen, aber Position >20 (Tapezieren ~145
 - ✓ Neue Seite /malerarbeiten-hausverwaltung-hamburg (Treppenhaus, Mieterwechsel, Büro/Praxis, Schaden; nur belegte Aussagen, Nettopreise 8,10/9,10 €, 6 FAQ). In Services, llms.txt, Sitemap, Startseiten-Karte und Malerarbeiten-Seite verlinkt.
 - ✓ /malerarbeiten-hamburg: Kosten-FAQ "Was kostet es, eine Wohnung streichen zu lassen?" (ohne Hochrechnung ganzer Wohnungen).
 - Offen: Standort klären (Website Marienthal, Nutzer nannte Bramfeld). Backlinks/Bewertungen.
+
+## 23.10.2026 — Partner-Backlinks
+- Footer sitewide: Partner ALBERK + Systemic Automation (/sichtbarkeit); Abschnitt "Partner" auf /bodenbelag-hamburg. Gegenlink: alberk.de/unsere-partner. Wenige, thematisch passende Links, kein Linktausch im großen Stil.
